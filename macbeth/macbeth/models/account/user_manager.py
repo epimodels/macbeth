@@ -3,6 +3,9 @@
 # ------------------------------------------------------------
 # File: user_manager.py
 # ------------------------------------------------------------
+# This class is what we should to create new users or access information
+# about existing users. It uses a custom user model that overrides the
+# default Django user model.
 
 from lib2to3.pytree import Base
 from django.contrib.auth.base_user import BaseUserManager

@@ -3,6 +3,7 @@
 # ------------------------------------------------------------
 # File: account.py
 # ------------------------------------------------------------
+# The implementation of User to be used in the project.
 
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models

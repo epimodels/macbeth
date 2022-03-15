@@ -9,42 +9,98 @@ from django.test import TestCase
 from parameterized import parameterized
 
 
+def account_test_cases():
+    return [
+        (
+            'foo@bar.com', 'foobar',
+            '1986-08-12', 'Alex', 'Smith',
+        ),
+        (
+            'tester@myprovider.com', 'mypassword',
+            '2000-01-10', 'Tester', 'McTester',
+        ),
+    ]
+
+
+def account_test_cases_emails():
+    test_cases = account_test_cases()
+    emails = []
+    for test_case in test_cases:
+        emails.append((test_case[0],))
+    return emails
+
+
 class TestUserManager(TestCase):
 
-    User = get_user_model()
-
-    @parameterized.expand(
-        ['foo@bar.com', 'foobar', '07/13/1986', 'Alex', 'Smith', ],
-        )
-    def test_create_user(
-        self, email, password, date_of_birth,
-        firstname, lastname, **extra_fields,
-    ):
-        user = self.User.objects.create_user(
-            email=email,
-            password=password,
-            firstname=firstname,
-            lastname=lastname,
-            date_of_birth=date_of_birth,
-            **extra_fields,
+    def setUp(self):
+        self.User = get_user_model()
+        for email, password, dob, firstname, lastname in account_test_cases():
+            self.User.objects.create_user(
+                email=email,
+                password=password,
+                date_of_birth=dob,
+                firstname=firstname,
+                lastname=lastname,
             )
 
-        optionals = {
-            'is_active': (user.is_active, True),
-            'is_staff': (user.is_staff, False),
-            'is_superuser': (user.is_superuser, False),
-        }
+    @parameterized.expand(account_test_cases)
+    def test_create_user(
+        self, email, password, date_of_birth,
+        firstname, lastname,
+    ):
+        '''Tests the creation of a new basic user.'''
+        user = self.User.objects.create_user(
+            email=email, password=password,
+            firstname=firstname, lastname=lastname,
+            date_of_birth=date_of_birth,
+            )
 
         self.assertEqual(user.email, email)
         self.assertTrue(user.check_password(password))
         self.assertEqual(user.firstname, firstname)
         self.assertEqual(user.lastname, lastname)
-        # May have to be a date object
         self.assertEqual(user.date_of_birth, date_of_birth)
-        for key, value in optionals.items():
-            self.assertEqual(value[0], value[1] if (
-                is_ := extra_fields.get(key, None)
-                ) is None
-                else is_
-                )
+        self.assertFalse(user.is_staff)
+        self.assertFalse(user.is_superuser)
+        self.assertTrue(user.is_active)
+        return
+
+    @parameterized.expand(account_test_cases)
+    def test_create_superuser(
+        self, email,
+        password, date_of_birth,
+        firstname, lastname,
+    ):
+        '''Tests the creation of a new superuser.'''
+        user = self.User.objects.create_superuser(
+            email=email, password=password,
+            firstname=firstname, lastname=lastname,
+            date_of_birth=date_of_birth,
+            )
+
+        self.assertEqual(user.email, email)
+        self.assertTrue(user.check_password(password))
+        self.assertEqual(user.firstname, firstname)
+        self.assertEqual(user.lastname, lastname)
+        self.assertEqual(user.date_of_birth, date_of_birth)
+        self.assertTrue(user.is_staff)
+        self.assertTrue(user.is_superuser)
+        self.assertTrue(user.is_active)
+        return
+
+    @parameterized.expand(account_test_cases_emails)
+    def test_get_user(self, email):
+        user = self.User.objects.get(email=email)
+        self.assertEqual(user.email, email)
+        return
+
+    @parameterized.expand([
+        ('mynonexistentemail',),
+        ('',),
+        (' ',),
+        ('invalidemail@email.com',),
+    ])
+    def test_get_user_invalid(self, email):
+        with self.assertRaises(self.User.DoesNotExist):
+            self.User.objects.get(email=email)
         return
