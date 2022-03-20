@@ -1,0 +1,15 @@
+{% block model_form %}
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        {% block selectionList %}
+        <select name="chosen_model_id" class="form-input">
+            {% for results in showModelList %}
+                <option name="{{ results.title }}" value="{{ results.id }}">{{ results.title }}</option>
+            {% endfor %}
+        </select>
+        {%endblock%}
+    </table>
+    <button type="submit">Select</button>
+</form>
+{%endblock%}
