@@ -1,3 +1,2 @@
 start python manage.py runserver
-cd macbeth_frontend
-npm start
+npm start --prefix ./macbeth_frontend
