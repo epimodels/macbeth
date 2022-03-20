@@ -69,6 +69,15 @@ creat_db()
 	echo ${GREEN}Done.${NC}
 }
 
+do_migrations()
+{
+	echo ${RED}Running migrations...${NC}
+	./manage.py makemigrations macbeth_backend
+	./manage.py makemigrations macbeth_api
+	./manage.py migrate
+	echo ${GREEN}Done.${NC}
+}
+
 if [[ $# -eq 0 ]] ; then
 	echo Calling ./manage.py runserver
 	./manage.py runserver
@@ -89,12 +98,12 @@ while [[ $# -gt 0 ]] ; do
  			;;
  		${CREATDB})
  			creat_db
- 			./manage.py migrate
+			do_migrations
  			;;
  		${DROPANDRUN})
  			drop_db
  			creat_db
- 			./manage.py migrate
+			do_migrations
  			./manage.py runserver
  			;;
  		*)

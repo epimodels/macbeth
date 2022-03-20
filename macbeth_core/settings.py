@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'macbeth_backend',
-    # 'macbeth_api',
+    'macbeth_api',
 ]
 
 MIDDLEWARE = [
