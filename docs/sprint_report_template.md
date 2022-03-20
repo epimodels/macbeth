@@ -4,15 +4,34 @@
 [Summary video link](https://youtube.com/)
 
 ## Link to Working Prototype
-You can access our team's working prototype at [this site](https://ourapp.herokuapp.com)
-*(If your working prototype is not deployed to the web, then provide instructions here for downloading/installing your prototype)*
+You can access our team's working prototype at [this site](https://github.com/wsu-cpts421-sp22/macbeth)
+Instructions on how to run the program can be seen in the README.md that outlines the project.
 
 ## Team members
-1. **Team leader:** *name (GitHub Id)*
-1. *Team member 2 name (GitHub Id)*
-1. *Team member 3 name (GitHub Id)*
-1. *Team member 4 name (GitHub Id)*
-1. *Team member 5 name (GitHub Id)*
+<table>
+  <thead>
+    <tr>
+      <th>Name</th><th>GitHub Username</th><th>GitHub ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>TM1 </b>Mikaela Dean</td><td><a href="https://github.com/mikaloolooloo">mikaloolooloo</a></td><td>61486037</td>
+    </tr>
+    <tr>
+      <td><b>TM2 </b>Kyle Hurd</td><td><a href="https://github.com/khurd21">khurd21</a></td><td>76460909</td>
+    </tr>
+    <tr>
+      <!--<td>Trevor Naze</td><td><a href="#">NullSnapshot</a></td><td>5078676</td>-->
+      <td><b>TM3 </b>Trevor Naze</td><td><a href="https://github.com/NullSnapshot">NullSnapshot</a></td><td>5078676</td>
+    </tr>
+    <tr>
+      <td><b>TM4 </b>Ethan Nelson</td><td><a href="https://github.com/ENelson526">ENelson526</a></td><td>63766480</td>
+    </tr>
+    <tr>
+      <td><b>TM5 </b>Eric Song</td><td><a href="https://github.com/song471">song471</a></td><td>89554934</td>
+  </tbody>
+</table>
 
 ### Progress
 #### Issues, Points and Hours
@@ -40,7 +59,7 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
 #### Reflection Statements
 | Team Member | Contribution Reflection Statement |
 |-------------|-------------------|
-|TM1| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|TM1| For this milestone, I designed and implemented the frontend website look, during which I got React all set-up and working with Bootstrap and Django for our project. I had to do research into how to use these all together, as well as each one individually seeing as I’ve never worked with these or anything similar before. I wrote meeting agendas and notes, which allowed us to stay focused and on track. I set up each draft we had with the appropriate template edited to fit the project as well as the instructions needed to complete the assignment. I did the same with this Sprint Report and counted everyone's messages, reacts, and attendance for each meeting. |
 |TM2| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |TM3| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |TM4| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
@@ -49,32 +68,69 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
 
 |Issue | Test File | Feature Tested | Results Summary | 
 |------|-----------|----------------|-----------------|
-|[Issue #](https://github.com/issue)| [Google.js](https://www.github.com/)|Google Authentication| [3/3 tests passed](https://yoursite.com/animated.gif) | [
-|[Issue #](https://github.com/issue)| [routes.js](https://www.github.com/)|PUT and DELETE routes for rounds | [15/15 tests passed](https://yoursite.com/animated.gif) |
-  
+|[Issue #15](https://github.com/wsu-cpts421-sp22/macbeth/issues/15)| [test_user_manager.py](../macbeth_backend/tests/test_user_manager.py)| Create Users | 10/10 passed
+
 ### Communication
- 
-#### MS Teams/Discord/Slack Messages
-<table> 
-  <thead>
-    <tr>
-      <th></th><th colspan="6">Post/Reply Counts</th>
+#### MS Teams Messages (and Reacts) 
+
+<table>  
+
+  <thead> 
+    <tr> 
+      <th></th><th colspan="6">Message (and React) Counts</th> 
+    </tr>  
+    <tr> 
+      <th>Date</th><th>Total</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th> 
     </tr> 
-    <tr>
-      <th>Date</th><th>Total</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th>
-    </tr>
-  </thead> 
-  <tbody>
-    <tr>
-      <td>11/9/21</td><td>5</td><td>2</td><td>1</td><td>1</td><td>1</td><td>0</td>
-    </tr>
-    <tr>
-     <td>11/12/21</td><td>4</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td>
-    </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>9</b></td><td><b>3</b></td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td><td><b>1</b></td>
-    </tr>
-  </tbody>
-</table>
+
+  </thead>  
+  <tbody> 
+    <tr> 
+      <td>2/15/22</td><td>6 (1)</td><td>3 (1)</td><td>2 (0)</td><td>0 (0)</td><td>1 (0)</td><td>0 (0)</td> 
+    </tr> 
+    <tr> 
+     <td>2/17/22</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>1 (0)</td><td>0 (0)</td> 
+    </tr> 
+   <tr> 
+     <td>2/18/22</td><td>1 (1)</td><td>1 (1)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td> 
+    </tr> 
+   <tr> 
+     <td>2/21/22</td><td>4 (1)</td><td>3 (1)</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td> 
+    </tr> 
+   <tr> 
+     <td>2/22/22</td><td>5 (2)</td><td>4 (1)</td><td>0 (1)</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td> 
+    </tr> 
+   <tr> 
+     <td>2/26/22</td><td>1 (0)</td><td>0 (0)</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td> 
+    </tr> 
+   <tr> 
+     <td>2/28/22</td><td>7 (2)</td><td>3 (2)</td><td>0 (0)</td><td>1 (0)</td><td>2 (0)</td><td>1 (0)</td> 
+    </tr> 
+   <tr> 
+     <td>3/1/22</td><td>8 (3)</td><td>2 (3)</td><td>4 (0)</td><td>0 (0)</td><td>2 (0)</td><td>0 (0)</td> 
+    </tr> 
+   <tr> 
+     <td>3/2/22</td><td>2 (1)</td><td>0 (1)</td><td>1 (0)</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td> 
+    </tr> 
+   <tr> 
+     <td>3/4/22</td><td>2 (2)</td><td>2 (0)</td><td>0 (1)</td><td>0 (0)</td><td>1 (1)</td><td>0 (0)</td> 
+    </tr> 
+   <tr> 
+     <td>3/8/22</td><td>2 (0)</td><td>0 (0)</td><td>0 (0)</td><td>2 (0)</td><td>0 (0)</td><td>0 (0)</td> 
+    </tr> 
+   <tr> 
+     <td>3/10/22</td><td>1 (0)</td><td>0 (0)</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td> 
+    </tr> 
+   <tr> 
+     <td>3/15/22</td><td>10 (4)</td><td>2 (1)</td><td>3 (1)</td><td>1 (1)</td><td>3 (0)</td><td>1 (1)</td> 
+    </tr> 
+   <tr> 
+     <td>3/16/22</td><td>1 (1)</td><td>0 (1)</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td> 
+    </tr> 
+    <tr><td align="right"><b>Totals:</b></td><td><b>50 (18)</b></td><td><b>20 (12)</b></td><td><b>14 (3)</b></td><td><b>6 (1)</b></td><td><b>8 (1)</b></td><td><b>2 (1)</b></td> 
+    </tr> 
+  </tbody> 
+</table>  
 
 #### Video Meetings
 <table> 
@@ -97,28 +153,44 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
     </tr>
   </tbody>
 </table>
-  
-#### Face-to-Face Meetings
-<table> 
-  <thead>
-    <tr>
-      <th colspan="2"></th><th colspan="5">In attendance?</th><th></th>
+ #### Video Meetings 
+
+<table>  
+  <thead> 
+    <tr> 
+      <th colspan="2"></th><th colspan="5">In attendance?</th> 
+    </tr>  
+    <tr> 
+      <th>Date</th><th>Duration (min)</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th><th>Type</th> 
     </tr> 
-    <tr>
-      <th>Date</th><th>Duration (min)</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th><th>Notes</th>
-    </tr>
-  </thead> 
-  <tbody>
-    <tr>
-      <td>11/10/21</td><td>45</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td>&check;</td><td>We met in CUB conference room</td>
-    </tr>
-     <tr>
-      <td>11/14/21</td><td>20</td><td>&check;</td><td>&check;</td><td></td><td></td><td>&check;</td><td>We met at Starbucks for coffee</td>
-    </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>65</b></td><td><b>2</b></td><td><b>2</b></td><td><b>0</b></td><td><b>1</b></td><td><b>2</b></td><td></td>
-    </tr>
-  </tbody>
-</table>
+  </thead>  
+  <tbody> 
+    <tr> 
+      <td>2/15/22</td><td>29</td><td>&check;</td><td>&check;</td><td></td><td> &check;</td><td>&check;</td><td>Work</td> 
+    </tr> 
+     <tr> 
+      <td>2/21/22</td><td>187</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td> 
+    </tr> 
+     <tr> 
+      <td>2/22/22</td><td>30</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td>&check;</td><td>Work</td> 
+    </tr> 
+     <tr> 
+      <td>3/1/22</td><td>9</td><td></td><td>&check;</td><td></td><td>&check;</td><td>&check;</td><td>Professor</td> 
+    </tr> 
+     <tr> 
+      <td>3/4/22</td><td>62</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td></td><td>Work</td> 
+    </tr> 
+     <tr> 
+      <td>3/8/22</td><td>88</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td> 
+    </tr> 
+     <tr> 
+      <td>3/15/22</td><td>108</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td> 
+    </tr> 
+    <tr><td align="right"><b>Totals:</b></td><td><b>48</b></td><td><b>2</b></td><td><b>2</b></td><td><b>0</b></td><td><b>1</b></td><td><b>2</b></td><td>Work</td> 
+    </tr> 
+  </tbody> 
+
+</table>  
 
 #### Reflection Statements
 | Team Member | Communication Reflection Statement |
