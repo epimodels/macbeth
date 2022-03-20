@@ -1,6 +1,8 @@
 #! /bin/sh
 
 ## This script is meant to help run repetitive commands.
+## NOTE: if getting an error saying `macbeth_backend_user` table not made,
+## RUN: ./manage.py makemigrations macbeth_backend
 ## Postgres DB Info
 
 USERNAME=postgres
@@ -80,7 +82,7 @@ while [[ $# -gt 0 ]] ; do
 			help
  			;;
  		${TEST})
- 			./manage.py test
+ 			./manage.py test ./macbeth_backend
  			;;
  		${DROPDB})
  			drop_db

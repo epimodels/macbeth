@@ -1,5 +1,6 @@
 asgiref==3.5.0
 Django==4.0.2
+parameterized==0.8.1
 psycopg2==2.9.3
 pycodestyle==2.8.0
 sqlparse==0.4.2
