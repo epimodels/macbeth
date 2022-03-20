@@ -19,8 +19,12 @@ For Windows:
 ./venv/Scripts/activate.bat
 ```
 For Mac/Linux
-```
-./.venv/Scripts/activate
+```bash
+# arguments for run-backend.sh:
+# dropdb, creatdb, dropandrun, test, or nothing to run
+./scripts/run-backend.sh
+# In a new terminal instance
+./scripts/run-frontend.sh
 ```
 
 Once the virtual environment is loaded, you'll need to install the project dependencies. Run the following:
@@ -49,8 +53,9 @@ scripts/startup.bat
 ```
 
 For Linux
-```
-./scripts/startup
+```bash
+./scripts/run-backend.sh
+./scripts/run-frontend.sh
 ```
 ---
 ## Contribution
