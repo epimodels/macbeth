@@ -6,7 +6,7 @@
 ## Link to Working Prototype
 You can access our team's working prototype at [this site](https://github.com/wsu-cpts421-sp22/macbeth)
 
-Instructions on how to run the program can be seen in the [readme.md](../readme.md) that outlines the project.
+Instructions on how to run the program can be seen in the [readme.md](../README.md) that outlines the project.
 
 ## Team members
 <table>
