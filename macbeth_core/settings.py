@@ -87,6 +87,17 @@ DATABASES = {
     }
 }
 
+# Rest Framework Settings
+# https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

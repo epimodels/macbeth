@@ -15,10 +15,10 @@ from .user_manager import UserManager
 
 class User(AbstractBaseUser, PermissionsMixin):
     # https://docs.djangoproject.com/en/4.0/topics/auth/customizing/
-
+    id = models.AutoField(primary_key=True)
     email = models.EmailField(
         _('email address'), max_length=32,
-        unique=True, primary_key=True,
+        unique=True,
         )
     firstname = models.CharField(max_length=32)
     lastname = models.CharField(max_length=32)
