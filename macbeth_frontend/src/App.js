@@ -2,26 +2,20 @@ import React from 'react';
 import './App.css';
 import WebNavbar from './components/webnavbar'
 import Footer from './components/footer'
-import SignIn from './components/signin'
+import ComputeModel from './components/compute_model'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-
-    }
+    this.state = {}
   }
 
   render() {
-      return (
+    return (
       <div className="App">
-        <WebNavbar />
-        <SignIn />
-        <header className="App-header">
-          
-        </header>
-        
-        <Footer />
+       <WebNavbar />
+       <ComputeModel />
+       <Footer />
       </div>
     );
   }

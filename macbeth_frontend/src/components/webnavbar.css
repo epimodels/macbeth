@@ -1,4 +1,8 @@
 .brand {
-    align-items: center;
-    display: flex;
+  align-items: center;
+  display: flex;
+}
+
+.navbar {
+  font-size: 20px;
 }
