@@ -5,6 +5,8 @@
     // I want to change the pycodestyle args to extend the length of a line
     "python.linting.flake8Args": [
         "--max-line-length",
-        "120"
+        "120",
+        "--ignore",
+        "F401", // Unused imports give an error. This is not ideal due to __init__.py files
     ],
 }
