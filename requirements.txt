@@ -3,6 +3,7 @@ Django==4.0.2
 djangorestframework==3.13.1
 djangorestframework-simplejwt==5.1.0
 flake8==4.0.1
+flake8-commas==2.1.0
 flake8-polyfill==1.0.2
 mccabe==0.6.1
 parameterized==0.8.1
