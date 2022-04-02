@@ -6,3 +6,7 @@
 .navbar {
   font-size: 20px;
 }
+
+.active {
+  color:red;
+}

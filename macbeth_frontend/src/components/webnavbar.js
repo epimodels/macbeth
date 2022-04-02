@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
+import { NavLink } from 'react-router-dom'
 import './webnavbar.css'
 
 class WebNavbar extends React.Component {
@@ -27,19 +28,19 @@ class WebNavbar extends React.Component {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#home">Home <span className="visually-hidden">(current)</span></Nav.Link>
-                <Nav.Link href="#compute">Compute</Nav.Link>
+              <Nav className="me-auto" activeClassName="active">
+                <Nav.Link as={NavLink} to='/'>Home <span className="visually-hidden">(current)</span></Nav.Link>
+                <Nav.Link as={NavLink} to='/compute'>Compute</Nav.Link>
                 <NavDropdown title="Help" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#help/FAQ">FAQ</NavDropdown.Item>
-                <NavDropdown.Item href="#help/contact-us">Contact Us</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to='/help/faq'>FAQ</NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to='/help/contact-us'>Contact Us</NavDropdown.Item>
                 </NavDropdown>
                </Nav>
             </Navbar.Collapse>
         </Container>
         <Container>
           <Nav className="ms-auto">
-            <Nav.Link href="#account">Sign In</Nav.Link>
+            <Nav.Link as={NavLink} to='/account/sign-in'>Sign In</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

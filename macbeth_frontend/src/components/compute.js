@@ -1,8 +1,10 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container'
-import ModelDropdown from './model_dropdown'
 
-class ComputeModel extends React.Component {
+/*
+ * Base page for Compute
+ */
+class Compute extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -12,10 +14,9 @@ class ComputeModel extends React.Component {
     return (
       <div>
         <Container>Compute</Container>
-        <ModelDropdown />
       </div>
     );
   }
 }
 
-export default ComputeModel;
+export default Compute;
