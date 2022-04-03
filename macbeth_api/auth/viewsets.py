@@ -13,7 +13,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.exceptions import InvalidToken
 
-from macbeth_core.auth.serializers import UserSerializer
+from macbeth_backend.models.account import UserSerializer
 
 
 class LoginViewSet(TokenObtainPairView, ModelViewSet):
@@ -73,4 +73,9 @@ class RefreshViewSet(viewsets.ViewSet, TokenRefreshView):
     http_method_names = ['post', ]
 
     def create(self, request, *args, **kwargs):
-        pass
+        serializer = self.get_serializer(data=request.data)
+        try:
+            serializer.is_valid(raise_exception=True)
+        except Exception as e:
+            raise InvalidToken(e.args[0])
+        return Response(serializer.validated_data, status=status.HTTP_200_OK)
