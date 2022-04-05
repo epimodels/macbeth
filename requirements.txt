@@ -1,6 +1,16 @@
 asgiref==3.5.0
 Django==4.0.2
+djangorestframework==3.13.1
+djangorestframework-simplejwt==5.1.0
+flake8==4.0.1
+flake8-commas==2.1.0
+flake8-polyfill==1.0.2
+mccabe==0.6.1
 parameterized==0.8.1
+pep8-naming==0.12.1
 psycopg2==2.9.3
 pycodestyle==2.8.0
+pyflakes==2.4.0
+PyJWT==2.3.0
+pytz==2022.1
 sqlparse==0.4.2
