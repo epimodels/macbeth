@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer class="bg-light text-center text-lg text-muted">
+    <footer class="bg-light text-center text-lg text-muted" style={{'position':'fixed','bottom':'0', 'left':'0', 'right':'0'}}>
       <section>
         <span>Bird image created by silhouettegarden.com</span>
       </section>

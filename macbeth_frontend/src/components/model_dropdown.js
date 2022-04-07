@@ -1,6 +1,7 @@
 import React from 'react';
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
+import './model_dropdown.css'
 
 class ModelDropdown extends React.Component {
   constructor(props) {
@@ -11,8 +12,9 @@ class ModelDropdown extends React.Component {
   render() {
     return (
       <DropdownButton 
-        id="dropdown-basic-button" 
-        title="Select a Model"
+        id='model-dropdown'
+        title='Select a Model'
+        size='lg'
       >
         <Dropdown.Item href="#/action-1">Model 1</Dropdown.Item>
         <Dropdown.Item href="#/action-2">Model 2</Dropdown.Item>

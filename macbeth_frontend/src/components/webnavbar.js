@@ -19,7 +19,7 @@ class WebNavbar extends React.Component {
           <Navbar.Brand className="brand" href="#home">
             <img
              alt="logo"
-             src="assets/images/teamnightingale.png"
+             src="/assets/images/teamnightingale.png"
              width="100"
              height="100"
              className="d-inline-block align-top"
@@ -30,7 +30,7 @@ class WebNavbar extends React.Component {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto" activeClassName="active">
                 <Nav.Link as={NavLink} to='/'>Home <span className="visually-hidden">(current)</span></Nav.Link>
-                <Nav.Link as={NavLink} to='/compute'>Compute</Nav.Link>
+                <Nav.Link as={NavLink} to='/compute/model-select'>Compute</Nav.Link>
                 <NavDropdown title="Help" id="basic-nav-dropdown">
                 <NavDropdown.Item as={NavLink} to='/help/faq'>FAQ</NavDropdown.Item>
                 <NavDropdown.Item as={NavLink} to='/help/contact-us'>Contact Us</NavDropdown.Item>

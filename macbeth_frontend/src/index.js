@@ -21,6 +21,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App/ >}>
           <Route path="compute" element={<Compute />}>
+            {/* add capability to leave 'compute' to come back to same tab? */}
             <Route path="model-select" element={<ModelSelect />} />
             <Route path="parameter-edit" element={<ParameterEdit />} />
             <Route path="results" element={<Results />} />

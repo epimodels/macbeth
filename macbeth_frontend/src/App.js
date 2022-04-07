@@ -1,4 +1,5 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom'
 import './App.css';
 import WebNavbar from './components/webnavbar'
 import Footer from './components/footer'
@@ -13,7 +14,7 @@ class App extends React.Component {
     return (
       <div className="App">
        <WebNavbar />
-       
+       <Outlet />
        <Footer />
       </div>
     );

@@ -5,6 +5,8 @@
 
 .navbar {
   font-size: 20px;
+  font-family: Arial;
+  margin-bottom: 20px;
 }
 
 .active {

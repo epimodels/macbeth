@@ -1,5 +1,7 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container'
+import { Outlet } from 'react-router-dom'
+import ProgressBar from 'react-bootstrap/ProgressBar'
+import './compute.css'
 
 /*
  * Base page for Compute
@@ -13,7 +15,8 @@ class Compute extends React.Component {
   render() {
     return (
       <div>
-        <Container>Compute</Container>
+        <h1>Compute</h1>
+        <Outlet />
       </div>
     );
   }

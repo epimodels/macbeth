@@ -1,4 +1,6 @@
 import React from 'react';
+import NavButton from './nav_button'
+import Progress from './progress'
 
 class Results extends React.Component {
   constructor(props) {
@@ -8,7 +10,11 @@ class Results extends React.Component {
   
   render() {
     return (
-      <h1>Viewing Results</h1>
+      <div>
+        <Progress currentStep={3} />
+        <h4>Viewing Results</h4>
+        <NavButton label='Back' redirect='/compute/parameter-edit' variant='prev'/>
+      </div>
     )
   }
 }
