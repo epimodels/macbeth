@@ -1,5 +1,5 @@
 import React from 'react';
-import DropdownButton from 'react-bootstrap/DropdownButton'
+import ButtonGroup from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import './model_dropdown.css'
 
@@ -11,15 +11,20 @@ class ModelDropdown extends React.Component {
 
   render() {
     return (
-      <DropdownButton 
-        id='model-dropdown'
-        title='Select a Model'
-        size='lg'
-      >
-        <Dropdown.Item href="#/action-1">Model 1</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Model 2</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Model 3</Dropdown.Item>
-      </DropdownButton>
+      <Dropdown>
+        <Dropdown.Toggle 
+          id='model-dropdown'
+          size='lg'
+          className='model'
+        > 
+        Select a Model
+          </Dropdown.Toggle>
+        <Dropdown.Menu className='model'>
+          <Dropdown.Item className='model-item' eventKey="1">Model 1</Dropdown.Item>
+          <Dropdown.Item className='model-item' eventKey="2">Model 2</Dropdown.Item>
+          <Dropdown.Item className='model-item' eventKey="3">Model 3</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
     );
   }
 }

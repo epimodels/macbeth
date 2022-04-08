@@ -3,7 +3,7 @@
   border: #EA9AB2;
 }
 
-.next {
+.next, .next:focus {
   position: fixed;
   top: 80%;
   right: 30%;
@@ -16,7 +16,7 @@
   border: #4AD94D;
 }
 
-.prev {
+.prev, .prev:focus {
   position: fixed;
   top: 80%;
   left: 30%;

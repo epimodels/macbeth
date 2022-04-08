@@ -3,6 +3,9 @@ import ModelDropdown from './model_dropdown'
 import NavButton from './nav_button'
 import Progress from './progress'
 
+/*
+ * Sub-page of Compute
+ */
 class ModelSelect extends React.Component {
   constructor(props) {
     super(props);
