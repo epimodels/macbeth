@@ -1,27 +1,21 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom'
 import './App.css';
 import WebNavbar from './components/webnavbar'
 import Footer from './components/footer'
-import SignIn from './components/signin'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-
-    }
+    this.state = {}
   }
 
   render() {
-      return (
+    return (
       <div className="App">
-        <WebNavbar />
-        <SignIn />
-        <header className="App-header">
-          
-        </header>
-        
-        <Footer />
+       <WebNavbar />
+       <Outlet />
+       <Footer />
       </div>
     );
   }

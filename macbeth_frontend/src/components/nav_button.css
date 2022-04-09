@@ -1,0 +1,30 @@
+.default {
+  background-color: #EA9AB2;
+  border: #EA9AB2;
+}
+
+.next, .next:focus {
+  position: fixed;
+  top: 80%;
+  right: 30%;
+  background-color: #7CD47E;
+  border: #7CD47E;
+}
+
+.next:hover {
+  background-color: #4AD94D;
+  border: #4AD94D;
+}
+
+.prev, .prev:focus {
+  position: fixed;
+  top: 80%;
+  left: 30%;
+  background-color: #84BC85;
+  border: #84BC85;
+}
+
+.prev:hover {
+  background-color: #7AA07B;
+  border: #7AA07B;
+}
