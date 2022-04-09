@@ -63,8 +63,8 @@ class RegisterSerializer(UserSerializer):
     '''
     password = serializers.CharField(
         max_length=128, min_length=8,
-        required=True, write_only=True
-        )
+        required=True, write_only=True,
+    )
     email = serializers.EmailField(max_length=128, required=True, write_only=True)
     firstname = serializers.CharField(max_length=128, required=True, write_only=True)
     lastname = serializers.CharField(max_length=128, required=True, write_only=True)
@@ -73,7 +73,8 @@ class RegisterSerializer(UserSerializer):
     class Meta:
         model = User
         fields = ('id', 'email', 'firstname', 'lastname', 'date_of_birth', 'password',
-                  'is_active', 'is_staff', 'is_superuser', 'date_joined', 'last_login', )
+                  'is_active', 'is_staff', 'is_superuser', 'date_joined', 'last_login',
+                  )
 
     def create(self, validated_data):
         '''Creates the :class: `account.User`.

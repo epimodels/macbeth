@@ -24,7 +24,7 @@ class LoginViewSet(TokenObtainPairView, ModelViewSet):
     '''
     serializer_class = UserSerializer
     permission_classes = (AllowAny, )
-    http_method_names = ['post', ]
+    http_method_names = ['post']
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
@@ -45,7 +45,7 @@ class RegisterViewSet(ModelViewSet, TokenObtainPairView):
     '''
     serializer_class = UserSerializer
     permission_classes = (AllowAny, )
-    http_method_names = ['post', ]
+    http_method_names = ['post']
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
@@ -70,7 +70,7 @@ class RefreshViewSet(viewsets.ViewSet, TokenRefreshView):
     :type viewsets.ViewSet: class
     '''
     permission_classes = (AllowAny, )
-    http_method_names = ['post', ]
+    http_method_names = ['post']
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
