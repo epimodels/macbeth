@@ -1,7 +1,7 @@
 {
     "files.eol": "\n",
     "python.linting.pycodestyleEnabled": false,
-    "python.linting.flake8Enabled": false,
+    "python.linting.flake8Enabled": true,
     // I want to change the pycodestyle args to extend the length of a line
     "python.linting.flake8Args": [
         "--max-line-length",
