@@ -7,8 +7,8 @@
 [MS Teams link](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A82a13a296cc04422a8cca15d5b8096d0%40thread.tacv2%2FMACBETH%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=b220a2c2-7afd-4a37-abe3-43ede7d9e484&directDl=true&msLaunch=true&enableMobilePage=true)
 
 ## Link to Working Prototype
-You can access our team's working prototype at [this site](https://ourapp.herokuapp.com)
-*(If your working prototype is not deployed to the web, then provide instructions here for downloading/installing your prototype)*
+We currently do not have a link to a working prototype. Please follow the reposoitory
+instructions for the prototype <a href="https://github.com/wsu-cpts421-sp22/macbeth">here: </a>
 
 ## Team members
 <table>
@@ -76,7 +76,7 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
       <td>
         <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/45">PR #45</a>
       </td>
-      <td>3<br/>0.5</td><td>1<br/>0.5</td><td>2<br>???</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100%</td><td></td>
+      <td>3<br/>0.5</td><td>1<br/>0.5</td><td>2<br>4</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100%</td><td></td>
     </tr>
     <tr>
      <td>
@@ -84,7 +84,7 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
     </td>
     <td>
       <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/50">PR #50</a>
-    </td><td>3<br/>5</td><td>0<br/>5</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+    </td><td>3<br/>5</td><td>0<br/>5</td><td>4<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/46">Issue #46</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/41">PR #41</a></td><td>3<br/>2.5</td><td>3<br/>2.5</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100%</td><td></td>
@@ -107,16 +107,16 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
      </td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/30">Issue #30</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/30">Issue #30</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>8<br/>0</td><td>0<br/>0</td><td>5<br>8</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/27">Issue #27</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/18">Issue #18</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/18">Issue #18</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>5<br/>0</td><td>0<br/>0</td><td>2<br>8</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/15">Issue #15</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/15">Issue #15</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>3<br/>0</td><td>0<br/>0</td><td>3<br>6</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr><td colspan="2" align="right"><b>Totals:</b></td><td><b>0<br/>0</b></td><td><b>15.75<br/>32.25</b></td><td><b>0<br/>0</b></td><td><b>0<br/>0</b></td><td><b>0<br/>0</b></td><td><b>0<br/>0</b></td><td colspan="2"></td>
     </tr>
@@ -140,7 +140,7 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
 | Team Member | Contribution Reflection Statement |
 |-------------|-------------------|
 |Mikaela| For this milestone, I extensively worked on incorporating React Router and creating the pages for computing models, which includes researching, designing, and implementing both the routing framework and its various interactions with our other existing tools and a modular wizard-style UI. I'm most proud of my animated progress bar and dynamic parameter fields. Then for non-code related work, I solely completed the User Interface portion of the Project Design Draft, which means I did the design, creation, and explanation of the mock-ups. I worked on this report by myself for most of the sprint. I planned on pushing the WIP report to our dev branch at the beginning, but I was waiting for a PR, made before this sprint, to be merged and unfortunately, as of the 8th it still hasn't been due to lack of changes required by the reviews. |
-|Kyle| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Kyle| For this this sprint, I created the Register, Login, and Refresh API for the front end to communicate with. I was very excited to incorporate this with Trevor's frontend component, as the communication and refresh tokens worked almost flawlessly on the first trial. I also performed a lot of research regarding how Serializers and Viewsets work. Going into this sprint, I had no idea the format React expected for communication nor how to perform the communications. It was a great learning opportunity and very rewarding to see the end result working. |
 |Trevor| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Ethan| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Eric| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
@@ -257,7 +257,7 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
 | Team Member | Communication Reflection Statement |
 |-------------|-------------------|
 |Mikaela| I feel like the above message, reply, and attendance counts reflect my attempts at communication and participation for this sprint. For the Q&A on the 22nd, the start of the sprint, I was the only one to attend via Zoom and I had no communication with my team; last sprint, as part of our retrospective, we had the idea of a planning meeting, so during the Q&A I asked on Teams when that was going to occur but never got any replies on that post, not that day or ever. After only getting a response to another post about 25% into the sprint, I then mostly focused on working on my own as I realized I wasn't going to have enough time to get what I wanted done in the short time-frame if I continued to wait on my team members. I'm a bit disappointed with how this sprint turned out as I felt pretty disconnected from my team overall. Because of all of this, however, I did put more effort and thought into my commits' titles and messages which I feel is a distinct improvement from before. |
-|Kyle| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Kyle| I feel like our communication should be more prompt. There were some scenarios in which we would not reply or communicate for long periods at a time and it hindered our progress in a few areas. There was definitely problems with communication at the beginning of the sprint, but we managed to get back on top about halfway through. |
 |Trevor| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 |Ethan| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 |Eric| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
@@ -267,18 +267,15 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
 [Link to Recording](https://emailwsu.sharepoint.com/:v:/r/teams/2022.PULLM.CptS.421.423-MACBETH2/Shared%20Documents/Recordings/New%20channel%20meeting-20220410_082712-Meeting%20Recording.mp4?csf=1&web=1&e=4bW9Fy)
 
 #### What went well
-  - Item 1
-  - Item 2
-  - Item x
+  - We utilized GitHub Issues to track our progress and communicate with our team members.
+  - Our interaction with GitHub was ultimately better. We had less merge conflicts and a better understanding on how to use GitHub.
+  - Initially we were contributing using our own develop branches. We switched over to feature branches and that was much more efficient when it came to contributing to the project.
   
  #### What we'd like to improve
-  - Item 1
-  - Item 2
-  - Item x
+  - Starting communication earlier
+  - Make sure we are all on same page for what to do
+  - We should understand our limitations and promise only things that we know we can get done.
   
 #### Changes we plan to implement in next sprint period
-  - Item 1
-  - Item 2
-  - Item x
-
-
+  - Improve communication with team members
+  - Switching to feature branches instead of dev branches
