@@ -59,22 +59,41 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
   </thead> 
   <tbody>
     <tr>
-      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/6">Issue #6</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>5<br/>7.1</td><td>2.5<br/>3</td><td>1<br/>1.3</td><td>1<br/>1.8</td><td>0.25<br/>0.5</td><td>0.25<br/>0.5</td><td>100</td><td></td>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/6">Issue #6</a>
+      </td>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/50">PR #50</a>
+      </td>
+      <td>
+        5<br/>7.1</td><td>2.5<br/>3</td><td>1<br/>1.3</td><td>1<br/>1.8</td><td>0.25<br/>0.5</td><td>0.25<br/>0.5</td><td>100</td><td>
+      </td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/42">Issue #42</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>3<br/>0.5</td><td>1<br/>0.5</td><td>2<br>???</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100%</td><td></td>
+     <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/42">Issue #42</a>
+      </td>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/45">PR #45</a>
+      </td>
+      <td>3<br/>0.5</td><td>1<br/>0.5</td><td>2<br>???</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100%</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/38">Issue #38</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>3<br/>5</td><td>0<br/>5</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td>
+      <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/38">Issue #38</a>
+    </td>
+    <td>
+      <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/50">PR #50</a>
+    </td><td>3<br/>5</td><td>0<br/>5</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/46">Issue #46</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/41">PR #41</a></td><td>3<br/>2.5</td><td>3<br/>2.5</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100%</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/43">Issue #43</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>3.75<br/>4.5</td><td>3.75<br/>4.5</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>75%</td><td>Researched, installed, added basic and nested routing with active link. Did not add redirection or unique results url because we don't have a working and tested API yet.</td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/43">Issue #43</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>3.75<br/>4.5</td><td>3.75<br/>4.5</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>75%</td><td>Researched, installed, added basic and nested routing with active link. Did not add redirection or unique results url because we don't have a working and tested API yet.</td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/12">Issue #12</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>3.6<br/>10.25</td><td>3.6<br/>10.25</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>45%</td><td>Researched, designed, and implemented a wizard UI for Compute as a whole. Created model selection component. Did not add model info component because lack of time. Did not add models from the backend because we don't have a working and tested API yet.</td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/12">Issue #12</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>3.6<br/>10.25</td><td>3.6<br/>10.25</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>45%</td><td>Researched, designed, and implemented a wizard UI for Compute as a whole. Created model selection component. Did not add model info component because lack of time. Did not add models from the backend because we don't have a working and tested API yet.</td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/9">Issue #9</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>1.5<br/>5.75</td><td>1.5<br/>5.75</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>22%</td><td>Added a Parameter Edit page, parameter field, dynamic number of parameter fields. Did not add default values because lack of time. Did not add parameters from a selected model because of dependence on Issue #12.</td>
@@ -83,15 +102,39 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/11">Issue #11</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0.4<br/>0.75</td><td>0.4<br/>0.75</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0.05%</td><td>Added a Results page. Did not add anything else due to lack of time and dependence on the Issues #12 and #9.</td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue #</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td>
+      <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/39">Issue #39</a>
+     </td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue #</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/30">Issue #30</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+    </tr>
+    <tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/27">Issue #27</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+    </tr>
+    <tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/18">Issue #18</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+    </tr>
+    <tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/15">Issue #15</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr><td colspan="2" align="right"><b>Totals:</b></td><td><b>0<br/>0</b></td><td><b>15.75<br/>32.25</b></td><td><b>0<br/>0</b></td><td><b>0<br/>0</b></td><td><b>0<br/>0</b></td><td><b>0<br/>0</b></td><td colspan="2"></td>
     </tr>
   </tbody>
 </table>
+
+<!--- Needs to be added:
+
+#39
+
+#30
+
+#27
+
+#18
+
+#15
+--->
 
 ### Reflection Statements
 | Team Member | Contribution Reflection Statement |
