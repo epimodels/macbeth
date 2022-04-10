@@ -96,7 +96,7 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/12">Issue #12</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>3.6<br/>10.25</td><td>3.6<br/>10.25</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>45%</td><td>Researched, designed, and implemented a wizard UI for Compute as a whole. Created model selection component. Did not add model info component because lack of time. Did not add models from the backend because we don't have a working and tested API yet.</td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/9">Issue #9</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>1.5<br/>5.75</td><td>1.5<br/>5.75</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>22%</td><td>Added a Parameter Edit page, parameter field, dynamic number of parameter fields. Did not add default values because lack of time. Did not add parameters from a selected model because of dependence on Issue #12.</td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/9">Issue #9</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>1.5<br/>5.75</td><td>1.5<br/>5.75</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>30%</td><td>Added a Parameter Edit page, parameter field, dynamic number of parameter fields. Did not add default values because lack of time. Did not add parameters from a selected model because of dependence on Issue #12.</td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/11">Issue #11</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0.4<br/>0.75</td><td>0.4<br/>0.75</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0.05%</td><td>Added a Results page. Did not add anything else due to lack of time and dependence on the Issues #12 and #9.</td>
@@ -205,10 +205,10 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
      <td>4/07/22</td><td>3 (1)</td><td>0 (0)</td><td>1 (0)</td><td>1 (1)</td><td>1 (0)</td><td>0 (0)</td>
     </tr>
     <tr>
-     <td>//22</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td>
+     <td>4/09/22</td><td>21 (7)</td><td>8 (5)</td><td>3 (1)</td><td>10 (1)</td><td>1 (0)</td><td>0 (0)</td>
     </tr>
     <tr>
-     <td>//22</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td>
+     <td>4/10/22</td><td>4 (2)</td><td>3 (1)</td><td>0 (1)</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td>
     </tr>
     <tr><td align="right"><b>Totals:</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td>
     </tr>
@@ -243,9 +243,12 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
       <td>4/5/22</td><td>30</td><td></td><td>&check;</td><td></td><td>&check;</td><td>&check;</td><td>Work</td>
     </tr>
     <tr>
-      <td>4/9/22</td><td>???</td><td></td><td></td><td></td><td></td><td></td><td>Work</td>
+      <td>4/9/22</td><td>101</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>332</b></td><td><b>4</b></td><td><b>4</b></td><td><b>3</b></td><td><b>4</b></td><td><b>4</b></td>
+    <tr>
+      <td>4/10/22</td><td>60</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
+    </tr>
+    <tr><td align="right"><b>Totals:</b></td><td><b>433</b></td><td><b>6</b></td><td><b>6</b></td><td><b>5</b></td><td><b>6</b></td><td><b>6</b></td>
     </tr>
   </tbody>
 </table>
@@ -261,7 +264,7 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
 
 ### Retrospective
 
-[Link to Recording](https://wsu.zoom.us/recording)
+[Link to Recording](https://emailwsu.sharepoint.com/:v:/r/teams/2022.PULLM.CptS.421.423-MACBETH2/Shared%20Documents/Recordings/New%20channel%20meeting-20220410_082712-Meeting%20Recording.mp4?csf=1&web=1&e=4bW9Fy)
 
 #### What went well
   - Item 1
