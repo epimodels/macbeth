@@ -14,6 +14,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.exceptions import InvalidToken
 
 from macbeth_backend.models.account import UserSerializer
+from .serializers import LoginSerializer, RegisterSerializer
 
 
 class LoginViewSet(TokenObtainPairView, ModelViewSet):
@@ -22,7 +23,7 @@ class LoginViewSet(TokenObtainPairView, ModelViewSet):
     :param TokenObtainPairView: The base class viewset.
     :type TokenObtainPairView: class
     '''
-    serializer_class = UserSerializer
+    serializer_class = LoginSerializer
     permission_classes = (AllowAny, )
     http_method_names = ['post']
 
@@ -43,7 +44,7 @@ class RegisterViewSet(ModelViewSet, TokenObtainPairView):
     :param ModelViewSet: The base class viewset.
     :type ModelViewSet: class
     '''
-    serializer_class = UserSerializer
+    serializer_class = RegisterSerializer
     permission_classes = (AllowAny, )
     http_method_names = ['post']
 
