@@ -19,5 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('macbeth_backend.urls', namespace='macbeth_backend')),
-    path('api/', include('macbeth_api.urls', namespace='macbeth_api')),
+    path('api/', include(('macbeth_api.routers', 'macbeth_api'), namespace='macbeth_api')),
 ]

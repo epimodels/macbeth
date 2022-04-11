@@ -1,0 +1,25 @@
+#model-dropdown {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  background-color: #9C7D77;
+  border: #9C7D77;
+}
+
+#model-dropdown:hover {
+  background-color: #B1827A;
+}
+
+.model {
+  background-color: #D7B8B2;
+  text-align: center;
+  min-width: 184px;
+}
+
+.model-item:hover {
+  background-color: #E5C8C2;
+}
+
+.model-item:focus, .model-item:active {
+  color: #4C3936;
+  background-color: #EED6D1;
+}
