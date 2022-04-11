@@ -104,13 +104,13 @@ instructions for the prototype <a href="https://github.com/wsu-cpts421-sp22/macb
     <tr>
      <td>
       <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/39">Issue #39</a>
-     </td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     </td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>3<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/30">Issue #30</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>8<br/>0</td><td>0<br/>0</td><td>5<br>8</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/27">Issue #27</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/27">Issue #27</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>2<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/18">Issue #18</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>5<br/>0</td><td>0<br/>0</td><td>2<br>8</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
@@ -118,7 +118,7 @@ instructions for the prototype <a href="https://github.com/wsu-cpts421-sp22/macb
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/15">Issue #15</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>3<br/>0</td><td>0<br/>0</td><td>3<br>6</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
-    <tr><td colspan="2" align="right"><b>Totals:</b></td><td><b>0<br/>0</b></td><td><b>15.75<br/>32.25</b></td><td><b>0<br/>0</b></td><td><b>0<br/>0</b></td><td><b>0<br/>0</b></td><td><b>0<br/>0</b></td><td colspan="2"></td>
+    <tr><td colspan="2" align="right"><b>Totals:</b></td><td><b>0<br/>0</b></td><td><b>15.75<br/>32.25</b></td><td><b>17<br/>27.3</b></td><td><b>0<br/>0</b></td><td><b>0<br/>0</b></td><td><b>0<br/>0</b></td><td colspan="2"></td>
     </tr>
   </tbody>
 </table>
