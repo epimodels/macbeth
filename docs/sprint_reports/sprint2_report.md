@@ -110,7 +110,10 @@ instructions for the prototype <a href="https://github.com/wsu-cpts421-sp22/macb
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/30">Issue #30</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>8<br/>0</td><td>0<br/>0</td><td>5<br>8</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/27">Issue #27</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/27">Issue #27</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>1<br/>3</td><td>100%</td><td></td>
+    </tr>
+    <tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/28">Issue #28</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>1<br/>7</td><td>100%</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/18">Issue #18</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/48">PR #48</a></td><td>5<br/>0</td><td>0<br/>0</td><td>2<br>8</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
@@ -143,7 +146,10 @@ instructions for the prototype <a href="https://github.com/wsu-cpts421-sp22/macb
 |Kyle| For this this sprint, I created the Register, Login, and Refresh API for the front end to communicate with. I was very excited to incorporate this with Trevor's frontend component, as the communication and refresh tokens worked almost flawlessly on the first trial. I also performed a lot of research regarding how Serializers and Viewsets work. Going into this sprint, I had no idea the format React expected for communication nor how to perform the communications. It was a great learning opportunity and very rewarding to see the end result working. |
 |Trevor| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Ethan| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Eric| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Eric| For this sprint, I added the compute layer to macbeth as well as a route to trigger
+the model, and added a table to the database that could store the results generated. I was
+unable to get the model data to be stored properly due to time constraints, and will have
+that fixed in the next sprint.  |
 
 ### Testing
 
@@ -260,7 +266,7 @@ instructions for the prototype <a href="https://github.com/wsu-cpts421-sp22/macb
 |Kyle| I feel like our communication should be more prompt. There were some scenarios in which we would not reply or communicate for long periods at a time and it hindered our progress in a few areas. There was definitely problems with communication at the beginning of the sprint, but we managed to get back on top about halfway through. |
 |Trevor| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 |Ethan| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|Eric| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Eric| My communication during this sprint was definitely lacking. There was a long period when I wasn't regularly checking the teams messages and was overall disengaged from what was going on. To make up for this, I tried to be more engaged during the group meetings. In future sprints I should use teams more regularly to let my team members know what I am workig on. |
 
 ### Retrospective
 
