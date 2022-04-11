@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import EpiModel, Parameter
+from .compututations.computemodels import ZombieSIR
 
 
 # Create your views here.
@@ -38,3 +39,4 @@ def chosen_model_form(request, model_id=101):
             d.update({params[i].name: int(request.POST.get(params[i].name))})
         return results(request, d, model_id)
     return render(request, 'backend/chosen_model.html', {"parameters": params})
+

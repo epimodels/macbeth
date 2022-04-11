@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 from datetime import timedelta
 
@@ -91,6 +92,19 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+# Github actions configuration
+if os.environ.get('GITHUB_ACTIONS'):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'macbeth_db',
+            'USER': 'postgres',
+            'PASSWORD': '123',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
 
 # Rest Framework Settings
 # https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html

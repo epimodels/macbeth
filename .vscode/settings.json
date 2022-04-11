@@ -9,4 +9,6 @@
         "--ignore",
         "F401", // Unused imports give an error. This is not ideal due to __init__.py files
     ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
 }
