@@ -11,7 +11,7 @@ import './nav_button.css'
  * size: Size of button
  */
 function NavButton(props) {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   
   function handleClick() {
     navigate(props.redirect)

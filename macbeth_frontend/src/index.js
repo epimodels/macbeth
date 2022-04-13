@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './App';
+import Home from './components/home';
 import Compute from './components/compute';
 import ModelSelect from './components/model_select';
 import ParameterEdit from './components/parameter_edit';
@@ -21,6 +22,7 @@ ReactDOM.render(
     <Router>
       <Routes>
         <Route path="/" element={<App/ >}>
+          <Route path="home" element = {<Home />} />
           <Route path="compute" element={<Compute />}>
             {/* add capability to leave 'compute' to come back to same tab? */}
             <Route path="model-select" element={<ModelSelect />} />

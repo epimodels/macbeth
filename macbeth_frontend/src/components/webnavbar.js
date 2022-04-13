@@ -29,7 +29,7 @@ class WebNavbar extends React.Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto" activeClassName="active">
-                <Nav.Link as={NavLink} to='/'>Home <span className="visually-hidden">(current)</span></Nav.Link>
+                <Nav.Link as={NavLink} to='/home'>Home <span className="visually-hidden">(current)</span></Nav.Link>
                 <Nav.Link as={NavLink} to='/compute/model-select'>Compute</Nav.Link>
                 <NavDropdown title="Help" id="basic-nav-dropdown">
                 <NavDropdown.Item as={NavLink} to='/help/faq'>FAQ</NavDropdown.Item>
