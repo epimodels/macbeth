@@ -41,6 +41,7 @@ class WebNavbar extends React.Component {
         <Container>
           <Nav className="ms-auto">
             <Nav.Link as={NavLink} to='/account/sign-in'>Sign In</Nav.Link>
+            <Nav.Link as={NavLink} to='/account/register'>Register</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

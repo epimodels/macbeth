@@ -11,6 +11,7 @@ import Results from './components/results';
 import Faq from './components/faq';
 import ContactUs from './components/contact_us';
 import SignIn from './components/signin';
+import Register from './components/register';
 import AccountView from './components/account_view';
 import SignOut from './components/signout';
 import reportWebVitals from './reportWebVitals';
@@ -35,6 +36,7 @@ ReactDOM.render(
           {/* add redirection based on whether user is signed in or not */}
           <Route path="account">
             <Route path="sign-in" element={<SignIn />} />
+            <Route path="register" element={<Register />} />
             <Route path="account/view" element={<AccountView />} />
             <Route path="account/sign-out" element={<SignOut />} />
           </Route>
