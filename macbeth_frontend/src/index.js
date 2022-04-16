@@ -4,25 +4,25 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './App';
-import Home from './components/home';
-import Compute from './components/compute';
-import ModelSelect from './components/model_select';
-import ParameterEdit from './components/parameter_edit';
-import Results from './components/results';
-import Faq from './components/faq';
-import ContactUs from './components/contact_us';
-import SignIn from './components/signin';
-import Register from './components/register';
-import AccountView from './components/account_view';
-import SignOut from './components/signout';
+import Home from './components/pages/home';
+import Compute from './components/pages/compute';
+import ModelSelect from './components/pages/model_select';
+import ParameterEdit from './components/pages/parameter_edit';
+import Results from './components/pages/results';
+import Faq from './components/pages/faq';
+import ContactUs from './components/pages/contact_us';
+import SignIn from './components/pages/signin';
+import Register from './components/pages/register';
+import AccountView from './components/pages/account_view';
+import SignOut from './components/pages/signout';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render( 
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<App/ >}>
-          <Route path="home" element = {<Home />} />
+        <Route path="/" element={<App />}>
+          <Route index element = {<Home />} />
           <Route path="compute" element={<Compute />}>
             {/* add capability to leave 'compute' to come back to same tab? */}
             <Route path="model-select" element={<ModelSelect />} />

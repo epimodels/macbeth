@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Home extends React.Component {
+class InvalidUrl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -8,9 +8,9 @@ class Home extends React.Component {
   
   render() {
     return (
-      <h1>Home</h1>
+      <h1>This page doesn't exist!</h1>
     )
   }
 }
 
-export default Home;
+export default InvalidUrl;
