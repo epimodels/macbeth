@@ -1,8 +1,9 @@
-#! /bin/sh
+#! /usr/bin/env bash
 
 ## This script is meant to help run repetitive commands.
 ## NOTE: if getting an error saying `macbeth_backend_user` table not made,
 ## RUN: ./manage.py makemigrations macbeth_backend
+
 ## Postgres DB Info
 
 USERNAME=postgres
