@@ -7,7 +7,7 @@
 
 import numpy
 from scipy import integrate
-from .interface_compute_model import InterfaceComputeModel
+from macbeth_backend.computations.interface_compute_model import InterfaceComputeModel
 
 
 class ZombieSIR(InterfaceComputeModel):

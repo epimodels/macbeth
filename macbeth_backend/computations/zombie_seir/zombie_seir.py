@@ -7,7 +7,8 @@
 
 import numpy
 from scipy import integrate
-from .interface_compute_model import InterfaceComputeModel
+from macbeth_backend.computations.interface_compute_model import InterfaceComputeModel
+
 
 
 class ZombieSEIR(InterfaceComputeModel):
@@ -16,14 +17,6 @@ class ZombieSEIR(InterfaceComputeModel):
         self.infect_prob = infect_prob
         self.infect_duration = infect_duration
         self.latent_period = latent_period
-
-    @staticmethod
-    def title():
-        return 'Zombie SEIR'
-
-    @staticmethod
-    def description():
-        return 'The SEIR model is a basic model of a disease.'
 
     def compute_model(self, **kwargs):
         s0 = 0.9999

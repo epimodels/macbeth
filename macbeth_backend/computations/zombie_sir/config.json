@@ -1,0 +1,34 @@
+{
+    "ModelName": "Example Model",
+    "Version": 1.0,
+    "Author": "Example Author",
+    "Description": "This is an example model that demonstrates how the different functionality works for configuring epidemic models",
+    "Type": "Deterministic",
+    "Authorlink": "https://www.idmod.org/",
+    "Parameters": [
+        {
+            "Name": "Integer Example",
+            "Type": "integer",
+            "Description": "A brief explanation of what the parameter controls.",
+            "Min": 0,
+            "Max": 10000,
+            "DefaultValue": 1
+        },
+        {
+            "Name": "Double Example",
+            "Type": "double",
+            "Description": "A brief explanation of what the parameter controls.",
+            "Min": -1.0,
+            "Max": 1,
+            "DefaultValue": 0.1
+        },
+        {
+            "Name": "String Example",
+            "Type": "string",
+            "Description": "A brief explanation of what the parameter controls. Strings might be used for seeds.",
+            "Min": {},
+            "Max": {},
+            "DefaultValue": ""
+        }
+    ]
+}

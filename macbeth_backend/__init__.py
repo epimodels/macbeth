@@ -5,10 +5,10 @@
 # ------------------------------------------------------------
 # Locates all of the compute models and loads them into the
 # compute_models dictionary.
-
 import inspect
-from compututations import *
-
+import pprint
+from .computations import interface_compute_model
+from .computations.config import Config
 
 def _load_compute_models(parent=interface_compute_model.InterfaceComputeModel):
     models = set()
@@ -21,15 +21,13 @@ def _load_compute_models(parent=interface_compute_model.InterfaceComputeModel):
 def _get_attributes_model(model):
     attributes = inspect.getfullargspec(model.__init__).args
     return {
-        'title': model.title(),
-        'description': model.description(),
+        'name': model.__name__,
         'attributes': [a for a in attributes if not (a[0].startswith('_') or a == 'self')],
         'model': model,
     }
 
-
 _models_classes = _load_compute_models()
-COMPUTE_MODELS = {model.title(): _get_attributes_model(model) for model in _models_classes}
+COMPUTE_MODELS = [_get_attributes_model(model) for model in _models_classes]
 
 del _models_classes
 del _load_compute_models

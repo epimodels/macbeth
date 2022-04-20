@@ -15,16 +15,6 @@ class InterfaceComputeModel(ABC):
     def __init__(self, *args, **kwargs):
         '''Initializes the interface.'''
 
-    @staticmethod
-    @abstractmethod
-    def title():
-        '''Returns the title of the model.'''
-
-    @staticmethod
-    @abstractmethod
-    def description():
-        '''Returns the description of the model.'''
-
     @abstractmethod
     def compute_model(self, **kwargs):
         '''Computes the model.'''
