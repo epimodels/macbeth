@@ -1,5 +1,4 @@
 import React from 'react';
-import ButtonGroup from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 import axiosInstance from '../../axios';
 import ModelDropdownItems from './model_dropdown_items'
@@ -28,6 +27,10 @@ class ModelDropdown extends React.Component {
       })
   }
 
+  handleChange(e) {
+    this.setState({modelprompt: e.target.innerText});
+  }
+
   render() {
     return (
       <Dropdown>
@@ -39,7 +42,7 @@ class ModelDropdown extends React.Component {
         {this.state.modelprompt}
           </Dropdown.Toggle>
         <Dropdown.Menu className='model'>
-          <ModelDropdownItems models={this.state.options}/>
+          <ModelDropdownItems onClick={(e) => this.handleChange(e)} models={this.state.options}/>
         </Dropdown.Menu>
       </Dropdown>
     );
