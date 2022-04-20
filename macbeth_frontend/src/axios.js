@@ -26,7 +26,7 @@ axiosInstance.interceptors.response.use(
         const originalRequest = error.config;
 
         // Network outage of some kind.
-        if(typeof error.reponse === 'undefined') {
+        if(typeof error.response === 'undefined') {
             alert(
                 'A server/network error has occured. ' +
                 'Please try again later. ' +
@@ -41,6 +41,29 @@ axiosInstance.interceptors.response.use(
             originalRequest.url === baseURL + 'auth/refresh/'
         ) {
             window.location.href = '/account/sign-in';
+            return Promise.reject(error);
+        }
+        
+        // bad request during registration attempt.
+        if (
+            error.response.status === 400 &&
+            originalRequest.url === 'auth/register/'
+        ) {
+            if (error.response.data.password) {
+                alert(error.response.data.password);
+            }
+            else if (error.response.data.email) {
+                alert(error.response.data.email);
+            }
+            return Promise.reject(error);
+        }
+        
+        // bad request during login attempt.
+        if (
+            error.response.status === 401 &&
+            originalRequest.url === 'auth/login/'
+        ) {
+            alert('Invalid email or password.');
             return Promise.reject(error);
         }
 
@@ -64,7 +87,6 @@ axiosInstance.interceptors.response.use(
                         .then((res) => {
                             localStorage.setItem('access_token', res.data.access);
                             localStorage.setItem('refresh_token', res.data.refresh);
-
                             axiosInstance.defaults.headers['Authorization'] =
                                 'JWT ' + res.data.access
                             originalRequest.headers['Authorization'] =

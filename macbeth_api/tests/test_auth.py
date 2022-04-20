@@ -1,10 +1,15 @@
 from django.test import TestCase, Client
 from rest_framework import status
 from macbeth_backend.models.account.user import User
+import datetime
 
 
 class LoginViewSetTest(TestCase):
-    
+    '''Login ViewSet Tests for the :class: `LoginViewSet`.
+
+    :param: TestCase: The base class for test cases.
+    :type: TestCase: class
+    '''
     def setUp(self):
         self.user = User.objects.create_user(
             email="test@123.com", 
@@ -31,7 +36,7 @@ class LoginViewSetTest(TestCase):
         return
 
     def test_api_login_invalid(self):
-        invalid_pass= self.client.post(
+        invalid_pass = self.client.post(
             '/api/auth/login/', 
             {'email': self.user.email, 'password': '1234567'},
         )
@@ -48,8 +53,8 @@ class LoginViewSetTest(TestCase):
 class RegisterViewSetTest(TestCase):
     def setUp(self):
         self.user = User.objects.create_user(
-            email='taken@test.com', 
-            password='12345678', 
+            email='taken@test.com',
+            password='12345678',
             **{'date_of_birth': '1986-08-12'},
         )
         self.client = Client()
@@ -58,10 +63,10 @@ class RegisterViewSetTest(TestCase):
     def test_api_register_valid(self):
         response = self.client.post(
             '/api/auth/register/', {
-                'email': 'test@test.com', 
-                'password': '12345678', 
-                'firstname': 'test', 
-                'lastname': 'test', 
+                'email': 'test@test.com',
+                'password': '12345678',
+                'firstname': 'test',
+                'lastname': 'test',
                 'date_of_birth': '1986-08-12',
             },
         )
@@ -71,12 +76,18 @@ class RegisterViewSetTest(TestCase):
         self.assertEqual(data['is_active'], False)
         self.assertEqual(data['is_staff'], False)
         self.assertEqual(data['is_superuser'], False)
+
+        query = User.objects.get(email="test@test.com")
+        self.assertEqual(query.email, 'test@test.com')
+        self.assertEqual(query.firstname, 'test')
+        self.assertEqual(query.lastname, 'test')
+        self.assertEqual(query.date_of_birth, datetime.date(1986, 8, 12))
         return
 
     def test_api_register_invalid_email(self):
         response = self.client.post(
             '/api/auth/register/', {
-                'email': 'test', 
+                'email': 'test',
                 'password': '12345678',
                 'firstname': 'test',
                 'lastname': 'test',
@@ -85,4 +96,20 @@ class RegisterViewSetTest(TestCase):
         )
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(response.data['email'][0], 'Enter a valid email address.')
+        self.assertEqual(User.objects.filter(email='test').count(), 0)
+        return
+
+    def test_api_register_invalid_password(self):
+        response = self.client.post(
+            '/api/auth/register/', {
+                'email': 'test',
+                'password': '1234',
+                'firstname': 'test',
+                'lastname': 'test',
+                'date_of_birth': '1986-08-12',
+            },
+        )
+
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(User.objects.filter(email='test').count(), 0)
         return
