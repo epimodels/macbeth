@@ -17,14 +17,6 @@ class ZombieSIR(InterfaceComputeModel):
         self.infect_duration = infect_duration
         super().__init__()
 
-    @staticmethod
-    def title():
-        return 'Zombie SIR'
-
-    @staticmethod
-    def description():
-        return 'The Zombie SIR model is a simple model of a zombie epidemic.'
-
     def compute_model(self, **kwargs):
 
         # Parameter Values and Initial Conditions

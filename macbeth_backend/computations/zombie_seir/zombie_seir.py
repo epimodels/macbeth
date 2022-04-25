@@ -10,7 +10,6 @@ from scipy import integrate
 from macbeth_backend.computations.interface_compute_model import InterfaceComputeModel
 
 
-
 class ZombieSEIR(InterfaceComputeModel):
 
     def __init__(self, infect_prob, infect_duration, latent_period):

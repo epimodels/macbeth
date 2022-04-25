@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import EpiModel, Parameter
-from .compututations.computemodels import ZombieSIR
+from .computations.computemodels import ZombieSIR
 
 
 # Create your views here.
