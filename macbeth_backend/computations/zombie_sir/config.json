@@ -1,0 +1,26 @@
+{
+    "Title": "ZombieSIR",
+    "Version": 1.0,
+    "Author": "Eric Lofgren (adapted by Kyle Hurd)",
+    "Description": "Susceptible-Infected-Recovered (SIR) of a population of zombies.",
+    "Type": "Deterministic",
+    "Authorlink": "https://docs.idmod.org/projects/emod-generic/en/latest/model-sir.html",
+    "Parameters": [
+        {
+            "Name": "Infect Probability",
+            "Type": "float",
+            "Description": "The probability that a susceptible person will become infected.",
+            "Min": 0.0,
+            "Max": 100.0,
+            "DefaultValue": 0.5
+        },
+        {
+            "Name": "Infect Duration",
+            "Type": "double",
+            "Description": "The duration of the infection.",
+            "Min": -1.0,
+            "Max": 1,
+            "DefaultValue": 0.1
+        }
+    ]
+}
