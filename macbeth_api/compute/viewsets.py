@@ -13,7 +13,7 @@ class ComputeModelsViewSet(viewsets.ViewSet):
     def list(self, request):
         '''List all available compute models.'''
         return Response({
-            'models': 
+            'models':
             [
                 {"name": "Example Model 1", "id": "examplemodel1"},
                 {"name": "Example Model 2", "id": "examplemodel2"},
@@ -24,7 +24,7 @@ class ComputeModelsViewSet(viewsets.ViewSet):
     def retrieve(self, request, pk=None):
         '''Retrieve a specific compute model.'''
         return Response({
-                        "ModelName": "Example Model",
+                        "Title": "Example Model",
                         "Version": "1.0",
                         "Author": "Example Author",
                         "Description": "This is an example model that demonstrates how the different functionality works for configuring epidemic models",
