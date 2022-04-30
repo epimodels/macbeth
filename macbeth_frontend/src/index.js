@@ -4,17 +4,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './App';
-import Home from './components/pages/home';
-import Compute from './components/pages/compute';
-import ModelSelect from './components/pages/model_select';
-import ParameterEdit from './components/pages/parameter_edit';
-import Results from './components/pages/results';
-import Faq from './components/pages/faq';
-import ContactUs from './components/pages/contact_us';
-import SignIn from './components/pages/signin';
-import Register from './components/pages/register';
-import AccountView from './components/pages/account_view';
-import SignOut from './components/pages/signout';
+import Home from './components/home/home';
+import Compute from './components/compute/compute';
+import ModelSelect from './components/model_select/model_select';
+import ParameterEdit from './components/model_params/parameter_edit';
+import Results from './components/model_results/results';
+import Faq from './components/help/faq';
+import ContactUs from './components/help/contact_us';
+import SignIn from './components/account/signin';
+import Register from './components/account/register';
+import AccountView from './components/account/account_view';
+import SignOut from './components/account/signout';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render( 

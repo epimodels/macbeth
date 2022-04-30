@@ -1,7 +1,7 @@
 import React from 'react';
-import ModelDropdown from '../model_dropdown'
+import ModelDropdown from './model_dropdown'
 import NavButton from '../nav_button'
-import Progress from '../progress'
+import Progress from '../compute/progress'
 
 /*
  * Sub-page of Compute

@@ -2,8 +2,8 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import {Row, Col} from 'react-bootstrap'
 import NavButton from '../nav_button'
-import Progress from '../progress'
-import Parameter from '../parameter'
+import Progress from '../compute/progress'
+import Parameter from './parameter'
 
 /*
  * Sub-page of Compute

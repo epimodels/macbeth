@@ -1,6 +1,6 @@
 import React from 'react';
 import NavButton from '../nav_button'
-import Progress from '../progress'
+import Progress from '../compute/progress'
 
 /*
  * Sub-page of Compute

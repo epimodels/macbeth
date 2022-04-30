@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import InfoCard from '../info_card'
-import UpdateLogCard from '../update_log_card';
+import InfoCard from './info_card'
+import UpdateLogCard from './update_log_card';
 import './home.css'
 
 /* 
