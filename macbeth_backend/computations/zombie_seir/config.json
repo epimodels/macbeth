@@ -1,0 +1,26 @@
+{
+    "Title": "ZombieSEIR",
+    "Version": 1.0,
+    "Author": "Eric Lofgren (adapted by Kyle Hurd)",
+    "Description": "Susceptible-Exposed-Infected-Recovered (SEIR) model of a population of zombies.",
+    "Type": "Deterministic",
+    "Authorlink": "https://docs.idmod.org/projects/emod-generic/en/latest/model-seir.html?highlight=SEIR",
+    "Parameters": [
+        {
+            "Name": "Infect Prob",
+            "Type": "float",
+            "Description": "The probability that an infected individual will infect a susceptible individual.",
+            "Min": 0.0,
+            "Max": 100.0,
+            "DefaultValue": 0.5
+        },
+        {
+            "Name": "Infect Duration",
+            "Type": "double",
+            "Description": "The duration of the infection in hours.",
+            "Min": 0.0,
+            "Max": 100.0,
+            "DefaultValue": 0.1
+        }
+    ]
+}

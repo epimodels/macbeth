@@ -30,6 +30,12 @@ export default function Register() {
     e.preventDefault();
     console.log(formData);
 
+    // ensure that password and password confirmation match
+    if (formData.password !== formData.confirmPassword) {
+      alert('Passwords do not match');
+      return;
+    } 
+    
     axiosInstance
       .post('auth/register/', {
         email: formData.email,

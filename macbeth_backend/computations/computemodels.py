@@ -34,7 +34,7 @@ def ZombieSIR(infect_prob, infect_duration):
     numpy.arange(t_start, t_end, t_step)
 
     # Calculate R_0
-    #R_0 = beta/gamma
+    # R_0 = beta/gamma
 
     # Solving the differential equation. Solves over t for initial conditions
     # PopIn
@@ -207,6 +207,7 @@ def Haven(infect_prob_free, infect_prob_safe, infect_duration,
 
 # for testing purposes only
 
+
 def main():
     print("Main function")
     print(ZombieSIR(0.5, 11)[3].size)
@@ -214,6 +215,7 @@ def main():
     print(ZombieSIR(0.7, 13)[3].size)
     print(ZombieSIR(0.8, 14)[3].size)
     print(ZombieSIR(0.9, 15)[3].size)
+
 
 if __name__ == "__main__":
     main()

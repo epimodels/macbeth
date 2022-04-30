@@ -12,10 +12,6 @@ class ModelSelect extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {
-    // grab models here?
-  }
-
   render() {
     return (
       <div className='select'>
