@@ -160,19 +160,17 @@ Please follow the repository instructions for the prototype <a href="https://git
 
 ### Retrospective
 
-[Link to Recording](https://wsu.zoom.us/recording)
+[Link to Recording](https://emailwsu.sharepoint.com/teams/2022.PULLM.CptS.421.423-MACBETH2/Shared%20Documents/Recordings/New%20channel%20meeting-20220501_152806-Meeting%20Recording.mp4?web=1)
 
 #### What went well
-  - Item 1
-  - Item 2
-  - Item x
+  - We were able to do lots of planning at the beginning that really set up the rest of the sprint well
+  - Utilizing "mini sprints" where we each sprinted towards a different goal each week was successful when we were able to do so
+  - We checked in a lot more often with each other
   
  #### What we'd like to improve
-  - Item 1
-  - Item 2
-  - Item x
+  - We need to get better about leaving tasks to do at the last minute
+  - We'd also like to get better at managing our time in general and consistently putting forth more hours every week
   
 #### Changes we plan to implement in next sprint period
-  - Item 1
-  - Item 2
-  - Item x
+  - For people who find it helpful, we should figure out an individual's goals for the entire sprint rather than just one week at a time to help manage our time
+  - We are planning on meeting more frequently and regularly, at least once a week but preferably twice or more as needed
