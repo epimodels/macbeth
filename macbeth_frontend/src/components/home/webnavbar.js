@@ -6,12 +6,28 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import { NavLink } from 'react-router-dom'
 import './webnavbar.css'
 
-class WebNavbar extends React.Component {
+class WebNavbar extends React.Component  {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      accountNav: null,
+    };
   }
 
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick()
+    );
+  }
+
+  tick() {
+    this.setState({
+      accountNav: localStorage.getItem('access_token') ? <Nav className="ms-auto"><Nav.Link as={NavLink} to ='/account/view'>View Account</Nav.Link>
+      <Nav.Link as={NavLink} to='/account/sign-out'>Sign Out</Nav.Link></Nav> : <Nav className="ms-auto"><Nav.Link as={NavLink} to='/account/register'>Register</Nav.Link>
+        <Nav.Link as={NavLink} to='/account/sign-in'>Sign In</Nav.Link></Nav>
+    })
+  }
+  
   render() {
     return (
       <Navbar bg="light" expand="lg" sticky="top">
@@ -42,12 +58,11 @@ class WebNavbar extends React.Component {
         </Container>
         <Container>
           <Nav className="ms-auto">
-            <Nav.Link as={NavLink} to='/account/sign-in'>Sign In</Nav.Link>
-            <Nav.Link as={NavLink} to='/account/register'>Register</Nav.Link>
+            {this.state.accountNav}
           </Nav>
         </Container>
       </Navbar>
-    )
+    );
   }
 }
 

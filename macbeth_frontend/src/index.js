@@ -39,8 +39,8 @@ ReactDOM.render(
           <Route path="account">
             <Route path="sign-in" element={<SignIn />} />
             <Route path="register" element={<Register />} />
-            <Route path="account/view" element={<AccountView />} />
-            <Route path="account/sign-out" element={<SignOut />} />
+            <Route path="view" element={<AccountView />} />
+            <Route path="sign-out" element={<SignOut />} />
           </Route>
         </Route>
      </Routes>

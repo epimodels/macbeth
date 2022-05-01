@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Container from 'react-bootstrap/esm/Container';
+import axiosInstance from '../../axios';
+import { useNavigate } from 'react-router-dom';
 
-class SignOut extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-    }
-  
-  render() {
-    return (
-      <h1>Signing Out</h1>
-    )
-  }
+export default function SignOut() {
+  const history = useNavigate();
+
+  useEffect(() => {
+    const response = axiosInstance
+      .post('auth/logout/', {
+        refresh_token: localStorage.getItem('refresh_token'),
+      })
+      localStorage.removeItem('access_token');
+      localStorage.removeItem('refresh_token');
+      axiosInstance.defaults.headers['Authorization'] = null;
+      history('/account/sign-in');
+  });
+
+  return (
+    <Container>
+      <h1>Signed Out</h1>
+    </Container>
+  );
 }
-
-export default SignOut;
