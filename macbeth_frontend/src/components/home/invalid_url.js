@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SignOut extends React.Component {
+class InvalidUrl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -8,9 +8,9 @@ class SignOut extends React.Component {
   
   render() {
     return (
-      <h1>Signing Out</h1>
+      <h1>This page doesn't exist!</h1>
     )
   }
 }
 
-export default SignOut;
+export default InvalidUrl;

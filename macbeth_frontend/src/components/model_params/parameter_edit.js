@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
 import {Row, Col} from 'react-bootstrap'
 import NavButton from '../nav_button'
-import Progress from '../progress'
+import Progress from '../compute/progress'
 import Parameter from './parameter'
 import axiosInstance from '../../axios';
 import { useState } from 'react';

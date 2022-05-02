@@ -9,7 +9,7 @@ class ModelDropdown extends React.Component {
     super(props);
     this.state = {
       options: {},
-      modelprompt: 'Loading Models...'
+      modelPrompt: 'Loading Models...'
     };
     this.allowNext = this.props.allowNextEvent;
   }
@@ -19,9 +19,9 @@ class ModelDropdown extends React.Component {
     axiosInstance
       .get('/compute/models/', {})
       .then(res => {
-        let modeldict = {};
+        let modelDict = {};
         for (var i = 0; i < res.data.models.length; i++) {
-          modeldict[res.data.models[i].name] = res.data.models[i].id;
+          modelDict[res.data.models[i].name] = res.data.models[i].id;
         }
         this.setState({options : modeldict});
         this.setState({modelprompt : 'Select a Model'});
@@ -53,7 +53,7 @@ class ModelDropdown extends React.Component {
           size='lg'
           className='model'
         > 
-        {this.state.modelprompt}
+        {this.state.modelPrompt}
           </Dropdown.Toggle>
         <Dropdown.Menu className='model'>
           <ModelDropdownItems onClick={(e) => this.handleChange(e)} models={this.state.options}/>

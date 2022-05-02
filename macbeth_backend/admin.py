@@ -8,12 +8,12 @@ from django.db import models
 
 class UserAdminConfig(UserAdmin):
     model = User
-    search_fields = ('email', 'firstname',)
-    list_filter = ('email', 'firstname', 'is_active', 'is_staff')
+    search_fields = ('email', 'nickname',)
+    list_filter = ('email', 'nickname', 'is_active', 'is_staff')
     ordering = ('date_joined',)
-    list_display = ('id', 'email', 'firstname', 'lastname', 'is_active', 'is_staff', 'is_superuser', 'date_joined')
+    list_display = ('id', 'email', 'nickname', 'is_active', 'is_staff', 'is_superuser', 'date_joined')
     fieldsets = (
-        (None, {'fields': ('email', 'firstname', 'lastname', 'password')}),
+        (None, {'fields': ('email', 'nickname', 'password')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser')}),
     )
     formfield_overrides = {
