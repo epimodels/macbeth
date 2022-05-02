@@ -78,6 +78,11 @@ Please follow the repository instructions for the prototype <a href="https://git
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/16">Issue #16</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>4.2<br/>8</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>4</td><td>0<br/>0</td><td>83%</td><td></td>
     </tr>
+     <tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/29">Issue #29</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/56">PR #56</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>3</td><td>0<br/>0</td><td>100%</td><td></td>
+    </tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/14">Issue #14</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0.5<br/>3</td><td>0<br/>0</td><td>10%</td><td></td>
+    </tr>
     <tr><td colspan="2" align="right"><b>Totals:</b></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td><td colspan="2"></td>
     </tr>
   </tbody>
@@ -89,7 +94,7 @@ Please follow the repository instructions for the prototype <a href="https://git
 |Mikaela| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Kyle| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Trevor| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Ethan| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Ethan| During this milestone, one thing that I contributed by creating tab auto-completion for our bash scripts. As our scripts start to get bigger and have more commands, this tool will help us use our program faster. The other major thing that I contributed was the backend api of our job models. This allows the backend to store all jobs that a user has ever performed. These are saved to the user's account for later access. |
 |Eric| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 
 ### Testing
@@ -155,7 +160,7 @@ Please follow the repository instructions for the prototype <a href="https://git
 |Mikaela| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 |Kyle| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 |Trevor| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|Ethan| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Ethan| I think that our team did a good job with building on the communication that we established during the last sprint. We met about once a week to discuss our ideas and struggles, and to make sure everyone was making progress. It also helped that we are out of the setup phase and have begun working on the real implementation. This has caused us to have a lot less roadblocks with needing to wait for someone else to finish their stuff. |
 |Eric| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 
 ### Retrospective
