@@ -1,0 +1,123 @@
+/* THEMES */
+
+/* pink */
+#card-pink {
+  color: #260000;
+  background-color: #FFEFEF;
+}
+
+#card-pink .card-title {
+  margin-bottom: 20px;
+}
+
+.card-pink-muted {
+  color: #6e5a5a;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.accordion-pink .accordion-button {
+  box-shadow: 0 0 5px #C68484;
+  color: #260000;
+  background-color: #FFF6F6;
+}
+
+.accordion-pink .accordion-button:hover {
+  box-shadow: 0 0 15px 1px #C68484;
+  color: #260000;
+  background-color: #FFF6F6;
+}
+
+.accordion-pink .accordion-button:focus {
+  box-shadow: 0 0 10px 1px #bd6767;
+  color: #260000;
+  background-color: #FFF6F6;
+}
+
+.accordion-pink .accordion-button:not(.collapsed)::after {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+/* gray */
+#card-gray {
+  color: #1D1D1D;
+  background-color: #EAEAEA;
+}
+
+#card-gray .card-title {
+  margin-bottom: 20px;
+}
+
+.card-gray-muted {
+  color: #766D6D;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.accordion-gray .accordion-button {
+  box-shadow: 0 0 5px #797979;
+  color: #1D1D1D;
+  background-color: #F6F6F6;
+}
+
+.accordion-gray .accordion-button:hover {
+  box-shadow: 0 0 15px 1px #969696;
+  color: #1D1D1D;
+  background-color: #F6F6F6;
+}
+
+.accordion-gray .accordion-button:focus {
+  box-shadow: 0 0 10px 1px #474747;
+  color: #1D1D1D;
+  background-color: #F6F6F6;
+}
+
+.accordion-gray .accordion-button:not(.collapsed)::after {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+/* brown */
+#card-brown {
+  color: #260000;
+  background-color: #9C7D77;
+}
+
+#card-brown .card-title {
+  margin-bottom: 20px;
+}
+
+.card-brown-muted {
+  color: #533838;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.accordion-brown .accordion-button {
+  box-shadow: 0 0 5px #260000;
+  color: #260000;
+  background-color: #B89D98;
+}
+
+.accordion-brown .accordion-button:hover {
+  box-shadow: 0 0 15px 1px #FFEAEA;
+  color: #260000;
+  background-color: #B89D98;
+}
+
+.accordion-brown .accordion-button:focus {
+  box-shadow: 0 0 10px #FFEAEA;
+  color: #260000;
+  background-color: #B89D98;
+}
+
+.accordion-brown .accordion-button:not(.collapsed)::after {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+
+.card {
+  margin-top: 25px;
+}

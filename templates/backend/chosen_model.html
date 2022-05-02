@@ -1,8 +1,0 @@
-<form method="POST">
-    {% csrf_token %}
-    {% for result in parameters %}
-        <label for="{{ result.id }}">{{ result.name }}: </label>
-        <input type="text" id="{{ result.name }}" name="{{result.name}}"></br>
-    {% endfor %}
-    <button type="submit">Submit</button>
-</form>
