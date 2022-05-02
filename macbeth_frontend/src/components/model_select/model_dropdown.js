@@ -19,9 +19,10 @@ class ModelDropdown extends React.Component {
     axiosInstance
       .get('/compute/models/', {})
       .then(res => {
+        console.log(res.data);
         let modelDict = {};
         for (var i = 0; i < res.data.models.length; i++) {
-          modelDict[res.data.models[i].name] = res.data.models[i].id;
+          modelDict[res.data.models[i].title] = res.data.models[i].id;
         }
         this.setState({options: modelDict});
         this.setState({modelPrompt : 'Select a Model'});

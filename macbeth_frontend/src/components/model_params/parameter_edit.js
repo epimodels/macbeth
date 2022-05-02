@@ -17,12 +17,16 @@ const ParameterEdit = (props) => {
   const [rowNum, setRowNum] = useState('');
   const URLparams = useParams();
   const [parameters, setParameters] = useState([]);
+  const [description, setDescription] = useState('');
+  const [author, setAuthor] = useState('');
 
   useEffect(() => {
     axiosInstance
       .get('/compute/models/' + URLparams.modelid +'/', {})
       .then(res => {
         setParameters(res.data.Parameters);
+        setAuthor(res.data.Author);
+        setDescription(res.data.Description);
       })
     }
   , []);
@@ -44,7 +48,9 @@ const ParameterEdit = (props) => {
 
   return(
     <div>
-        <h4 style={{'margin-bottom':'2%'}}>{localStorage.getItem('compute-selected-model-name')}</h4>
+        <h4>{localStorage.getItem('compute-selected-model-name')}</h4>
+        <span class={'text-muted'} style={{'margin-bottom':'2%'}}>{author}</span><br />
+        <span class={'text-muted'} style={{'margin-bottom':'2%'}}>{description}</span>
         <Progress currentStep={2} />
         <h4 style={{'margin-bottom':'2%'}}>Edit Parameters</h4>
         <Form> {/* dynamically organizes the parameters into rows and columns based on number */}
