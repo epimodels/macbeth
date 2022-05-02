@@ -11,6 +11,7 @@ import './nav_button.css'
  * size: Size of button
  */
 function NavButton(props) {
+  let disabled = props.disabled;
   let navigate = useNavigate();
   
   function handleClick() {
@@ -22,6 +23,7 @@ function NavButton(props) {
       className={props.variant}
       size={props.size}
       onClick={handleClick}
+      disabled={disabled}
     >
       {props.label}
     </Button>

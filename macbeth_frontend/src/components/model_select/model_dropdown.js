@@ -11,6 +11,7 @@ class ModelDropdown extends React.Component {
       options: {},
       modelprompt: 'Loading Models...'
     };
+    this.allowNext = this.props.allowNextEvent;
   }
 
   componentDidMount() {
@@ -24,11 +25,24 @@ class ModelDropdown extends React.Component {
         }
         this.setState({options : modeldict});
         this.setState({modelprompt : 'Select a Model'});
+        if(localStorage.getItem('compute-selected-model') !== null) {
+          this.setState({modelprompt : localStorage.getItem('compute-selected-model-name')});
+          this.allowNext();
+        }
       })
   }
 
   handleChange(e) {
     this.setState({modelprompt: e.target.innerText});
+    const prevmodelID = localStorage.getItem('compute-selected-model');
+    console.log(e.target.id);
+    // If the model is new
+    if(prevmodelID !== e.target.id) {
+      localStorage.setItem('compute-selected-model', e.target.id);
+      localStorage.setItem('compute-selected-model-name', e.target.innerText);
+      localStorage.setItem('compute-selected-model-params', JSON.stringify({}));
+    }
+    this.allowNext();
   }
 
   render() {

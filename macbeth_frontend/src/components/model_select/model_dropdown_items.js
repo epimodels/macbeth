@@ -13,7 +13,7 @@ const ModelDropdownItems = (props) => {
     return (
         <React.Fragment>
             {Object.entries(models).map(([key, value]) => (
-                <Dropdown.Item key={key} onClick={props.onClick} eventKey={value}>{key}</Dropdown.Item>
+                <Dropdown.Item key={value} id={value} onClick={props.onClick} eventKey={value}>{key}</Dropdown.Item>
             ))}
         </React.Fragment>
     )

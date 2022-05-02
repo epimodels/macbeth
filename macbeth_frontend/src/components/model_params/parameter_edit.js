@@ -1,30 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
 import {Row, Col} from 'react-bootstrap'
 import NavButton from '../nav_button'
 import Progress from '../progress'
 import Parameter from './parameter'
+import axiosInstance from '../../axios';
+import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 /*
  * Sub-page of Compute
  * Future: if no parameters are received, show an error screen (with potentially a report a bug button?)
  */
-class ParameterEdit extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      row_num: 4, // change this number to change how many parameters are in one column
-    };
 
-    this._create2DArray.bind(this);
-  }
+const ParameterEdit = (props) => {
+  const [rowNum, setRowNum] = useState('');
+  const URLparams = useParams();
+  const [parameters, setParameters] = useState([]);
 
-  // Creates a 2D array of rows and columns to organize the parameters
-  _create2DArray() {
+  useEffect(() => {
+    axiosInstance
+      .get('/compute/models/' + URLparams.modelid +'/', {})
+      .then(res => {
+        setParameters(res.data.Parameters);
+      })
+    }
+  , []);
+
+  const _create2dArray = () => {
     let rows = [[], []];
     let cols = 1;
-    this.props.parameters.forEach((parameter, idx) => {
-      if (idx % this.state.row_num === 0 && idx !== 0) {
+    parameters.forEach((parameter, idx) => {
+      if (idx % rowNum === 0 && idx !== 0) {
         cols++;
         rows.push([]);
         rows[cols].push(parameter);
@@ -35,18 +42,19 @@ class ParameterEdit extends React.Component {
     return rows;
   }
 
-  render() {
-    let rows = this._create2DArray(); // pre-processing
-    return (
-      <div>
+  return(
+    <div>
+        <h4 style={{'margin-bottom':'2%'}}>{localStorage.getItem('compute-selected-model-name')}</h4>
         <Progress currentStep={2} />
-        <h4 style={{'margin-bottom':'2%'}}>Edit a Parameter</h4>
+        <h4 style={{'margin-bottom':'2%'}}>Edit Parameters</h4>
         <Form> {/* dynamically organizes the parameters into rows and columns based on number */}
           <Row className='justify-content-center'>
-            {rows.map((item, idx) => {
+            {parameters.map((item, idx) => {
               return (
                 <Col xs={'auto'}>
-                  {item}
+                  <Parameter controlID='default' label={item.Name} type='basicDefualt' 
+                    placeholder={item.DefaultValue} 
+                    text={item.Description} />
                 </Col>
               )
             })}
@@ -55,15 +63,23 @@ class ParameterEdit extends React.Component {
         <NavButton label='Back' redirect='/compute/model-select' variant='prev'/>
         <NavButton label='Next' redirect='/compute/results' variant='next'/>
       </div>
-    )
-  }
+  )
 }
 
-ParameterEdit.defaultProps = {
+
+
+
+
+
+
+
+
+
+/*ParameterEdit.defaultProps = {
   // This is for testing only
   parameters: [<Parameter controlId='formBasicParameter' label='Parameter1' type='parameter' placeholder='enter parameter here'/>, 
               <Parameter controlId='formBasicParameter' label='Parameter2' type='parameter' placeholder='enter parameter here'/>, 
               <Parameter controlId='formBasicParameter' label='Parameter3' type='parameter' placeholder='enter parameter here'/>]
-}
+}*/
 
 export default ParameterEdit;

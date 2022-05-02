@@ -24,7 +24,7 @@ ReactDOM.render(
           <Route path="compute" element={<Compute />}>
             {/* add capability to leave 'compute' to come back to same tab? */}
             <Route path="model-select" element={<ModelSelect />} />
-            <Route path="parameter-edit" element={<ParameterEdit />} />
+            <Route path="parameter-edit/:modelid" element={<ParameterEdit />} />
             <Route path="results" element={<Results />} />
               {/* add unique url for each result */}
               {/* <Route path=":resultsID" element={<Result />} /> */}
