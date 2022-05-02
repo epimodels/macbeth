@@ -5,6 +5,8 @@ from rest_framework.permissions import AllowAny
 from macbeth_backend import COMPUTE_MODELS
 from macbeth_backend.computations.config import Config
 
+import json
+
 # [{ Title, Version, id }, ...]
 # list() = GET "API/Compute/"
 
@@ -13,7 +15,13 @@ from macbeth_backend.computations.config import Config
 # create = POST "API/Compute/"
 MODEL_DICT = {}
 for model in COMPUTE_MODELS:
-    MODEL_DICT[model['name']] = model
+    MODEL_DICT[model['name']] = [
+        {
+            'title': Config.title(model['model']),
+            'version': Config.version(model['model']),
+            'id': model['name'],
+        }
+    ]
 
 
 class ComputeModelsViewSet(viewsets.ViewSet):
