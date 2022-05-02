@@ -58,32 +58,32 @@ Please follow the repository instructions for the prototype <a href="https://git
   </thead> 
   <tbody>
     <tr>
-      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/53">Issue #53</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>1.5</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/53">Issue #53</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>5<br/>3</td><td>3<br/>3</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100%</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/54">Issue #54</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/52">Issue #52</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>7.7</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/52">Issue #52</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0.75<br/>7.7</td><td>0.75<br/>7.7</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>25%</td><td>Researched and created a Home page. Not enough time to get to the rest as it is low priority.</td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/55">Issue #55</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>5<br>12</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100%</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/15">Issue #15</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>6</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>2</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/15">Issue #15</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>2.5<br/>9</td><td>1.75<br/>6</td><td>0<br>0</td><td>0<br/>0</td><td>0.75<br/>2</td><td>0<br/>0</td><td>86%</td><td>Updated the frontend to match other pages and to match new backend. Updated the backend so we're collecting a lesser amount of sensitive data. Still need frontend automated testing.</td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/18">Issue #18</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>1<br/>2</td><td>1<br>3</td><td>0<br/>0</td><td>0<br/>4</td><td>0<br/>0</td><td>58%</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/18">Issue #18</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>2<br/>5</td><td>1<br/>2</td><td>1<br>3</td><td>0<br/>0</td><td>0<br/>4</td><td>0<br/>0</td><td>82%</td><td>Updated the frontend to match other pages and to match new backend. More testing has been added/updated. Still needs the ability to recover forgotten account information, but we ran out of time and it is low priority.</td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/16">Issue #16</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>4.2<br/>8</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>4</td><td>0<br/>0</td><td>83%</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/16">Issue #16</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>5<br/>10</td><td>5<br/>10</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>4</td><td>0<br/>0</td><td>100%</td><td></td>
     </tr>
      <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/29">Issue #29</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/56">PR #56</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>3</td><td>0<br/>0</td><td>100%</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/29">Issue #29</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/56">PR #56</a></td><td>2<br/>3</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>2<br/>3</td><td>0<br/>0</td><td>100%</td><td></td>
     </tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/14">Issue #14</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0.5<br/>3</td><td>0<br/>0</td><td>10%</td><td></td>
     </tr>
-    <tr><td colspan="2" align="right"><b>Totals:</b></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td><td colspan="2"></td>
+    <tr><td colspan="2" align="right"><b>Totals:</b></td><td>0<br/>0</td><td>11.5<br/>28.7</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td><td colspan="2"></td>
     </tr>
   </tbody>
 </table>
