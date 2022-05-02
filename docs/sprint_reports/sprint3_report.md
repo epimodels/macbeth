@@ -1,7 +1,7 @@
 # Report for Sprint # 3: *Team Nightingale*
 
 ## Link to Sprint Summary Video
-[Summary video link](https://youtube.com/)
+[Summary video link](https://www.youtube.com/watch?v=2fAZ5M4UhPI)
 
 ## Link to Online Communication Channel (MS Teams/Slack/Discord)
 [MS Teams link](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A82a13a296cc04422a8cca15d5b8096d0%40thread.tacv2%2FMACBETH%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=b220a2c2-7afd-4a37-abe3-43ede7d9e484&directDl=true&msLaunch=true&enableMobilePage=true)
@@ -61,7 +61,7 @@ Please follow the repository instructions for the prototype <a href="https://git
       <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/53">Issue #53</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>5<br/>3</td><td>3<br/>3</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100%</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/54">Issue #54</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/54">Issue #54</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>3<br/>4</td><td>0<br/>0</td><td>0<br>0</td><td>3<br/>4</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/52">Issue #52</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0.75<br/>7.7</td><td>0.75<br/>7.7</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>25%</td><td>Researched and created a Home page. Not enough time to get to the rest as it is low priority.</td>
@@ -86,7 +86,19 @@ Please follow the repository instructions for the prototype <a href="https://git
     </tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/13">Issue #13</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0.5<br/>3</td><td>2<br/>6</td><td>10%</td><td></td>
     </tr>
-    <tr><td colspan="2" align="right"><b>Totals:</b></td><td>0<br/>0</td><td>11.5<br/>28.7</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>3<br/>12</td><td>0</td><td></td><td colspan="2"></td>
+    </tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/12">Issue #12</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>4<br/>10</td><td>0<br/>0</td><td>0<br/>0</td><td>50%</td><td>API now communicates between the front end and the backend. Just needs additional unit testing.</td>
+    </tr>
+    </tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/9">Issue #9</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>2<br/>5</td><td>0<br/>0</td><td>0<br/>0</td><td>70%</td><td>API now communicates between the front end and the backend. Just needs additional unit testing, and the code to get the params into the models.</td>
+    </tr>
+    </tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/43">Issue #43</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>2<br/>3</td><td>0<br/>0</td><td>0<br/>0</td><td>100%</td><td></td>
+    </tr>
+    </tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/40">Issue #40</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>2<br/>2</td><td>0<br/>0</td><td>0<br/>0</td><td>100%</td><td></td>
+    </tr>
+    <tr><td colspan="2" align="right"><b>Totals:</b></td><td>0<br/>0</td><td>11.5<br/>28.7</td><td>0<br/>0</td><td>13<br/>25</td><td>0<br/>0</td><td>3<br/>12</td><td>0</td><td></td><td colspan="2"></td>
     </tr>
   </tbody>
 </table>
@@ -96,7 +108,7 @@ Please follow the repository instructions for the prototype <a href="https://git
 |-------------|-------------------|
 |Mikaela| At the start of this sprint, we set 3 goals for myself to accomplish by thend: working on miscellaneous pages, adding a responsive navbar (depending on if the user is logged in or not), and fixing the user model to more closely match what our design draft detailed. I was able to accomplish all of these and more; I added a Home page with different cards (each can have its own individual theme, I made 3 default ones), I fully implemented the user story of logging out, the navbar now says "Register" and "Sign In" or "View Account" and "Sign Out" depending on the current access token, I updated the backend, api, and frontend to collect less sensitive user data (first, last name -> nickname, date of birth -> verify you're over 13 checkbox), and I updated the tests relating to users based on this new backend/api updates as well as adding more for logging out. I also mostly did this sprint report, counting the messages, reacts, meetings, and more. I feel very accomplished this sprint! |
 |Kyle| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Trevor| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Trevor| During this sprint, I once again acted as the API czar. This was going to be the sprint where we'd get essentially all of the API endpoints done, and because of that, there was a huge amount of work that would need to be put in to coordinating the implementation of the frontend and the backend. I was responsible for completing the persistent session code for the frontend model and parameter selection form, as well as implementing several prototypes relating to job and model retrieval. I also managed the merging this sprint, particularly with building our common feature branch that each of the API front-end, back-end, and job system branches would merge into to give a common base for other features. Finally, I wrote the future work for our final report draft, and created this sprint's video.  |
 |Ethan| During this milestone, one thing that I contributed by creating tab auto-completion for our bash scripts. As our scripts start to get bigger and have more commands, this tool will help us use our program faster. The other major thing that I contributed was the backend api of our job models. This allows the backend to store all jobs that a user has ever performed. These are saved to the user's account for later access. |
 |Eric| During this milestone, I mostly did research on how to implement my issues in future sprints |
 
@@ -216,7 +228,7 @@ Please follow the repository instructions for the prototype <a href="https://git
 |-------------|-------------------|
 |Mikaela| We did a good job on keeping in contact throughout this sprint despite how busy it got especially as we got into dead week. I feel like the counts above pretty accurately display how often I make an effort to engage with my team and keep myself and others updated on our project. I finally figured out how to keep all of my notifications on, so I see messages within a few hours of their posting if not sooner and I try to always respond somehow (either through a reply or a react). Anyways, now that we've been able to move past the sluggish beginning, it's been easier to discuss what we're working on and it's been easier to work alone and together throughout the sprint. |
 |Kyle| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|Trevor| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Trevor| I was kind of surprised to see how well our team did in communication. We all knew this sprint was going to be particularly difficult because of dead week, but despite that, we did good. One of the really great things was the fact that our team went above and beyond to communicate whenever we had something that was stumping us, and relying on the group to help them work through problems. Mikaela, Kyle and I probably messaged each other at least 3-4 times a day just to make sure the API went smoothly. All in all, I was incredibly satisfied with how we did. |
 |Ethan| I think that our team did a good job with building on the communication that we established during the last sprint. We met about once a week to discuss our ideas and struggles, and to make sure everyone was making progress. It also helped that we are out of the setup phase and have begun working on the real implementation. This has caused us to have a lot less roadblocks with needing to wait for someone else to finish their stuff. |
 |Eric| I think the team overall did well communicating throughout the sprint. I personally need to work on being more engaged with the team outside of meetings.  |
 
