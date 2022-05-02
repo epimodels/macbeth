@@ -13,9 +13,9 @@ import json
 # retrieve = GET "API/Compute/ID"
 
 # create = POST "API/Compute/"
-MODEL_DICT = {}
+MODEL_LIST = []
 for model in COMPUTE_MODELS:
-    MODEL_DICT[model['name']] = [
+    MODEL_LIST += [
         {
             'title': Config.title(model['model']),
             'version': Config.version(model['model']),
@@ -23,6 +23,9 @@ for model in COMPUTE_MODELS:
         }
     ]
 
+MODEL_TO_CONF_DICT = {}
+for model in COMPUTE_MODELS:
+    MODEL_TO_CONF_DICT[model['name']] = model
 
 class ComputeModelsViewSet(viewsets.ViewSet):
     '''ViewSet for handling of compute models.'''
@@ -33,7 +36,7 @@ class ComputeModelsViewSet(viewsets.ViewSet):
     def list(self, request):
         '''List all available compute models.'''
         return Response({
-            'models': MODEL_DICT,
+            'models': MODEL_LIST,
         }, status=status.HTTP_200_OK)
 
     def retrieve(self, request, pk=None):
@@ -43,9 +46,17 @@ class ComputeModelsViewSet(viewsets.ViewSet):
         # Make COMPUTE_MODELS a dictionary of {name: model}
         # if pk in dict, return the config file for it, otherwise error
         print(f'pk: {pk}')
+        body = ""
+        try:
+            body = Config.load_config_from_obj(
+                MODEL_TO_CONF_DICT[pk]['model'],
+            )
+        except KeyError:
+            return Response({
+                'error': 'Model not found.',
+            }, status=status.HTTP_404_NOT_FOUND)
+
         return Response(
-            Config.load_config_from_obj(
-                MODEL_DICT['ZombieSIR']['model'],
-            ),
+            body,
             status=status.HTTP_200_OK,
         )
