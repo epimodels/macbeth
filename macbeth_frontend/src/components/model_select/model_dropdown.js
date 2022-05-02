@@ -23,17 +23,17 @@ class ModelDropdown extends React.Component {
         for (var i = 0; i < res.data.models.length; i++) {
           modelDict[res.data.models[i].name] = res.data.models[i].id;
         }
-        this.setState({options : modeldict});
-        this.setState({modelprompt : 'Select a Model'});
+        this.setState({options: modelDict});
+        this.setState({modelPrompt : 'Select a Model'});
         if(localStorage.getItem('compute-selected-model') !== null) {
-          this.setState({modelprompt : localStorage.getItem('compute-selected-model-name')});
+          this.setState({modelPrompt : localStorage.getItem('compute-selected-model-name')});
           this.allowNext();
         }
       })
   }
 
   handleChange(e) {
-    this.setState({modelprompt: e.target.innerText});
+    this.setState({modelPrompt: e.target.innerText});
     const prevmodelID = localStorage.getItem('compute-selected-model');
     console.log(e.target.id);
     // If the model is new

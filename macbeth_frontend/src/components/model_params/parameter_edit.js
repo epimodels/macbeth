@@ -51,7 +51,7 @@ const ParameterEdit = (props) => {
           <Row className='justify-content-center'>
             {parameters.map((item, idx) => {
               return (
-                <Col xs={'auto'}>
+                <Col xs={'auto'} key={item.Name}>
                   <Parameter controlID='default' label={item.Name} type='basicDefualt' 
                     placeholder={item.DefaultValue} 
                     text={item.Description} />
@@ -61,7 +61,7 @@ const ParameterEdit = (props) => {
           </Row>
         </Form>
         <NavButton label='Back' redirect='/compute/model-select' variant='prev'/>
-        <NavButton label='Next' redirect='/compute/results' variant='next'/>
+        <NavButton label='Submit' redirect='/compute/results' variant='next'/>
       </div>
   )
 }
