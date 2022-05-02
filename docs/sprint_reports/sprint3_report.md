@@ -73,10 +73,15 @@ Please follow the repository instructions for the prototype <a href="https://git
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/15">Issue #15</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>6</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>2</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/18">Issue #18</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>1<br/>2</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>4</td><td>0<br/>0</td><td>58%</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/18">Issue #18</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>1<br/>2</td><td>0<br>3</td><td>0<br/>0</td><td>0<br/>4</td><td>0<br/>0</td><td>58%</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/16">Issue #16</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>4.2<br/>8</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>4</td><td>0<br/>0</td><td>83%</td><td></td>
+    </tr>
+     <tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/29">Issue #29</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/56">PR #56</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>3</td><td>0<br/>0</td><td>100%</td><td></td>
+    </tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/14">Issue #14</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0.5<br/>3</td><td>0<br/>0</td><td>10%</td><td></td>
     </tr>
     <tr><td colspan="2" align="right"><b>Totals:</b></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td><td colspan="2"></td>
     </tr>
@@ -89,7 +94,7 @@ Please follow the repository instructions for the prototype <a href="https://git
 |Mikaela| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Kyle| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Trevor| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Ethan| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Ethan| During this milestone, one thing that I contributed by creating tab auto-completion for our bash scripts. As our scripts start to get bigger and have more commands, this tool will help us use our program faster. The other major thing that I contributed was the backend api of our job models. This allows the backend to store all jobs that a user has ever performed. These are saved to the user's account for later access. |
 |Eric| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 
 ### Testing
@@ -113,15 +118,60 @@ Please follow the repository instructions for the prototype <a href="https://git
   </thead> 
   <tbody>
     <tr>
-      <td>4/12/22</td><td>0 (0)</td><td>0 (2)</td><td>1 (0)</td><td>2 (0)</td><td>0 (0)</td><td>0 (0)</td>
+      <td>4/12/22</td><td>1 (2)</td><td>0 (2)</td><td>1 (0)</td><td>2 (0)</td><td>0 (0)</td><td>0 (0)</td>
     </tr>
     <tr>
-     <td>//22</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td>
+     <td>4/13/22</td><td>5 (2)</td><td>4 (0)</td><td>0 (0)</td><td>1 (1)</td><td>0 (0)</td><td>0 (1)</td>
     </tr>
     <tr>
-     <td>//22</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td>
+     <td>4/14/22</td><td>2 (0)</td><td>1 (0)</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td>
+    <tr>
+     <td>4/16/22</td><td>11 (7)</td><td>3 (1)</td><td>4 (0)</td><td>1 (0)</td><td>3 (6)</td><td>0 (0)</td>
+    </tr>
+    <tr>
+     <td>4/18/22</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>1 (0)</td>
+    </tr>
+    <tr>
+     <td>4/19/22</td><td>25 (10)</td><td>6 (6)</td><td>4 (1)</td><td>15 (2)</td><td>0 (1)</td><td>0 (0)</td>
+    </tr>
+    <tr>
+     <td>4/20/22</td><td>2 (2)</td><td>1 (1)</td><td>0 (0)</td><td>0 (0)</td><td>1 (0)</td><td>0 (1)</td>
+    </tr>
+    <tr>
+     <td>4/21/22</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td>
+    </tr>
+    <tr>
+     <td>4/22/22</td><td>3 (2)</td><td>1 (2)</td><td>1 (0)</td><td>0 (0)</td><td>1 (0)</td><td>0 (0)</td>
+    </tr>
+    <tr>
+     <td>4/23/22</td><td>9 (6)</td><td>4 (5)</td><td>1 (0)</td><td>2 (0)</td><td>1 (1)</td><td>1 (0)</td>
+    </tr>
+    <tr>
+     <td>4/24/22</td><td>6 (0)</td><td>4 (0)</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td><td>1 (0)</td>
+    </tr>
+    <tr>
+     <td>4/25/22</td><td>7 (2)</td><td>3 (2)</td><td>0 (0)</td><td>3 (0)</td><td>1 (0)</td><td>0 (0)</td>
+    </tr>
+    <tr>
+     <td>4/26/22</td><td>6 (2)</td><td>2 (2)</td><td>1 (0)</td><td>3 (0)</td><td>0 (0)</td><td>0 (0)</td>
+    </tr>
+    <tr>
+     <td>4/27/22</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>1 (0)</td><td>0 (0)</td>
+    </tr>
+    <tr>
+     <td>4/28/22</td><td>1 (0)</td><td>1 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td>
+    </tr>
+    <tr>
+     <td>4/29/22</td><td>5 (4)</td><td>1 (2)</td><td>0 (0)</td><td>2 (0)</td><td>2 (2)</td><td>0 (0)</td>
+    </tr>
+    <tr>
+     <td>4/30/22</td><td>8 (3)</td><td>5 (3)</td><td>0 (0)</td><td>1 (0)</td><td>2 (0)</td><td>0 (0)</td>
+    </tr>
+    <tr>
+     <td>5/1/22</td><td>45 (9)</td><td>11 (5)</td><td>8 (1)</td><td>21 (0)</td><td>5 (3)</td><td>0 (0)</td>
+    </tr>
+    <tr><td align="right"><b>Totals:</b></td><td><b>141 (51)</b></td><td><b>47 (31)</b></td><td><b>22 (2)</b></td><td><b>52 (3)</b></td><td><b>17 (13)</b></td><td><b>3 (2)</b></td>
     </tr>
   </tbody>
 </table>
@@ -139,12 +189,21 @@ Please follow the repository instructions for the prototype <a href="https://git
   </thead> 
   <tbody>
     <tr>
-      <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
+      <td>4/19/22</td><td>143</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Professor, Work</td>
     </tr>
-     <tr>
-      <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Sponsor</td>
+    <tr>
+      <td>4/24/22</td><td>120</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td><td></td><td>Work</td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+    <tr>
+      <td>4/25/22</td><td>62</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td>Sponsor</td>
+    </tr>
+    <tr>
+      <td>4/26/22</td><td>96</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td><td>Work</td>
+    </tr>
+    <tr>
+      <td>5/1/22</td><td>111</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td><td>Work</td>
+    </tr>
+    <tr><td align="right"><b>Totals:</b></td><td><b>532</b></td><td><b>5</b></td><td><b>5</b></td><td><b>5</b></td><td><b>3</b></td><td><b>2</b></td>
     </tr>
   </tbody>
 </table>
@@ -155,7 +214,7 @@ Please follow the repository instructions for the prototype <a href="https://git
 |Mikaela| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 |Kyle| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 |Trevor| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|Ethan| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Ethan| I think that our team did a good job with building on the communication that we established during the last sprint. We met about once a week to discuss our ideas and struggles, and to make sure everyone was making progress. It also helped that we are out of the setup phase and have begun working on the real implementation. This has caused us to have a lot less roadblocks with needing to wait for someone else to finish their stuff. |
 |Eric| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 
 ### Retrospective
