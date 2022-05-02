@@ -30,7 +30,7 @@ def _get_attributes_model(model):
 
 _models_classes = _load_compute_models()
 COMPUTE_MODELS = [_get_attributes_model(model) for model in _models_classes]
-# print(pprint.pformat(COMPUTE_MODELS))
+print(pprint.pformat(COMPUTE_MODELS))
 
 del _models_classes
 del _load_compute_models
