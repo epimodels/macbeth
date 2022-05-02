@@ -6,8 +6,8 @@
 # Register the routers for the macbeth_api
 
 from rest_framework.routers import SimpleRouter
-from .auth.viewsets import LoginViewSet, RegisterViewSet, RefreshViewSet, BlacklistTokenViewSet
 from macbeth_backend.models.account import UserViewSet
+from .auth.viewsets import LoginViewSet, RegisterViewSet, RefreshViewSet, BlacklistTokenViewSet
 from .compute.viewsets import ComputeModelsViewSet
 
 routes = SimpleRouter()

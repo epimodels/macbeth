@@ -3,7 +3,6 @@ import axiosInstance from '../../axios';
 import { useNavigate } from 'react-router-dom';
 
 // React Bootstrap
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/Row';
@@ -14,7 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 
-
+import NavButton from '../nav_button'
 
 
 // React sign in component
@@ -28,10 +27,10 @@ export default function SignIn() {
     visiblePassword: false,
   })
 
-  const [formData, updateformData] = useState(initialFormData);
+  const [formData, updateFormData] = useState(initialFormData);
 
   const handleChange = (e) => {
-    updateformData({
+    updateFormData({
       ...formData,
       [e.target.name]: e.target.value.trim(),
     });
@@ -59,26 +58,29 @@ export default function SignIn() {
     return (
       <Container>
         <div className="signin">
-          <h1>Sign In</h1>
+          <h2 style={{'margin-top':'3%'}}>Sign In</h2>
           <Form>
-            <Form.Group as={Row} className="mb-3" controlId="formUsername">
-              <Form.Label column sm={2}>
-                Username:
+            <Form.Group as={Row} controlId="formUsername" className="justify-content-center" style={{'margin-top':'5%'}}>
+              <Form.Label column sm={1} style={{display:'flex',justifyContent:'right'}}>
+                email:
               </Form.Label>
               <Col sm={4}>
-                <Form.Control type="text" name="email" placeholder="Enter username" onChange={handleChange} />
+                <Form.Control type="text" name="email" placeholder="Enter email" onChange={handleChange} />
               </Col>
+              <Col sm={1}></Col>
             </Form.Group>
-            <Form.Group as={Row} className="mb-3" controlID="formPassword">
-              <Form.Label column sm={2}>Password:</Form.Label>
+            <Form.Group as={Row} controlID="formPassword" className="justify-content-center" style={{'margin-top':'2%', 'margin-bottom':'3%'}}>
+              <Form.Label column sm={1} style={{display:'flex',justifyContent:'right'}}>
+                password:
+              </Form.Label>
               <Col sm={4}>
                 <Form.Control type={formData.visiblePassword ? "text" : "password"} name = "password" placeholder="Enter password" onChange={handleChange} />
               </Col>
-              <Col sm={2}>
-                <FontAwesomeIcon icon={formData.visiblePassword ? faEyeSlash : faEye} id="togglepassword" onClick={() => updateformData({...formData, visiblePassword: !formData.visiblePassword})} />
+              <Col sm={1}>
+                <FontAwesomeIcon icon={formData.visiblePassword ? faEyeSlash : faEye} id="togglepassword" onClick={() => updateFormData({...formData, visiblePassword: !formData.visiblePassword})} style={{'margin-top':'10%', 'margin-left':'-100%'}}/>
               </Col>
             </Form.Group>
-            <Button variant="primary" type="submit" onClick={handleSubmit} >Sign In</Button>
+            <NavButton label="Sign In" variant="account" clickEvent={handleSubmit} />
           </Form>
         </div>
       </Container>

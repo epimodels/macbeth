@@ -11,10 +11,10 @@ import ParameterEdit from './components/model_params/parameter_edit';
 import Results from './components/model_results/results';
 import Faq from './components/help/faq';
 import ContactUs from './components/help/contact_us';
-import SignIn from './components/account/signin';
+import SignIn from './components/account/sign_in';
 import Register from './components/account/register';
 import AccountView from './components/account/account_view';
-import SignOut from './components/account/signout';
+import SignOut from './components/account/sign_out';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render( 

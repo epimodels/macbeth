@@ -61,18 +61,17 @@ class RegisterSerializer(UserSerializer):
     :param UserSerializer: The base class serializer.
     :type UserSerializer: class
     '''
+    email = serializers.EmailField(max_length=128, required=True, write_only=True)
+    nickname = serializers.CharField(max_length=128, required=True, write_only=True)
     password = serializers.CharField(
         max_length=128, min_length=8,
         required=True, write_only=True,
     )
-    email = serializers.EmailField(max_length=128, required=True, write_only=True)
-    firstname = serializers.CharField(max_length=128, required=True, write_only=True)
-    lastname = serializers.CharField(max_length=128, required=True, write_only=True)
-    date_of_birth = serializers.DateField(required=True, write_only=True)
+    over13 = serializers.BooleanField(required=True, write_only=True)
 
     class Meta:
         model = User
-        fields = ('id', 'email', 'firstname', 'lastname', 'date_of_birth', 'password',
+        fields = ('id', 'email', 'nickname', 'password', 'over13',
                   'is_active', 'is_staff', 'is_superuser', 'date_joined', 'last_login',
                   )
 

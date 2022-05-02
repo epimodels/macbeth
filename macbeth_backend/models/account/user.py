@@ -20,9 +20,8 @@ class User(AbstractBaseUser, PermissionsMixin):
         _('email address'), max_length=32,
         unique=True,
         )
-    firstname = models.CharField(max_length=32)
-    lastname = models.CharField(max_length=32)
-    date_of_birth = models.DateField()
+    nickname = models.CharField(max_length=32)
+    over13 = models.BooleanField(default=True)
 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
@@ -33,7 +32,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
     EMAIL_FIELD = 'email'
-    REQUIRED_FIELDS = ['firstname', 'lastname', 'date_of_birth', ]
+    REQUIRED_FIELDS = ['nickname', 'over13', ]
 
     def __str__(self) -> str:
         '''Returns the unique identifier of the :class: `account.User`.
@@ -43,24 +42,13 @@ class User(AbstractBaseUser, PermissionsMixin):
         '''
         return self.email
 
-    def get_full_name(self) -> str:
+    def get_nickname(self) -> str:
         '''
-        A longer formal identifier for the user such as their full name.
+        A longer formal identifier for the user such as their nickname.
         If implemented, this appears alongside the username in an object's
         history in django.contrib.admin.
 
-        :return: The firstname and lastname of the :class: `account.User`.
+        :return: The nickname of the :class: `account.User`.
         :rtype: str
         '''
-        return f'{self.firstname} {self.lastname}'
-
-    def get_short_name(self) -> str:
-        '''
-        A short, informal identifier for the user such as their first name.
-        If implemented, this replaces the username in the greeting to the user
-        in the header of :class: `django.contrib.admin`.
-
-        :return: The firstname of the :class: `account.User`.
-        :rtype: str
-        '''
-        return self.firstname
+        return self.nickname

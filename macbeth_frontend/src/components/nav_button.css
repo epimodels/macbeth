@@ -28,3 +28,13 @@
   background-color: #7AA07B;
   border: #7AA07B;
 }
+
+.account, .account:focus {
+  background-color: #7CD47E;
+  border: #7CD47E;
+}
+
+.account:hover {
+  background-color: #4AD94D;
+  border: #4AD94D;
+}
