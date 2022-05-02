@@ -55,6 +55,9 @@ axiosInstance.interceptors.response.use(
             else if (error.response.data.email) {
                 alert(error.response.data.email);
             }
+            else if (error.response.data.over13) {
+                alert('You have to verify you are over 13');
+            }
             return Promise.reject(error);
         }
         
