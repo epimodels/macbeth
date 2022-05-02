@@ -21,7 +21,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         unique=True,
         )
     nickname = models.CharField(max_length=32)
-    over13 = models.BooleanField(default=True)
+    over13 = models.BooleanField(default=False)
 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)

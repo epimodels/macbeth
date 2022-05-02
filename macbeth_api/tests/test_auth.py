@@ -12,9 +12,10 @@ class LoginViewSetTest(TestCase):
     '''
     def setUp(self):
         self.user = User.objects.create_user(
-            email="test@123.com", 
-            password='123456', 
-            **{'date_of_birth': '1986-08-12'}
+            email="test@123.com",
+            password='123456',
+            **{'nickname': 'Test',
+               'over13': True, },
         )
         self.client = Client()
 
@@ -27,9 +28,8 @@ class LoginViewSetTest(TestCase):
         data = response.data['user']
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(data['email'], self.user.email)
-        self.assertEqual(data['firstname'], self.user.firstname)
-        self.assertEqual(data['lastname'], self.user.lastname)
-        self.assertEqual(data['date_of_birth'], self.user.date_of_birth)
+        self.assertEqual(data['nickname'], self.user.nickname)
+        self.assertEqual(data['over13'], self.user.over13)
         self.assertEqual(data['is_active'], self.user.is_active)
         self.assertEqual(data['is_staff'], self.user.is_staff)
         self.assertEqual(data['is_superuser'], self.user.is_superuser)
@@ -55,7 +55,8 @@ class RegisterViewSetTest(TestCase):
         self.user = User.objects.create_user(
             email='taken@test.com',
             password='12345678',
-            **{'date_of_birth': '1986-08-12'},
+            **{'nickname': 'Taken',
+               'over13': True, },
         )
         self.client = Client()
         return
@@ -65,9 +66,8 @@ class RegisterViewSetTest(TestCase):
             '/api/auth/register/', {
                 'email': 'test@test.com',
                 'password': '12345678',
-                'firstname': 'test',
-                'lastname': 'test',
-                'date_of_birth': '1986-08-12',
+                'nickname': 'test',
+                'over13': True,
             },
         )
         
@@ -79,9 +79,8 @@ class RegisterViewSetTest(TestCase):
 
         query = User.objects.get(email="test@test.com")
         self.assertEqual(query.email, 'test@test.com')
-        self.assertEqual(query.firstname, 'test')
-        self.assertEqual(query.lastname, 'test')
-        self.assertEqual(query.date_of_birth, datetime.date(1986, 8, 12))
+        self.assertEqual(query.nickname, 'test')
+        self.assertEqual(query.over13, True)
         return
 
     def test_api_register_invalid_email(self):
@@ -89,9 +88,8 @@ class RegisterViewSetTest(TestCase):
             '/api/auth/register/', {
                 'email': 'test',
                 'password': '12345678',
-                'firstname': 'test',
-                'lastname': 'test',
-                'date_of_birth': '1986-08-12',
+                'nickname': 'test',
+                'over13': True,
             },
         )
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
@@ -102,14 +100,47 @@ class RegisterViewSetTest(TestCase):
     def test_api_register_invalid_password(self):
         response = self.client.post(
             '/api/auth/register/', {
-                'email': 'test',
+                'email': 'tester@test.com',
                 'password': '1234',
-                'firstname': 'test',
-                'lastname': 'test',
-                'date_of_birth': '1986-08-12',
+                'nickname': 'test',
+                'over13': True,
             },
         )
 
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        self.assertEqual(User.objects.filter(email='test').count(), 0)
+        self.assertEqual(User.objects.filter(email='tester@test.com').count(), 0)
+        return
+
+
+class BlacklistTokenViewSetTest(TestCase):
+    '''BlacklistToken ViewSet Tests for the :class: `BlacklistTokenViewSet`.
+
+    :param: TestCase: The base class for test cases.
+    :type: TestCase: class
+    '''
+    def setUp(self):
+        self.user = User.objects.create_user(
+            email="test@123.com",
+            password='12345678',
+            **{'nickname': 'Test',
+               'over13': True, },
+        )
+        self.client = Client()
+
+    def test_api_logout_valid(self):
+        login_response = self.client.post(
+            '/api/auth/login/',
+            {'email': self.user.email, 'password': '12345678'}
+        )
+        logout_response = self.client.post(
+            '/api/auth/logout/', 
+            {'refresh_token': login_response.data['refresh']},
+        )
+        response = self.client.post(
+            '/api/auth/refresh',
+            {'refresh_token': login_response.data['refresh']},
+        )
+
+        self.assertEqual(logout_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.status_code, status.HTTP_301_MOVED_PERMANENTLY)
         return
