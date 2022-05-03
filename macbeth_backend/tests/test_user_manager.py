@@ -13,11 +13,11 @@ def account_normal_user_test_cases():
     return [
         (
             'foo@bar.com', 'foobar',
-            '1986-08-12', 'Alex', 'Smith',
+            'Alex', True,
         ),
         (
             'tester@myprovider.com', 'mypassword',
-            '2000-01-10', 'Tester', 'McTester',
+            'Tester', True,
         ),
     ]
 
@@ -26,7 +26,7 @@ def account_super_user_test_cases():
     return [
         (
             'super@user.com', 'superuser',
-            '1986-08-12', 'SuperName', 'SuperLastName',
+            'SuperName', True,
         ),
     ]
 
@@ -45,42 +45,39 @@ class TestUserManager(TestCase):
         self.User = get_user_model()
         reg_users = account_normal_user_test_cases()
         sup_users = account_super_user_test_cases()
-        for email, password, dob, firstname, lastname in reg_users:
+        for email, password, nickname, over13 in reg_users:
             self.User.objects.create_user(
                 email=email,
                 password=password,
                 **{
-                    'date_of_birth': dob,
-                    'firstname': firstname,
-                    'lastname': lastname,
+                    'nickname': nickname,
+                    'over13': over13,
                 }
             )
 
-        for email, password, dob, firstname, lastname in sup_users:
+        for email, password, nickname, over13 in sup_users:
             self.User.objects.create_superuser(
                 email=email,
                 password=password,
                 **{
-                    'date_of_birth': dob,
-                    'firstname': firstname,
-                    'lastname': lastname,
+                    'nickname': nickname,
+                    'over13': over13,
                     'is_superuser': True,
                 }
             )
 
     @parameterized.expand(account_normal_user_test_cases)
     def test_normal_user(
-        self, email, password, date_of_birth,
-        firstname, lastname,
+        self, email, password, 
+        nickname, over13,
     ):
         '''Tests the creation of a new basic user.'''
         user = self.User.objects.get(email=email, is_superuser=False)
 
         self.assertEqual(user.email, email)
         self.assertTrue(user.check_password(password))
-        self.assertEqual(user.firstname, firstname)
-        self.assertEqual(user.lastname, lastname)
-        self.assertEqual(str(user.date_of_birth)[:10], date_of_birth)
+        self.assertEqual(user.nickname, nickname)
+        self.assertEqual(user.over13, over13)
         self.assertFalse(user.is_staff)
         self.assertFalse(user.is_superuser)
         self.assertTrue(user.is_active)
@@ -88,18 +85,16 @@ class TestUserManager(TestCase):
 
     @parameterized.expand(account_super_user_test_cases)
     def test_superuser(
-        self, email,
-        password, date_of_birth,
-        firstname, lastname,
+        self, email, password, 
+        nickname, over13,
     ):
         '''Tests the creation of a new superuser.'''
         user = self.User.objects.get(email=email, is_superuser=True)
 
         self.assertEqual(user.email, email)
         self.assertTrue(user.check_password(password))
-        self.assertEqual(user.firstname, firstname)
-        self.assertEqual(user.lastname, lastname)
-        self.assertEqual(str(user.date_of_birth)[:10], date_of_birth)
+        self.assertEqual(user.nickname, nickname)
+        self.assertEqual(user.over13, over13)
         self.assertTrue(user.is_staff)
         self.assertTrue(user.is_superuser)
         self.assertTrue(user.is_active)

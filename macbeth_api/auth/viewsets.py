@@ -13,7 +13,6 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.exceptions import InvalidToken
 
-from macbeth_backend.models.account import UserSerializer
 from .serializers import LoginSerializer, RegisterSerializer
 
 
@@ -80,3 +79,23 @@ class RefreshViewSet(viewsets.ViewSet, TokenRefreshView):
         except Exception as e:
             raise InvalidToken(e.args[0])
         return Response(serializer.validated_data, status=status.HTTP_200_OK)
+
+
+class BlacklistTokenViewSet(viewsets.ViewSet):
+    '''Blacklist Token ViewSet for the :class: `account.User`.
+    Blacklists the refresh token to force user to login
+
+    :param viewsets.ViewSet: The base class viewset.
+    :type viewsets.ViewSet: class
+    '''
+    permission_classes = (AllowAny, )
+    http_method_names = ['post']
+
+    def create(self, request):
+        try:
+            refresh_token = request.data['refresh_token']
+            token = RefreshToken(refresh_token)
+            token.blacklist()
+        except Exception as e:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+        return Response(status=status.HTTP_200_OK)
