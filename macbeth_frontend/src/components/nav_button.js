@@ -7,10 +7,12 @@ import './nav_button.css'
  * Navigational button
  * label: Name of button
  * redirect: When clicked, what page to go to
+ * clickEvent: Instead of simply redirecting, call a function when clicked
  * variant: Style of button
  * size: Size of button
  */
 function NavButton(props) {
+  let disabled = props.disabled;
   let navigate = useNavigate();
   
   function handleClick() {
@@ -21,7 +23,8 @@ function NavButton(props) {
     <Button 
       className={props.variant}
       size={props.size}
-      onClick={handleClick}
+      onClick={props.clickEvent === 'none' ? handleClick : props.clickEvent}
+      disabled={disabled}
     >
       {props.label}
     </Button>
@@ -31,6 +34,7 @@ function NavButton(props) {
 NavButton.defaultProps = {
   label: 'Button',
   redirect: '/',
+  clickEvent: 'none',
   variant: 'default',
   size: 'lg',
 }

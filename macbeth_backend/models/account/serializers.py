@@ -23,11 +23,11 @@ class UserSerializer(serializers.ModelSerializer):
         '''Meta class for the :class: `account.UserSerializer`.'''
         model = User
         fields = (
-            'email', 'firstname', 'lastname',
-            'date_of_birth', 'is_active', 'is_staff',
+            'email', 'nickname',
+            'over13', 'is_active', 'is_staff',
             'is_superuser', 'date_joined',
         )
         read_only_fields = (
-            'date_of_birth', 'date_joined',
+            'date_joined',
             'is_active', 'is_staff', 'is_superuser',
         )

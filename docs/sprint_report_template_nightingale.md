@@ -3,9 +3,11 @@
 ## Link to Sprint Summary Video
 [Summary video link](https://youtube.com/)
 
+## Link to Online Communication Channel (MS Teams/Slack/Discord)
+[MS Teams link](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A82a13a296cc04422a8cca15d5b8096d0%40thread.tacv2%2FMACBETH%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=b220a2c2-7afd-4a37-abe3-43ede7d9e484&directDl=true&msLaunch=true&enableMobilePage=true)
+
 ## Link to Working Prototype
-You can access our team's working prototype at [this site](https://ourapp.herokuapp.com)
-*(If your working prototype is not deployed to the web, then provide instructions here for downloading/installing your prototype)*
+Please follow the repository instructions for the prototype <a href="https://github.com/wsu-cpts421-sp22/macbeth">here. </a>
 
 ## Team members
 <table>
@@ -51,17 +53,17 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
       <th colspan="2"></th><th colspan="6">Point & Hour Counts</th><th colspan="2"></th>
     </tr> 
     <tr>
-      <th>Issue</th><th>Linked PR</th><th>Total</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th><th>% Complete</th><th>Notes</th>
+      <th>Issue</th><th>Linked PR</th><th><ins>Total</ins><br/>Points,<br/>Hours</th><th><ins>Mikaela</ins></th><th><ins>Kyle</ins></th><th><ins>Trevor</ins></th><th><ins>Ethan</ins></th><th><ins>Eric</ins></th><th>% Complete</th><th>Notes</th>
     </tr>
   </thead> 
   <tbody>
     <tr>
-      <td><a href="https://github.com/issue">Issue #</a></td><td><a href="https://github.com/PR">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue #</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/issue">Issue #</a></td><td><a href="https://github.com/PR">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue #</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
-    <tr><td colspan="2" align="right"><b>Total Hours:</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td colspan="2"></td>
+    <tr><td colspan="2" align="right"><b>Totals:</b></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td><td colspan="2"></td>
     </tr>
   </tbody>
 </table>
@@ -69,18 +71,18 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
 ### Reflection Statements
 | Team Member | Contribution Reflection Statement |
 |-------------|-------------------|
-|TM1| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|TM2| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|TM3| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|TM4| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|TM5| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Mikaela| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Kyle| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Trevor| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Ethan| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Eric| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 
 ### Testing
 
 |Issue | Test File | Feature Tested | Results Summary | 
 |------|-----------|----------------|-----------------|
-|[Issue #](https://github.com/issue)| [Google.js](https://www.github.com/)|Google Authentication| [3/3 tests passed](https://yoursite.com/animated.gif) | [
-|[Issue #](https://github.com/issue)| [routes.js](https://www.github.com/)|PUT and DELETE routes for rounds | [15/15 tests passed](https://yoursite.com/animated.gif) |
+|[Issue #](https://github.com/wsu-cpts421-sp22/macbeth/issues/)| [Google.js](https://www.github.com/wsu-cpts421-sp22/macbeth/)|Google Authentication| [3/3 tests passed](https://yoursite.com/animated.gif) | [
+|[Issue #](https://github.com/wsu-cpts421-sp22/macbeth/issues/)| [routes.js](https://www.github.com/wsu-cpts421-sp22/macbeth/)|PUT and DELETE routes for rounds | [15/15 tests passed](https://yoursite.com/animated.gif) |
   
 ### Communication
  
@@ -91,15 +93,15 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
       <th></th><th colspan="6">Message (React) Counts</th>
     </tr> 
     <tr>
-      <th>Date</th><th>Total</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th>
+      <th>Date</th><th>Total</th><th>Mikaela</th><th>Kyle</th><th>Trevor</th><th>Ethan</th><th>Eric</th>
     </tr>
   </thead> 
   <tbody>
     <tr>
-      <td>11/9/22</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td>
+      <td>//22</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td>
     </tr>
     <tr>
-     <td>11/12/22</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td>
+     <td>//22</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td>
     </tr>
     <tr><td align="right"><b>Totals:</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td>
     </tr>
@@ -114,15 +116,15 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
       <th colspan="2"></th><th colspan="5">In attendance?</th>
     </tr> 
     <tr>
-      <th>Date</th><th>Duration (min)</th><th>TM1</th><th>TM2</th><th>TM3</th><th>TM4</th><th>TM5</th><th>Type</th> 
+      <th>Date</th><th>Duration (min)</th><th>Mikaela</th><th>Kyle</th><th>Trevor</th><th>Ethan</th><th>Eric</th><th>Type</th> 
     </tr>
   </thead> 
   <tbody>
     <tr>
-      <td>11/9/21</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
+      <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
     </tr>
      <tr>
-      <td>11/12/21</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Sponsor</td>
+      <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Sponsor</td>
     </tr>
     <tr><td align="right"><b>Totals:</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
     </tr>
@@ -132,11 +134,11 @@ You can access our team's working prototype at [this site](https://ourapp.heroku
 #### Reflection Statements
 | Team Member | Communication Reflection Statement |
 |-------------|-------------------|
-|TM1| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM2| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM3| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM4| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|TM5| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Mikaela| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Kyle| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Trevor| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Ethan| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
+|Eric| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
 
 ### Retrospective
 
