@@ -1,4 +1,3 @@
-from typing_extensions import Required
 from numpy import require
 from macbeth_backend.models.epimodels import EpiModel
 from macbeth_backend.models.account import User
