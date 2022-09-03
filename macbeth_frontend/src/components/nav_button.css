@@ -3,7 +3,18 @@
   border: #EA9AB2;
 }
 
-.next, .next:focus {
+.default:active, .default:active:focus, .default:focus {
+  background-color: #eeadc0;
+  border: #eeadc0;
+  box-shadow: 0 0 5px 1px #eeadc0;
+}
+
+.default:hover, .default:hover:active:focus {
+  background-color: #eeadc0;
+  border: #eeadc0;
+}
+
+.next {
   position: fixed;
   top: 80%;
   right: 30%;
@@ -11,12 +22,18 @@
   border: #7CD47E;
 }
 
-.next:hover {
+.next:active, .next:active:focus, .next:focus {
+  background-color: #4AD94D;
+  border: #4AD94D;
+  box-shadow: 0 0 5px 1px #4AD94D;
+}
+
+.next:hover, .next:hover:active:focus {
   background-color: #4AD94D;
   border: #4AD94D;
 }
 
-.prev, .prev:focus {
+.prev {
   position: fixed;
   top: 80%;
   left: 30%;
@@ -24,17 +41,28 @@
   border: #84BC85;
 }
 
-.prev:hover {
+.prev:active, .prev:active:focus, .prev:focus {
+  background-color: #7AA07B;
+  border: #7AA07B;
+  box-shadow: 0 0 5px 1px #7AA07B;
+}
+.prev:hover, .prev:hover:active:focus {
   background-color: #7AA07B;
   border: #7AA07B;
 }
 
-.account, .account:focus {
+.nextnopos {
   background-color: #7CD47E;
   border: #7CD47E;
 }
 
-.account:hover {
+.nextnopos:active, .nextnopos:active:focus, .nextnopos:focus {
+  background-color: #4AD94D;
+  border: #4AD94D;
+  box-shadow: 0 0 5px 1px #4AD94D;
+}
+
+.nextnopos:hover, .nextnopos:hover:active:focus {
   background-color: #4AD94D;
   border: #4AD94D;
 }
