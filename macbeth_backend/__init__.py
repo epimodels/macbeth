@@ -5,10 +5,10 @@
 # ------------------------------------------------------------
 # Locates all of the compute models and loads them into the
 # compute_models dictionary.
+
 import inspect
 import pprint
 from .computations import interface_compute_model
-from .computations.config import Config
 
 
 def _load_compute_models(parent=interface_compute_model.InterfaceComputeModel):
@@ -31,7 +31,3 @@ def _get_attributes_model(model):
 _models_classes = _load_compute_models()
 COMPUTE_MODELS = [_get_attributes_model(model) for model in _models_classes]
 print(pprint.pformat(COMPUTE_MODELS))
-
-del _models_classes
-del _load_compute_models
-del _get_attributes_model

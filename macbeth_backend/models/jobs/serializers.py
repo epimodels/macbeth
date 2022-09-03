@@ -1,3 +1,9 @@
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# ------------------------------------------------------------
+# File: serializers.py
+# ------------------------------------------------------------
+#
 
 from . import Job
 from rest_framework import serializers
@@ -6,7 +12,7 @@ from rest_framework import serializers
 class JobSerializer(serializers.ModelSerializer):
     '''Serializer for the :class: `jobs.Job`
 
-    :param serializers.ModelSerializer: The base class serializer 
+    :param serializers.ModelSerializer: The base class serializer
     :type serializers.ModelSerializer: class
     '''
 

@@ -1,3 +1,9 @@
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# ------------------------------------------------------------
+# File: viewsets.py
+# ------------------------------------------------------------
+# Compute Model ViewSets
 
 from rest_framework import status, viewsets
 from rest_framework.response import Response
@@ -5,14 +11,6 @@ from rest_framework.permissions import AllowAny
 from macbeth_backend import COMPUTE_MODELS
 from macbeth_backend.computations.config import Config
 
-import json
-
-# [{ Title, Version, id }, ...]
-# list() = GET "API/Compute/"
-
-# retrieve = GET "API/Compute/ID"
-
-# create = POST "API/Compute/"
 MODEL_LIST = []
 for model in COMPUTE_MODELS:
     MODEL_LIST += [
@@ -20,12 +18,13 @@ for model in COMPUTE_MODELS:
             'title': Config.title(model['model']),
             'version': Config.version(model['model']),
             'id': model['name'],
-        }
+        },
     ]
 
 MODEL_TO_CONF_DICT = {}
 for model in COMPUTE_MODELS:
     MODEL_TO_CONF_DICT[model['name']] = model
+
 
 class ComputeModelsViewSet(viewsets.ViewSet):
     '''ViewSet for handling of compute models.'''

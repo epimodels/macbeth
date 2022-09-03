@@ -1,11 +1,15 @@
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# ------------------------------------------------------------
+# File: viewsets.py
+# ------------------------------------------------------------
+# Job ViewSet
 
 from django.shortcuts import get_object_or_404
-from rest_framework import status, viewsets
+from rest_framework import status
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
-from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny
-from rest_framework_simplejwt.views import TokenObtainPairView
 
 from .serializers import JobSerializer
 from macbeth_backend.models.jobs.job import Job

@@ -1,7 +1,13 @@
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# ------------------------------------------------------------
+# File: test_auth.py
+# ------------------------------------------------------------
+# Tests Login Register Blacklist ViewSet
+
 from django.test import TestCase, Client
 from rest_framework import status
 from macbeth_backend.models.account.user import User
-import datetime
 
 
 class LoginViewSetTest(TestCase):
@@ -15,13 +21,13 @@ class LoginViewSetTest(TestCase):
             email="test@123.com",
             password='123456',
             **{'nickname': 'Test',
-               'over13': True, },
+               'over13': True},
         )
         self.client = Client()
 
     def test_api_login_valid(self):
         response = self.client.post(
-            '/api/auth/login/', 
+            '/api/auth/login/',
             {'email': self.user.email, 'password': '123456'},
         )
 
@@ -37,7 +43,7 @@ class LoginViewSetTest(TestCase):
 
     def test_api_login_invalid(self):
         invalid_pass = self.client.post(
-            '/api/auth/login/', 
+            '/api/auth/login/',
             {'email': self.user.email, 'password': '1234567'},
         )
         invalid_email = self.client.post(
@@ -56,7 +62,7 @@ class RegisterViewSetTest(TestCase):
             email='taken@test.com',
             password='12345678',
             **{'nickname': 'Taken',
-               'over13': True, },
+               'over13': True},
         )
         self.client = Client()
         return
@@ -70,7 +76,7 @@ class RegisterViewSetTest(TestCase):
                 'over13': True,
             },
         )
-        
+
         data = response.data['user']
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(data['is_active'], False)
@@ -123,17 +129,17 @@ class BlacklistTokenViewSetTest(TestCase):
             email="test@123.com",
             password='12345678',
             **{'nickname': 'Test',
-               'over13': True, },
+               'over13': True},
         )
         self.client = Client()
 
     def test_api_logout_valid(self):
         login_response = self.client.post(
             '/api/auth/login/',
-            {'email': self.user.email, 'password': '12345678'}
+            {'email': self.user.email, 'password': '12345678'},
         )
         logout_response = self.client.post(
-            '/api/auth/logout/', 
+            '/api/auth/logout/',
             {'refresh_token': login_response.data['refresh']},
         )
         response = self.client.post(

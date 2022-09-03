@@ -1,4 +1,3 @@
-from unittest import case
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
@@ -19,6 +18,6 @@ class Parameter(models.Model):
 
 class SIRResults(models.Model):
     model_id = models.ForeignKey(EpiModel, on_delete=models.CASCADE)
-    result = ArrayField(models.FloatField(), size = 1241)
+    result = ArrayField(models.FloatField(), size=1241)
     # also need job id, user id, time stamp
     # job id key = (job id, user id, time stamp)
