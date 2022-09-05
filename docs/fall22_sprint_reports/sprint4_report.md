@@ -92,12 +92,21 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
   </thead> 
   <tbody>
     <tr>
-      <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
+      <td>8/29/22</td><td>42</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td></td><td>Work</td>
+    </tr>
+    <tr>
+      <td>9/1/22</td><td>50</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td></td><td>Professor</td>
+    </tr>
+    <tr>
+      <td>9/2/22</td><td>50</td><td></td><td>&check;</td><td></td><td>&check;</td><td>&check;</td><td>Work</td>
+    </tr>
+    <tr>
+      <td>9/5/22</td><td>73</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td>&check;</td><td>Work</td>
     </tr>
      <tr>
       <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Sponsor</td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+    <tr><td align="right"><b>Totals:</b></td><td><b>215</b></td><td><b>3</b></td><td><b>4</b></td><td><b>1</b></td><td><b>4</b></td><td><b>2</b></td>
     </tr>
   </tbody>
 </table>
