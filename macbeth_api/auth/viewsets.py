@@ -96,6 +96,6 @@ class BlacklistTokenViewSet(viewsets.ViewSet):
             refresh_token = request.data['refresh_token']
             token = RefreshToken(refresh_token)
             token.blacklist()
-        except Exception as e:
+        except Exception:
             return Response(status=status.HTTP_400_BAD_REQUEST)
         return Response(status=status.HTTP_200_OK)

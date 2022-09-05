@@ -10,7 +10,6 @@ from macbeth_backend.models.account import UserViewSet
 from .auth.viewsets import LoginViewSet, RegisterViewSet, RefreshViewSet, BlacklistTokenViewSet
 from .compute.viewsets import ComputeModelsViewSet
 
-#from macbeth_backend.models.jobs.viewsets import 
 from .jobs.viewsets import JobViewSet
 
 routes = SimpleRouter()

@@ -1,4 +1,9 @@
-
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# ------------------------------------------------------------
+# File: viewsets.py
+# ------------------------------------------------------------
+# Job ViewSet
 
 from .serializers import JobSerializer
 from .job import Job
@@ -11,11 +16,11 @@ from rest_framework.permissions import IsAuthenticated
 class JobViewSet(viewsets.ModelViewSet):
 
     http_method_names = ['get', 'post']
-    permission_classes = [IsAuthenticated, ]
+    permission_classes = [IsAuthenticated]
     serialzer = JobSerializer
-    filter_backends = [filters.OrderingFilter, ]
-    ordering_fields = ['created_on', ]
-    ordering = ['-created_on', ]
+    filter_backends = [filters.OrderingFilter]
+    ordering_fields = ['created_on']
+    ordering = ['-created_on']
 
     def get_queryset(self):
         if self.request.user.is_superuser:

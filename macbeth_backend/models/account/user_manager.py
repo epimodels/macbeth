@@ -7,7 +7,6 @@
 # about existing users. It uses a custom user model that overrides the
 # default Django user model.
 
-from lib2to3.pytree import Base
 from django.contrib.auth.base_user import BaseUserManager
 from django.utils.translation import gettext_lazy as _
 

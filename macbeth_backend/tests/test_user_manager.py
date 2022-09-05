@@ -52,7 +52,7 @@ class TestUserManager(TestCase):
                 **{
                     'nickname': nickname,
                     'over13': over13,
-                }
+                },
             )
 
         for email, password, nickname, over13 in sup_users:
@@ -63,12 +63,12 @@ class TestUserManager(TestCase):
                     'nickname': nickname,
                     'over13': over13,
                     'is_superuser': True,
-                }
+                },
             )
 
     @parameterized.expand(account_normal_user_test_cases)
     def test_normal_user(
-        self, email, password, 
+        self, email, password,
         nickname, over13,
     ):
         '''Tests the creation of a new basic user.'''
@@ -85,7 +85,7 @@ class TestUserManager(TestCase):
 
     @parameterized.expand(account_super_user_test_cases)
     def test_superuser(
-        self, email, password, 
+        self, email, password,
         nickname, over13,
     ):
         '''Tests the creation of a new superuser.'''

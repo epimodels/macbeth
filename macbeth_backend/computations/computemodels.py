@@ -7,10 +7,13 @@
 # Modified by: Eric Song                         #
 ##################################################
 
-# Based on ../demos/ZombieModels.py
+
+# Error messages appear regarding structure of this code.
+# Only using this file as a reference
+# flake8: noqa
+
 from scipy import integrate
 import numpy
-from time import sleep
 
 
 def ZombieSIR(infect_prob, infect_duration):
