@@ -1,4 +1,4 @@
-# Report for Sprint # : *Team Nightingale*
+# Report for Fall 2022: Sprint #1 - *Team Nightingale*
 
 ## Link to Sprint Summary Video
 [Summary video link](https://youtube.com/)
