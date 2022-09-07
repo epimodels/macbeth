@@ -1,13 +1,16 @@
 import logging
+import os
 import pathlib
 import logging.handlers as handlers
 import sys
 
-
+_logs_full_path = os.path.join(pathlib.Path().absolute(), 'logs')
 _log_file_formatter = logging.Formatter(
     '%(asctime)s - %(levelname)-8s - %(filename)8s | %(funcName)s:%(lineno)d %(message)s')
 _log_file_path = pathlib.Path('logs/macbeth.log').resolve()
 _log_level = logging.DEBUG
+
+os.makedirs(_logs_full_path, exist_ok=True)
 
 
 class CustomFormatter(logging.Formatter):
