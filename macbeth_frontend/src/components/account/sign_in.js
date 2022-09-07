@@ -80,7 +80,7 @@ export default function SignIn() {
                 <FontAwesomeIcon icon={formData.visiblePassword ? faEyeSlash : faEye} id="togglepassword" onClick={() => updateFormData({...formData, visiblePassword: !formData.visiblePassword})} style={{'margin-top':'10%', 'margin-left':'-100%'}}/>
               </Col>
             </Form.Group>
-            <NavButton label="Sign In" variant="account" clickEvent={handleSubmit} />
+            <NavButton label="Sign In" variant="nextnopos" clickEvent={handleSubmit} />
           </Form>
         </div>
       </Container>

@@ -57,7 +57,7 @@ class InfoCard extends React.Component {
                     <li>Nickname</li>
                     <li>Password</li>
                     <li>Age </li>
-                    <span className='text-muted'>We only need you to verify you are over the age of 13</span>
+                    <span className='text-muted'>We only need to verify that you are over the age of 13</span>
                   </ul>
                 </Accordion.Body>
               </Accordion.Item>

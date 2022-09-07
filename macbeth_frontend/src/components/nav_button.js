@@ -8,7 +8,7 @@ import './nav_button.css'
  * label: Name of button
  * redirect: When clicked, what page to go to
  * clickEvent: Instead of simply redirecting, call a function when clicked
- * variant: Style of button
+ * variant: Style of button (next (green - bottom right), nextnopos (green), prev (dark green - bottom left), default (pink))
  * size: Size of button
  */
 function NavButton(props) {

@@ -5,21 +5,12 @@ import Progress from '../compute/progress'
 /*
  * Sub-page of Compute
  */
-class Results extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  
-  render() {
-    return (
-      <div>
-        <Progress currentStep={3} />
-        <h4>Viewing Results</h4>
-        <NavButton label='Back' redirect='/compute/parameter-edit' variant='prev'/>
-      </div>
-    )
-  }
+export default function Results() {
+  return (
+    <div>
+      <Progress currentStep={3} />
+      <h4>Viewing Results</h4>
+      <NavButton label='Back' redirect='/compute/parameter-edit' variant='prev'/>
+    </div>
+  )
 }
-
-export default Results;
