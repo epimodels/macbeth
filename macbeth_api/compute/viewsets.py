@@ -55,5 +55,3 @@ class ComputeModelsViewSet(viewsets.ViewSet):
 
         finally:
             log.info('Finished')
-
-
