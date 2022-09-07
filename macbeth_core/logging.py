@@ -6,7 +6,7 @@ import sys
 
 _logs_full_path = os.path.join(pathlib.Path().absolute(), 'logs')
 _log_file_formatter = logging.Formatter(
-    '%(asctime)s - %(levelname)-8s - %(filename)8s | %(funcName)s:%(lineno)d %(message)s')
+    '%(asctime)s - %(levelname)-8s - %(filename)-12s | %(funcName)s:%(lineno)d %(message)s')
 _log_file_path = pathlib.Path('logs/macbeth.log').resolve()
 _log_level = logging.DEBUG
 
@@ -41,7 +41,7 @@ class CustomFormatter(logging.Formatter):
 
     def _set_formats_color(self, log_level_color):
         return f'{self.grey}%(asctime)s{self.reset} - {log_level_color}%(levelname)-8s' \
-            f'{self.reset} - {self.orange}%(filename)s{self.reset} ' \
+            f'{self.reset} - {self.orange}%(filename)-12s{self.reset} ' \
             f'| %(funcName)s:{self.orange}%(lineno)d{self.reset} %(message)s'
 
     def format(self, record):

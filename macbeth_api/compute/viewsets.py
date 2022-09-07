@@ -10,6 +10,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from macbeth_backend import COMPUTE_MODELS
 from macbeth_backend.computations.config import Config
+from macbeth_core.logging import log
 
 MODEL_LIST = []
 for model in COMPUTE_MODELS:
@@ -34,28 +35,25 @@ class ComputeModelsViewSet(viewsets.ViewSet):
 
     def list(self, request):
         '''List all available compute models.'''
-        return Response({
-            'models': MODEL_LIST,
-        }, status=status.HTTP_200_OK)
+        log.info(f'Called with request: {request}')
+        return Response({'models': MODEL_LIST}, status=status.HTTP_200_OK)
 
     def retrieve(self, request, pk=None):
         '''Retrieve a specific compute model.'''
-        # The identifier is the name of the model class
         # pk = hopefully the id of the model we want.
-        # Make COMPUTE_MODELS a dictionary of {name: model}
-        # if pk in dict, return the config file for it, otherwise error
-        print(f'pk: {pk}')
-        body = ""
+        log.info(f'Called with request: {request}, pk: {pk}')
         try:
-            body = Config.load_config_from_obj(
-                MODEL_TO_CONF_DICT[pk]['model'],
-            )
+            log.info('Retrieving configuration ')
+            body = Config.load_config_from_obj(MODEL_TO_CONF_DICT[pk]['model'])
+            return Response(body, status=status.HTTP_200_OK)
+
         except KeyError:
+            log.exception(f'Model not found with id: {pk}', exc_info=True)
             return Response({
                 'error': 'Model not found.',
             }, status=status.HTTP_404_NOT_FOUND)
 
-        return Response(
-            body,
-            status=status.HTTP_200_OK,
-        )
+        finally:
+            log.info('Finished')
+
+
