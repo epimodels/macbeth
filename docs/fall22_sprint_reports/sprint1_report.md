@@ -60,7 +60,7 @@ Please follow the repository instructions for the prototype <a href="https://git
       <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/70">Issue #70</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/74">PR #74</a></td><td>1<br/>1</td><td>1<br/>1</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/72">Issue #72</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/74">PR #74</a></td><td>3<br/>0</td><td>0<br/>1</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/72">Issue #72</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/74">PR #74</a></td><td>3<br/>0</td><td>0<br/>1.5</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/73">Issue #73</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/74">PR #74</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
@@ -72,7 +72,7 @@ Please follow the repository instructions for the prototype <a href="https://git
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/65">Issue #65</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/75">PR #75</a></td><td>0<br/>0</td><td>0<br/>0</td><td>3<br>4</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/63">Issue #63</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>4</td><td>0<br/>4</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/63">Issue #63</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/80">PR #80</a></td><td>4<br/>4</td><td>4<br/>4</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/61">Issue #61</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/71">PR #71</a></td><td>3<br/>3</td><td>3<br/>3</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
@@ -124,10 +124,13 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
     <tr>
       <td>9/5/22</td><td>73</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td>&check;</td><td>Work</td>
     </tr>
+    <tr>
+      <td>9/9/22</td><td>60</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td></td><td>Work</td>
+    </tr>
      <tr>
       <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Sponsor</td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>215</b></td><td><b>3</b></td><td><b>4</b></td><td><b>1</b></td><td><b>4</b></td><td><b>2</b></td>
+    <tr><td align="right"><b>Totals:</b></td><td><b>275</b></td><td><b>4</b></td><td><b>5</b></td><td><b>1</b></td><td><b>5</b></td><td><b>2</b></td>
     </tr>
   </tbody>
 </table>
