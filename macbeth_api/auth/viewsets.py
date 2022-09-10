@@ -11,7 +11,6 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework_simplejwt.exceptions import InvalidToken
 
 from .serializers import LoginSerializer, RegisterSerializer
 from macbeth_core.logging import log
@@ -34,7 +33,7 @@ class LoginViewSet(TokenObtainPairView, ModelViewSet):
             serializer.is_valid(raise_exception=True)
         except Exception as e:
             log.exception(f'Unkown error: {e}', exc_info=True)
-            raise InvalidToken('Invalid token or user not found.')
+            return Response('Invalid token or user not found.', status=status.HTTP_400_BAD_REQUEST)
         finally:
             log.info('Finished')
 
@@ -64,7 +63,7 @@ class RegisterViewSet(ModelViewSet, TokenObtainPairView):
             }
         except Exception as e:
             log.exception(f'Unkown error: {e}', exc_info=True)
-            raise InvalidToken('Invalid token or user not found.')
+            return Response('Invalid token or user not found.', status=status.HTTP_400_BAD_REQUEST)
         finally:
             log.info('Finished')
 
@@ -91,7 +90,7 @@ class RefreshViewSet(viewsets.ViewSet, TokenRefreshView):
             serializer.is_valid(raise_exception=True)
         except Exception as e:
             log.exception(f'Unkown error: {e}', exc_info=True)
-            raise InvalidToken('Invalid token or user not found.')
+            return Response('Invalid token or user not foudn.', status=status.HTTP_400_BAD_REQUEST)
         finally:
             log.info('Finished')
         return Response(serializer.validated_data, status=status.HTTP_200_OK)
