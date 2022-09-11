@@ -58,14 +58,3 @@ export default function ResultsGraph(props) {
       <Line options={options} data={data} />
     )
   }
-
-  /*
-  props.datasets.map((dataset) =>
-            (
-                {
-                    label: dataset.label,
-                    data: [(0, 0), (1, 1), (2, 2)],
-                    borderColor: dataset.borderColor,
-                    backgroundColor: dataset.backgroundColor,
-                }
-            ))*/
