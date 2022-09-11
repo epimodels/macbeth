@@ -49,16 +49,16 @@ const ParameterEdit = (props) => {
   return(
     <div>
         <h4>{localStorage.getItem('compute-selected-model-name')}</h4>
-        <span class={'text-muted'} style={{'margin-bottom':'2%'}}>{author}</span><br />
-        <span class={'text-muted'} style={{'margin-bottom':'2%'}}>{description}</span>
+        <span className={'text-muted'} style={{'marginBottom':'2%'}}>{author}</span><br />
+        <span className={'text-muted'} style={{'marginBottom':'2%'}}>{description}</span>
         <Progress currentStep={2} />
-        <h4 style={{'margin-bottom':'2%'}}>Edit Parameters</h4>
+        <h4 style={{'marginBottom':'2%'}}>Edit Parameters</h4>
         <Form> {/* dynamically organizes the parameters into rows and columns based on number */}
           <Row className='justify-content-center'>
             {parameters.map((item, idx) => {
               return (
                 <Col xs={'auto'} key={item.Name}>
-                  <Parameter controlID='default' label={item.Name} type='basicDefualt' 
+                  <Parameter controlID='default' label={item.Name} type='basicDefault' 
                     placeholder={item.DefaultValue} 
                     text={item.Description} />
                 </Col>

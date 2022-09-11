@@ -1,5 +1,9 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form'
+import Form from 'react-bootstrap/Form';
+
+// Fontawesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRotateLeft } from '@fortawesome/free-solid-svg-icons';
 
 /*
  * Parameter field
@@ -9,43 +13,57 @@ import Form from 'react-bootstrap/Form'
  * placeholder: text inside field until something is entered
  * text: smaller text that shows below the field
  */
-class Parameter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      text: ""
-    };
-  }
+function Parameter(props) {
+  let paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
+  // value for parameter field
+  const [value, valueDispatch] = React.useReducer(valueReducer, '');
 
-  componentDidMount() {
-    const paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
-    if (paramDict[this.props.label] !== undefined) {
-      this.setState({text: paramDict[this.props.label]});
+  React.useEffect(() => {
+    // refresh params
+    paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
+    // if the parameter is already in the dict and it's not default, set the text to that
+    if (paramDict[props.label] !== undefined && paramDict[props.label] != props.placeholder) {
+      valueDispatch({ label: props.label, default: props.placeholder, params: paramDict, value: paramDict[props.label] });
     }
-  }
+    // otherwise, have the text be nothing so the placeholder text (that holds the default value) shows
+    else {
+      valueDispatch({ label: props.label, default: props.placeholder, params: paramDict, value: '' });
+    }
+  }, []);
 
-
-  onEditHandler(e) {
-    console.log("onEditHandler");
-    const paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
-    paramDict[this.props.label] = e.target.value;
+  /*
+   * Reducer function for a parameter value
+   * label: props.label (label/key for param)
+   * default: props.placeholder (default value for param -- just in case we want to reset to default (when new value is empty))
+   * value: new value
+   */
+  function valueReducer(value, action) {
+    console.log("changing to: " + action.value);
+    // refresh params
+    paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
+    // set new value in localStorage dict -- if our new value is empty, use default value instead
+    paramDict[action.label] = (action.value == '') ? action.default : action.value;
     localStorage.setItem('compute-selected-model-params', JSON.stringify(paramDict));
+    
+    return action.value;
   }
   
-  render() {
-    return (
-      <Form.Group className='mb-3' controlId={this.props.controlId}>
-        <Form.Label>{this.props.label}</Form.Label>
-        <Form.Control onChange={(e) => this.onEditHandler(e)} size='lg' 
-          type={this.props.type} 
-          placeholder={this.props.placeholder} 
-          defaultValue={this.state.text} />
-        <Form.Text className="text-muted">
-          {this.props.text}
-        </Form.Text>
-      </Form.Group>
-    )
-  }
+  return (
+    <Form.Group className='mb-3' controlId={props.controlId}>
+      <Form.Label>{props.label}</Form.Label>
+      <Form.Control size='lg' 
+        type={props.type} 
+        placeholder={props.placeholder} 
+        defaultValue={value} 
+        onChange={(e) => valueDispatch({ label: props.label, default: props.placeholder, value: e.target.value })} 
+        // Added onSelect because onChange does not trigger when there is a defaultValue and you select all text and delete
+        // See: https://stackoverflow.com/questions/66950716/react-bootstrap-component-form-control-onchange-event-listener-doesnt-fire-wh#comment126154329_66951536
+        onSelect={(e) => valueDispatch({ label: props.label, default: props.placeholder, value: e.target.value })} />
+      <Form.Text className="text-muted">
+        {props.text}
+      </Form.Text>
+    </Form.Group>
+  );
 }
 
 Parameter.defaultProps = {
