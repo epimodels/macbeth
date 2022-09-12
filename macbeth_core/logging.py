@@ -51,9 +51,9 @@ class CustomFormatter(logging.Formatter):
 
 
 def _get_file_handler():
-    handler = handlers.RotatingFileHandler(filename=_log_file_path, mode='a',
-                                           maxBytes=5*1024*1024, backupCount=2,
-                                           encoding=None, delay=0)
+    handler = handlers.TimedRotatingFileHandler(filename=_log_file_path, backupCount=5,
+                                                when='midnight', interval=1,
+                                                encoding=None, delay=0)
     handler.setFormatter(_log_file_formatter)
     handler.setLevel(_log_level)
     return handler
