@@ -80,6 +80,15 @@ Please follow the repository instructions for the prototype <a href="https://git
      <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/62">Issue #62</a></td><td>N/A</td><td>1<br/>1</td><td>0.2<br/>0.2</td><td>0.2<br>0.2</td><td>0.2<br/>0.2</td><td>0.2<br/>0.2</td><td>0.2<br/>0.2</td><td>100</td><td></td>
     </tr>
+     <tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/69">Issue #69</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>3</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+    </tr>
+     <tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/79">Issue #79</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0.3</td><td>0<br/>0.3</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>100</td><td>0</td><td></td>
+    </tr>
+     <tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue #</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+    </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue #</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
@@ -127,7 +136,10 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
     <tr>
       <td>9/9/22</td><td>60</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td></td><td>Work</td>
     </tr>
-     <tr>
+    <tr>
+      <td>9/12/22</td><td>71</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
+    </tr>
+    <tr>
       <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Sponsor</td>
     </tr>
     <tr><td align="right"><b>Totals:</b></td><td><b>275</b></td><td><b>4</b></td><td><b>5</b></td><td><b>1</b></td><td><b>5</b></td><td><b>2</b></td>
