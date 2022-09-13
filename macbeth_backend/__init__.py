@@ -6,11 +6,26 @@
 # Locates all of the compute models and loads them into the
 # compute_models dictionary.
 
+from dataclasses import dataclass
 import inspect
-from .computations import interface_compute_model
+
+from macbeth_backend.computations.interface_compute_model import InterfaceComputeModel
 
 
-def _load_compute_models(parent=interface_compute_model.InterfaceComputeModel):
+@dataclass
+class ComputeModel:
+
+    name: str
+    attributes: list
+    model: InterfaceComputeModel
+
+    def __init__(self, name, attributes, model):
+        self.name = name
+        self.attributes = attributes
+        self.model = model
+
+
+def _load_compute_models(parent=InterfaceComputeModel):
     models = set()
     for child in parent.__subclasses__():
         models.add(child)
@@ -19,12 +34,9 @@ def _load_compute_models(parent=interface_compute_model.InterfaceComputeModel):
 
 
 def _get_attributes_model(model):
-    attributes = inspect.getfullargspec(model.__init__).args
-    return {
-        'name': model.__name__,
-        'attributes': [a for a in attributes if not (a[0].startswith('_') or a == 'self')],
-        'model': model,
-    }
+    # `self` is the first argument of every method.
+    attributes = inspect.getfullargspec(model.__init__).args[1:]
+    return ComputeModel(model.__name__, attributes, model)
 
 
 _models_classes = _load_compute_models()
