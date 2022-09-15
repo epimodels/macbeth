@@ -13,6 +13,7 @@ from rest_framework.permissions import AllowAny
 
 from .serializers import JobSerializer
 from macbeth_backend.models.jobs.job import Job
+from macbeth_core.logging import log
 
 
 class JobViewSet(ModelViewSet):
@@ -23,18 +24,39 @@ class JobViewSet(ModelViewSet):
     http_method_names = ['post', 'get']
 
     def create(self, request, *args, **kwargs):
-        print(request.data)
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        job = serializer.save()
+        log.info(f'Called with request: {request}, args: {args}, kwargs: {kwargs}')
+        try:
+            serializer = self.get_serializer(data=request.data)
+            serializer.is_valid(raise_exception=True)
+            job = serializer.save()
 
-        return Response({
-            'job_id': job.id,
-        }, status=status.HTTP_201_CREATED)
+            return Response({
+                'job_id': job.id,
+            }, status=status.HTTP_201_CREATED)
+
+        except Exception:
+            log.exception('Failed to create job.', exc_info=True)
+            return Response({
+                'error': 'Failed to create job.',
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        finally:
+            log.info('Finished')
 
     # Get needs to be added here
     def retrieve(self, request, pk=None):
-        queryset = Job.objects.all()
-        job = get_object_or_404(queryset, pk=pk)
-        serializer = self.get_serializer(job)
-        return Response(serializer.data)
+        log.info(f'Called with request: {request}, pk: {pk}')
+        try:
+            queryset = Job.objects.all()
+            job = get_object_or_404(queryset, pk=pk)
+            serializer = self.get_serializer(job)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+
+        except Exception:
+            log.exception('Failed to retrieve job.', exc_info=True)
+            return Response({
+                'error': 'Failed to retrieve job.',
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        finally:
+            log.info('Finished')
