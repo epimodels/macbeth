@@ -152,7 +152,7 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
 
 ### Retrospective
 
-[Link to Recording]([https://wsu.zoom.us/recording](https://emailwsu.sharepoint.com/:v:/t/2022.PULLM.CptS.421.423-MACBETHV2/EVwUcyYO9KtBiyRsHOAb8qAB28Ybeo58qj6O30ldtwLb2Q?e=H2Ltwa))
+[Link to Recording](https://emailwsu.sharepoint.com/:v:/t/2022.PULLM.CptS.421.423-MACBETHV2/EVwUcyYO9KtBiyRsHOAb8qAB28Ybeo58qj6O30ldtwLb2Q?e=H2Ltwa)
 
 #### What went well
   - We did code review more regularly and more thoroughly.
