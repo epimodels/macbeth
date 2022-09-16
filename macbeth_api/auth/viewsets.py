@@ -6,6 +6,7 @@
 # Login and Register ViewSets
 
 from rest_framework import status, viewsets
+from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import AllowAny
@@ -61,6 +62,9 @@ class RegisterViewSet(ModelViewSet, TokenObtainPairView):
                 'refresh': str(refresh),
                 'access': str(refresh.access_token),
             }
+        except ValidationError as e:
+            log.exception(f'Validation error: {e}', exc_info=True)
+            return Response(e.detail, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             log.exception(f'Unknown error: {e}', exc_info=True)
             return Response('Invalid token or user not found.', status=status.HTTP_400_BAD_REQUEST)
