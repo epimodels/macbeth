@@ -90,6 +90,9 @@ Please follow the repository instructions for the prototype <a href="https://git
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/76">Issue #76</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/86">PR #86</a></td><td>0<br/>0</td><td>0<br/>0</td><td>4<br>7</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/78">Issue #78</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/80">PR #80</a></td><td>0<br/>0</td><td>0<br/>3</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+    </tr>
+    <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue #</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr><td colspan="2" align="right"><b>Totals:</b></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td><td colspan="2"></td>
@@ -140,28 +143,29 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
       <td>9/12/22</td><td>71</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
     </tr>
     <tr>
-      <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Sponsor</td>
+      <td>9/16/22</td><td>131</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>275</b></td><td><b>4</b></td><td><b>5</b></td><td><b>1</b></td><td><b>5</b></td><td><b>2</b></td>
+    <tr><td align="right"><b>Totals:</b></td><td><b>477</b></td><td><b>6</b></td><td><b>7</b></td><td><b>3</b></td><td><b>7</b></td><td><b>4</b></td>
     </tr>
   </tbody>
 </table>
 
 ### Retrospective
 
-[Link to Recording](https://wsu.zoom.us/recording)
+[Link to Recording]([https://wsu.zoom.us/recording](https://emailwsu.sharepoint.com/:v:/t/2022.PULLM.CptS.421.423-MACBETHV2/EVwUcyYO9KtBiyRsHOAb8qAB28Ybeo58qj6O30ldtwLb2Q?e=H2Ltwa))
 
 #### What went well
-  - Item 1 <i>(Be as concrete and specific as possible)</i>
-  - Item 2 <i>(Be as concrete and specific as possible)</i>
-  - Item x <i>(Be as concrete and specific as possible)</i>
+  - We did code review more regularly and more thoroughly.
+  - We were able to utilize issues and break down problems better than in the past.
+  - We did a good job of distributing tasks and working in parallel.
   
 #### What we'd like to improve
-  - Item 1 <i>(Be as concrete and specific as possible)</i>
-  - Item 2 <i>(Be as concrete and specific as possible)</i>
-  - Item x <i>(Be as concrete and specific as possible)</i>
+  - We'd like to improve on getting regular meetings set up because once we do, we do great at consistent communication.
+  - This also goes for getting regular meetings with our sponsor finally set up.
+  - We also need to do better at spreading our work out over the sprint.
   
 #### Changes we plan to implement in next sprint period
-  - Item 1 <i>(Express in concrete, observable, measurable terms so that progress can be assessed)</i>
-  - Item 2 <i>(Express in concrete, observable, measurable terms so that progress can be assessed)</i>
-  - Item x <i>(Express in concrete, observable, measurable terms so that progress can be assessed)</i>
+  - Create draft PRs for new branches so others can review as they work through the issue; it would be helpful in spreading out the review throughout the sprint rather than at the end.
+  - Make a concrete, written-down plan at the beginning of the sprint that includes both:
+    - issues we plan to tackle and 
+    - research we'd like to conduct.
