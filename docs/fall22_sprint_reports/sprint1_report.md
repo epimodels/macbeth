@@ -66,10 +66,10 @@ Please follow the repository instructions for the prototype <a href="https://git
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/73">Issue #73</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/74">PR #74</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/64">Issue #64</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/67">PR #67</a></td><td>0<br/>0</td><td>0<br/>0</td><td>1<br>1</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/64">Issue #64</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/67">PR #67</a></td><td>0<br/>0</td><td>0<br/>0</td><td>1<br>1</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/65">Issue #65</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/75">PR #75</a></td><td>0<br/>0</td><td>0<br/>0</td><td>3<br>4</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/65">Issue #65</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/75">PR #75</a></td><td>0<br/>0</td><td>0<br/>0</td><td>3<br>4</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/63">Issue #63</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/80">PR #80</a></td><td>4<br/>4</td><td>4<br/>4</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
@@ -87,7 +87,7 @@ Please follow the repository instructions for the prototype <a href="https://git
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/79">Issue #79</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0.3</td><td>0<br/>0.3</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>100</td><td>0</td><td></td>
     </tr>
      <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue #</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/76">Issue #76</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/86">PR #86</a></td><td>0<br/>0</td><td>0<br/>0</td><td>4<br>7</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue #</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
@@ -101,7 +101,7 @@ Please follow the repository instructions for the prototype <a href="https://git
 | Team Member | Contribution Reflection Statement |
 |-------------|-------------------|
 |Mikaela| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Kyle| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+|Kyle| In this milestone, I spent a good amount of time in the beginning cleaning up our existing codebase and branches. I thought it was important we refactor things that weren't working great before continuing to contribute to the project, especially since we haven't looked at the codebase for an entire summer. Additionally, I worked on logging while we determined the best way to perform a computation of a model. Overall, I am proud of the contributions I made to this milestone. I was able to help clean up the codebase, add logging to the project, and implement the computation of a model. |
 |Trevor| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Ethan| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Eric| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
