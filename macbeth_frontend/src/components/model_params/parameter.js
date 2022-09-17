@@ -2,8 +2,8 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 
 // Fontawesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRotateLeft } from '@fortawesome/free-solid-svg-icons';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import { faRotateLeft } from '@fortawesome/free-solid-svg-icons';
 
 /*
  * Parameter field
@@ -14,22 +14,21 @@ import { faRotateLeft } from '@fortawesome/free-solid-svg-icons';
  * text: smaller text that shows below the field
  */
 function Parameter(props) {
-  let paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
   // value for parameter field
   const [value, valueDispatch] = React.useReducer(valueReducer, '');
 
   React.useEffect(() => {
-    // refresh params
-    paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
+    // get fresh params
+    let paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
     // if the parameter is already in the dict and it's not default, set the text to that
-    if (paramDict[props.label] !== undefined && paramDict[props.label] != props.placeholder) {
+    if (paramDict[props.label] !== undefined && paramDict[props.label] !== props.placeholder) {
       valueDispatch({ label: props.label, default: props.placeholder, params: paramDict, value: paramDict[props.label] });
     }
     // otherwise, have the text be nothing so the placeholder text (that holds the default value) shows
     else {
       valueDispatch({ label: props.label, default: props.placeholder, params: paramDict, value: '' });
     }
-  }, []);
+  }, [props]);
 
   /*
    * Reducer function for a parameter value
@@ -38,11 +37,10 @@ function Parameter(props) {
    * value: new value
    */
   function valueReducer(value, action) {
-    console.log("changing to: " + action.value);
-    // refresh params
-    paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
+    // get fresh params
+    let paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
     // set new value in localStorage dict -- if our new value is empty, use default value instead
-    paramDict[action.label] = (action.value == '') ? action.default : action.value;
+    paramDict[action.label] = (action.value === '') ? action.default : action.value;
     localStorage.setItem('compute-selected-model-params', JSON.stringify(paramDict));
     
     return action.value;
