@@ -1,15 +1,19 @@
-# Report for Fall 2022: Sprint #1 - *Team Nightingale*
+# Report for Fall 2022: Sprint #1 - _Team Nightingale_
 
 ## Link to Sprint Summary Video
+
 [Summary video link](https://youtube.com/)
 
 ## Link to Online Communication Channel (MS Teams/Slack/Discord)
+
 [MS Teams link](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A5d8ece77ac41420a86770fdaee39b9cb%40thread.tacv2%2FMACBETH%2520V2%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=dcd68dfc-a6f9-4b0a-bf54-48138a776d04&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true)
 
 ## Link to Working Prototype
+
 Please follow the repository instructions for the prototype <a href="https://github.com/wsu-cpts421-sp22/macbeth">here. </a>
 
 ## Team members
+
 <table>
   <thead>
     <tr>
@@ -45,7 +49,9 @@ Please follow the repository instructions for the prototype <a href="https://git
 </table>
 
 ## Progress, Testing
+
 ### Issues, Points and Hours
+
 <table> 
   <thead>
     <tr>
@@ -56,6 +62,12 @@ Please follow the repository instructions for the prototype <a href="https://git
     </tr>
   </thead> 
   <tbody>
+    <tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/83">Issue #83</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>2<br/>2</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>2<br/>2</td><td>0<br/>0</td><td>25</td><td></td>
+    </tr>
+    <tr>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/84">Issue #84</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/85">PR #85</a></td><td>1<br/>1</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>1<br/>1</td><td>0<br/>0</td><td>100</td><td></td>
+    </tr>
     <tr>
       <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/70">Issue #70</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/74">PR #74</a></td><td>1<br/>1</td><td>1<br/>1</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
     </tr>
@@ -101,16 +113,18 @@ Please follow the repository instructions for the prototype <a href="https://git
 </table>
 
 ### Reflection Statements
-| Team Member | Contribution Reflection Statement |
-|-------------|-------------------|
-|Mikaela| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Kyle| In this milestone, I spent a good amount of time in the beginning cleaning up our existing codebase and branches. I thought it was important we refactor things that weren't working great before continuing to contribute to the project, especially since we haven't looked at the codebase for an entire summer. Additionally, I worked on logging while we determined the best way to perform a computation of a model. Overall, I am proud of the contributions I made to this milestone. I was able to help clean up the codebase, add logging to the project, and implement the computation of a model. |
-|Trevor| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Ethan| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Eric| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-  
+
+| Team Member | Contribution Reflection Statement                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Mikaela     | <_Required_: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.>                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Kyle        | In this milestone, I spent a good amount of time in the beginning cleaning up our existing codebase and branches. I thought it was important we refactor things that weren't working great before continuing to contribute to the project, especially since we haven't looked at the codebase for an entire summer. Additionally, I worked on logging while we determined the best way to perform a computation of a model. Overall, I am proud of the contributions I made to this milestone. I was able to help clean up the codebase, add logging to the project, and implement the computation of a model.                 |
+| Trevor      | <_Required_: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.>                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Ethan       | During this sprint I spent most of my time looking towards the future and the efficiency of our workflow. I added batch scripts to allow for easy usage of the different applications on the Windows platform. Testing is also something we have been lacking in for quite some time. I took some time this sprint and will continue to take time in the future to ensure that our application is properly tested and working properly in all scenarios. Overall I am satisfied with the progress that I made this milestone and am looking forward to continuing testing and improving our code quality in future milestones. |
+| Eric        | <_Required_: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.>                                                                                                                                                                                                                                                                                                                                                                                                                                |
+
 ### Communication
-As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A5d8ece77ac41420a86770fdaee39b9cb%40thread.tacv2%2FMACBETH%2520V2%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=dcd68dfc-a6f9-4b0a-bf54-48138a776d04&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true) where most of our communication is done; we may have a brief one or two message exchange in our sponsor's Discord server from time-to-time to communicate directly with him. 
+
+As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A5d8ece77ac41420a86770fdaee39b9cb%40thread.tacv2%2FMACBETH%2520V2%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=dcd68dfc-a6f9-4b0a-bf54-48138a776d04&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true) where most of our communication is done; we may have a brief one or two message exchange in our sponsor's Discord server from time-to-time to communicate directly with him.
 
 ### Video Meetings
 
@@ -155,17 +169,20 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
 [Link to Recording](https://emailwsu.sharepoint.com/:v:/t/2022.PULLM.CptS.421.423-MACBETHV2/EVwUcyYO9KtBiyRsHOAb8qAB28Ybeo58qj6O30ldtwLb2Q?e=H2Ltwa)
 
 #### What went well
-  - We did code review more regularly and more thoroughly.
-  - We were able to utilize issues and break down problems better than in the past.
-  - We did a good job of distributing tasks and working in parallel.
-  
+
+-   We did code review more regularly and more thoroughly.
+-   We were able to utilize issues and break down problems better than in the past.
+-   We did a good job of distributing tasks and working in parallel.
+
 #### What we'd like to improve
-  - We'd like to improve on getting regular meetings set up because once we do, we do great at consistent communication.
-  - This also goes for getting regular meetings with our sponsor finally set up.
-  - We also need to do better at spreading our work out over the sprint.
-  
+
+-   We'd like to improve on getting regular meetings set up because once we do, we do great at consistent communication.
+-   This also goes for getting regular meetings with our sponsor finally set up.
+-   We also need to do better at spreading our work out over the sprint.
+
 #### Changes we plan to implement in next sprint period
-  - Create draft PRs for new branches so others can review as they work through the issue; it would be helpful in spreading out the review throughout the sprint rather than at the end.
-  - Make a concrete, written-down plan at the beginning of the sprint that includes both:
-    - issues we plan to tackle and 
-    - research we'd like to conduct.
+
+-   Create draft PRs for new branches so others can review as they work through the issue; it would be helpful in spreading out the review throughout the sprint rather than at the end.
+-   Make a concrete, written-down plan at the beginning of the sprint that includes both:
+    -   issues we plan to tackle and
+    -   research we'd like to conduct.
