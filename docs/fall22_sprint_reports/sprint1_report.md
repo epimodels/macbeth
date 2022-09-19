@@ -2,7 +2,7 @@
 
 ## Link to Sprint Summary Video
 
-[Summary video link](https://youtube.com/)
+[Summary video link](https://www.youtube.com/watch?v=F4nXnJjaYsE)
 
 ## Link to Online Communication Channel (MS Teams/Slack/Discord)
 
@@ -72,16 +72,16 @@ Please follow the repository instructions for the prototype <a href="https://git
       <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/70">Issue #70</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/74">PR #74</a></td><td>1<br/>1</td><td>1<br/>1</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/72">Issue #72</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/74">PR #74</a></td><td>3<br/>0</td><td>0<br/>1.5</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/72">Issue #72</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/74">PR #74</a></td><td>3<br/>1.5</td><td>3<br/>1.5</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/73">Issue #73</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/74">PR #74</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/73">Issue #73</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/74">PR #74</a></td><td>3<br/>2.5</td><td>0<br/>0</td><td>0<br>0</td><td>3<br/>2.5</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/64">Issue #64</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/67">PR #67</a></td><td>0<br/>0</td><td>0<br/>0</td><td>1<br>1</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/64">Issue #64</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/67">PR #67</a></td><td>1<br/>1</td><td>0<br/>0</td><td>1<br>1</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/65">Issue #65</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/75">PR #75</a></td><td>0<br/>0</td><td>0<br/>0</td><td>3<br>4</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/65">Issue #65</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/75">PR #75</a></td><td>3<br/>4</td><td>0<br/>0</td><td>3<br>4</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
     </tr>
     <tr>
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/63">Issue #63</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/80">PR #80</a></td><td>4<br/>4</td><td>4<br/>4</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
@@ -93,21 +93,21 @@ Please follow the repository instructions for the prototype <a href="https://git
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/62">Issue #62</a></td><td>N/A</td><td>1<br/>1</td><td>0.2<br/>0.2</td><td>0.2<br>0.2</td><td>0.2<br/>0.2</td><td>0.2<br/>0.2</td><td>0.2<br/>0.2</td><td>100</td><td></td>
     </tr>
      <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/69">Issue #69</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>3</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/69">Issue #69</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>3</td><td>0<br/>3</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
      <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/79">Issue #79</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0.3</td><td>0<br/>0.3</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>100</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/79">Issue #79</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0.3</td><td>0<br/>0.3</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
     </tr>
      <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/76">Issue #76</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/86">PR #86</a></td><td>0<br/>0</td><td>0<br/>0</td><td>4<br>7</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/76">Issue #76</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/86">PR #86</a></td><td>4<br/>7</td><td>0<br/>0</td><td>4<br>7</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/78">Issue #78</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/80">PR #80</a></td><td>0<br/>0</td><td>0<br/>3</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/78">Issue #78</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/80">PR #80</a></td><td>0<br/>3</td><td>0<br/>3</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue #</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/87">Issue #87</a></td><td>N/A</td><td>3<br/>6</td><td>0<br/>0</td><td>0<br>0</td><td>3<br/>6</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
     </tr>
-    <tr><td colspan="2" align="right"><b>Totals:</b></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td><td colspan="2"></td>
+    <tr><td colspan="2" align="right"><b>Totals:</b></td><td>26<br/>40.3</td><td>11.2<br/>16</td><td>8.2<br>12.2</td><td>3<br/>6</td><td>3.2<br/>3.2</td><td>0.2<br/>0.2</td><td>70.3</td><td></td>
     </tr>
   </tbody>
 </table>
@@ -118,7 +118,7 @@ Please follow the repository instructions for the prototype <a href="https://git
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Mikaela     | <_Required_: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.>                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Kyle        | In this milestone, I spent a good amount of time in the beginning cleaning up our existing codebase and branches. I thought it was important we refactor things that weren't working great before continuing to contribute to the project, especially since we haven't looked at the codebase for an entire summer. Additionally, I worked on logging while we determined the best way to perform a computation of a model. Overall, I am proud of the contributions I made to this milestone. I was able to help clean up the codebase, add logging to the project, and implement the computation of a model.                 |
-| Trevor      | <_Required_: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.>                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Trevor      | In this milestone, I spent a majority of my time focusing on doing research for the technology and implementations we'll require for the rest of the project this semester. We for the most part have deterministic models done and working, but stochastic models were going to require a lot more work. One of the big issues that come up with these random-chance models is that they need to be ran multiple times, and because they need to be ran multiple times, we need a way to communicate status in real time to the front-end so the user isn't left in the dark about what's happening. After researching, I determined we should use webSockets, and that django has a built-in library for them called 'channels'. I spent time learning how channels works, and how we'll implement it into the front end as well. In addition, I did research about how we might be able to use WebSockets to help decouple the API from the actual computations we're running, which can assist with scalability intot he future.                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Ethan       | During this sprint I spent most of my time looking towards the future and the efficiency of our workflow. I added batch scripts to allow for easy usage of the different applications on the Windows platform. Testing is also something we have been lacking in for quite some time. I took some time this sprint and will continue to take time in the future to ensure that our application is properly tested and working properly in all scenarios. Overall I am satisfied with the progress that I made this milestone and am looking forward to continuing testing and improving our code quality in future milestones. |
 | Eric        | <_Required_: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.>                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
