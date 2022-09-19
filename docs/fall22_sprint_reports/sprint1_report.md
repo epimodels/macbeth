@@ -108,7 +108,7 @@ Please follow the repository instructions for the prototype <a href="https://git
      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/87">Issue #87</a></td><td>N/A</td><td>3<br/>6</td><td>0<br/>0</td><td>0<br>0</td><td>3<br/>6</td><td>0<br/>0</td><td>0<br/>0</td><td>100</td><td></td>
     </tr>
     <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/tree/sprint-reports">Issue #68</a></td><td>N/A</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>3<br/>4</td><td>100</td><td></td>
+     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/68">Issue #68</a></td><td>N/A</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br>0</td><td>0<br/>0</td><td>0<br/>0</td><td>3<br/>4</td><td>100</td><td></td>
     </tr>
     <tr><td colspan="2" align="right"><b>Totals:</b></td><td>31.9<br/>41.8</td><td>14.1<br/>17.5</td><td>8.2<br>12.2</td><td>3<br/>6</td><td>3.2<br/>3.2</td><td>3.2<br/>4.2</td><td></td><td></td>
     </tr>
