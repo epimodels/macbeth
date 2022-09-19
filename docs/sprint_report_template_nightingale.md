@@ -4,7 +4,7 @@
 [Summary video link](https://youtube.com/)
 
 ## Link to Online Communication Channel (MS Teams/Slack/Discord)
-[MS Teams link](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A82a13a296cc04422a8cca15d5b8096d0%40thread.tacv2%2FMACBETH%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=b220a2c2-7afd-4a37-abe3-43ede7d9e484&directDl=true&msLaunch=true&enableMobilePage=true)
+[MS Teams link](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A5d8ece77ac41420a86770fdaee39b9cb%40thread.tacv2%2FMACBETH%2520V2%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=dcd68dfc-a6f9-4b0a-bf54-48138a776d04&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true)
 
 ## Link to Working Prototype
 Please follow the repository instructions for the prototype <a href="https://github.com/wsu-cpts421-sp22/macbeth">here. </a>
@@ -18,10 +18,9 @@ Please follow the repository instructions for the prototype <a href="https://git
   </thead>
   <tbody>
     <tr>
-      <td>
-        <b>TM1 </b>Mikaela Dean</td>
-        <td><a href="https://github.com/mikaloolooloo">mikaloolooloo</a></td>
-        <td>61486037</td>
+      <td><b>TM1 </b>Mikaela Dean</td>
+      <td><a href="https://github.com/mikalooloo">mikalooloo</a></td>
+      <td>61486037</td>
     </tr>
     <tr>
       <td><b>TM2 </b>Kyle Hurd</td>
@@ -45,7 +44,7 @@ Please follow the repository instructions for the prototype <a href="https://git
   </tbody>
 </table>
 
-## Progress
+## Progress, Testing
 ### Issues, Points and Hours
 <table> 
   <thead>
@@ -76,37 +75,9 @@ Please follow the repository instructions for the prototype <a href="https://git
 |Trevor| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Ethan| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
 |Eric| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-
-### Testing
-
-|Issue | Test File | Feature Tested | Results Summary | 
-|------|-----------|----------------|-----------------|
-|[Issue #](https://github.com/wsu-cpts421-sp22/macbeth/issues/)| [Google.js](https://www.github.com/wsu-cpts421-sp22/macbeth/)|Google Authentication| [3/3 tests passed](https://yoursite.com/animated.gif) | [
-|[Issue #](https://github.com/wsu-cpts421-sp22/macbeth/issues/)| [routes.js](https://www.github.com/wsu-cpts421-sp22/macbeth/)|PUT and DELETE routes for rounds | [15/15 tests passed](https://yoursite.com/animated.gif) |
   
 ### Communication
- 
-#### MS Team Messages (and Reacts)
-<table> 
-  <thead>
-    <tr>
-      <th></th><th colspan="6">Message (React) Counts</th>
-    </tr> 
-    <tr>
-      <th>Date</th><th>Total</th><th>Mikaela</th><th>Kyle</th><th>Trevor</th><th>Ethan</th><th>Eric</th>
-    </tr>
-  </thead> 
-  <tbody>
-    <tr>
-      <td>//22</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td>
-    </tr>
-    <tr>
-     <td>//22</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td><td>0 (0)</td>
-    </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td><td><b>0 (0)</b></td>
-    </tr>
-  </tbody>
-</table>
+As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A5d8ece77ac41420a86770fdaee39b9cb%40thread.tacv2%2FMACBETH%2520V2%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=dcd68dfc-a6f9-4b0a-bf54-48138a776d04&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true) where most of our communication is done; we may have a brief one or two message exchange in our sponsor's Discord server from time-to-time to communicate directly with him. 
 
 ### Video Meetings
 
@@ -131,30 +102,21 @@ Please follow the repository instructions for the prototype <a href="https://git
   </tbody>
 </table>
 
-#### Reflection Statements
-| Team Member | Communication Reflection Statement |
-|-------------|-------------------|
-|Mikaela| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|Kyle| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|Trevor| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|Ethan| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-|Eric| <*Required*: The posts/replies data are unlikely to tell the whole story about your communication. Write a brief statement explaining and reflecting on your communication with your team during this milestone.> |
-
 ### Retrospective
 
 [Link to Recording](https://wsu.zoom.us/recording)
 
 #### What went well
-  - Item 1
-  - Item 2
-  - Item x
+  - Item 1 <i>(Be as concrete and specific as possible)</i>
+  - Item 2 <i>(Be as concrete and specific as possible)</i>
+  - Item x <i>(Be as concrete and specific as possible)</i>
   
- #### What we'd like to improve
-  - Item 1
-  - Item 2
-  - Item x
+#### What we'd like to improve
+  - Item 1 <i>(Be as concrete and specific as possible)</i>
+  - Item 2 <i>(Be as concrete and specific as possible)</i>
+  - Item x <i>(Be as concrete and specific as possible)</i>
   
 #### Changes we plan to implement in next sprint period
-  - Item 1
-  - Item 2
-  - Item x
+  - Item 1 <i>(Express in concrete, observable, measurable terms so that progress can be assessed)</i>
+  - Item 2 <i>(Express in concrete, observable, measurable terms so that progress can be assessed)</i>
+  - Item x <i>(Express in concrete, observable, measurable terms so that progress can be assessed)</i>
