@@ -20,6 +20,7 @@ if "%opp%"=="dropandrun" (
 ) else if "%opp%"=="test" (
     python .\manage.py test .\macbeth_backend
     python .\manage.py test .\macbeth_api
+    python .\manage.py test .\macbeth_core
 ) else (
     echo Please enter parameter
 )

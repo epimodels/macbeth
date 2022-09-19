@@ -94,6 +94,7 @@ while [[ $# -gt 0 ]] ; do
  		${TEST})
  			./manage.py test ./macbeth_backend
 			./manage.py test ./macbeth_api
+			./manage.py test ./macbeth_core
  			;;
  		${DROPDB})
  			drop_db
