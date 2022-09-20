@@ -7,6 +7,7 @@ dill==0.3.4
 Django==4.0.2
 django-cors-headers==3.11.0
 djangorestframework==3.13.1
+djangorestframework-dataclasses==1.1.1
 djangorestframework-simplejwt==5.1.0
 flake8==4.0.1
 flake8-commas==2.1.0
@@ -28,6 +29,6 @@ pytz==2022.1
 scipy==1.8.0
 sqlparse==0.4.2
 tomli==2.0.1
-typing-extensions==4.1.1
+typing_extensions==4.1.1
 urllib3==1.26.9
 wrapt==1.14.0
