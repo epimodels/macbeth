@@ -5,7 +5,6 @@
 # ------------------------------------------------------------
 # Tests Login Register Blacklist ViewSet
 
-from genericpath import exists
 from rest_framework import status
 from rest_framework.test import APITestCase
 
@@ -23,7 +22,7 @@ def _register_info():
             'nickname': 'test',
             'password': 'testtest',
             'over13': True,
-        }, status.HTTP_201_CREATED,),
+        }, status.HTTP_201_CREATED),
         ({
             'email': 'test@test.com',
             'nickname': 'test',
@@ -94,7 +93,6 @@ def _register_info():
 
 
 class TestRegisterView(APITestCase):
-
     @parameterized.expand(_register_info)
     def test_register(self, user_data, expected_status, errors=None):
         response = self.client.post(REGISTER_URL, user_data)
