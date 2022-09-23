@@ -101,12 +101,15 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
       <td>9/22/22</td><td>130</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
     </tr>
     <tr>
+      <td>9/23/22</td><td>50</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
+    </tr>
+    <tr>
       <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
     </tr>
     <tr>
       <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Sponsor</td>
     </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>178</b></td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td><td><b>2</b></td><td><b>0</b></td>
+    <tr><td align="right"><b>Totals:</b></td><td><b>283</b></td><td><b>4</b></td><td><b>3</b></td><td><b>3</b></td><td><b>4</b></td><td><b>2</b></td>
     </tr>
   </tbody>
 </table>
