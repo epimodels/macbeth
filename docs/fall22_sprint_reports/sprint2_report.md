@@ -98,7 +98,7 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
       <td>9/20/22</td><td>56</td><td>&check;</td><td></td><td>&check;</td><td>&check;</td><td></td><td>Work</td>
     </tr>
     <tr>
-      <td>9/22/22</td><td>75</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
+      <td>9/22/22</td><td>130</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
     </tr>
     <tr>
       <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
