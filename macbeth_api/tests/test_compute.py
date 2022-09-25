@@ -59,6 +59,7 @@ class ComputeViewSetTest(TestCase):
         self.assertContains(response, 'Type')
         self.assertContains(response, 'Authorlink')
         self.assertContains(response, 'Parameters')
+        self.assertContains(response, 'GraphingData')
 
     @parameterized.expand(_model_ids)
     def test_retrieve_returns_value_parameters(self, _title, _version, id):
@@ -67,6 +68,13 @@ class ComputeViewSetTest(TestCase):
         for parameter in parameters:
             for key in _valid_parameter_config_keys():
                 self.assertIn(key, parameter)
+
+    @parameterized.expand(_model_ids)
+    def test_retrieve_returns_graphing_data(self, _title, _version, id):
+        response = self.compute_view_set.as_view({'get': 'retrieve'})(self.request, pk=id)
+        graphing_data = response.data.get('GraphingData')
+        self.assertIn('X', graphing_data, msg='GraphingData must contain X')
+        self.assertIn('Y', graphing_data, msg='GraphingData must contain Y')
 
     @parameterized.expand(_valid_compute_query_strings)
     def test_compute_returns_valid_response(self, id, parameters):
