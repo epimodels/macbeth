@@ -7,7 +7,8 @@
 [MS Teams link](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A5d8ece77ac41420a86770fdaee39b9cb%40thread.tacv2%2FMACBETH%2520V2%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=dcd68dfc-a6f9-4b0a-bf54-48138a776d04&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true)
 
 ## Link to Working Prototype
-Please follow the repository instructions for the prototype <a href="https://github.com/wsu-cpts421-sp22/macbeth">here. </a>
+Please follow the repository instructions for the prototype
+<a href="https://github.com/wsu-cpts421-sp22/macbeth">here. </a>
 
 ## Team members
 <table>
@@ -47,50 +48,140 @@ Please follow the repository instructions for the prototype <a href="https://git
 ## Progress, Testing
 ### Issues, Points and Hours
 <table> 
-  <thead>
-    <tr>
-      <th colspan="2"></th><th colspan="6">Point & Hour Counts</th><th colspan="2"></th>
-    </tr> 
-    <tr>
-      <th>Issue</th><th>Linked PR</th><th><ins>Total</ins><br/>Points,<br/>Hours</th><th><ins>Mikaela</ins></th><th><ins>Kyle</ins></th><th><ins>Trevor</ins></th><th><ins>Ethan</ins></th><th><ins>Eric</ins></th><th>% Complete</th><th>Notes</th>
-    </tr>
-  </thead> 
-  <tbody>
-    <tr>
-      <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/94">Issue #94</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>0.2</td><td>0<br/>0.2</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td>
-    </tr>
-    <tr>
-     <td><a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/96">Issue #96</a></td><td><a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a></td><td>0<br/>2.85</td><td>0<br/>0.95</td><td>0<br>0</td><td>0<br/>0.95</td><td>0<br/>0.95</td><td>0<br/>0</td><td>0</td><td></td>
-    </tr>
-    <tr>
-        <td>
-            <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/91">Issue #91</a>
-        </td>
-        <td>
-            <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/99">PR #99</a>
-        </td>
-        <td>0<br/>0</td>
-        <td>0<br/>0</td>
-        <td>3<br/>2.5</td>
-        <td>0<br/>0</td>
-        <td>0<br/>0</td>
-        <td>0<br/>0</td>
-        <td>0</td>
-        <td></td>
-    </tr>
-    <tr><td colspan="2" align="right"><b>Totals:</b></td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0<br/>0</td><td>0</td><td></td><td colspan="2"></td>
-    </tr>
-  </tbody>
+    <thead>
+        <tr>
+            <th colspan="2"></th><th colspan="6">Point & Hour Counts</th><th colspan="2"></th>
+        </tr> 
+        <tr>
+            <th>Issue</th>
+            <th>Linked PR</th>
+            <th><ins>Total</ins><br/>Points,<br/>Hours</th>
+            <th><ins>Mikaela</ins></th>
+            <th><ins>Kyle</ins></th>
+            <th><ins>Trevor</ins></th>
+            <th><ins>Ethan</ins></th>
+            <th><ins>Eric</ins></th>
+            <th>% Complete</th>
+            <th>Notes</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/94">Issue #94</a>
+            </td>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a>
+            </td>
+            <td>0<br/>0.2</td>
+            <td>0<br/>0.2</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/96">Issue #96</a>
+            </td>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a>
+            </td>
+            <td>0<br/>2.85</td>
+            <td>0<br/>0.95</td>
+            <td>0<br>0</td>
+            <td>0<br/>0.95</td>
+            <td>0<br/>0.95</td>
+            <td>0<br/>0</td>
+            <td>0</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/91">Issue #91</a>
+            </td>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/99">PR #99</a>
+            </td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>3<br/>2.5</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right">
+                <b>Totals:</b>
+            </td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0</td>
+            <td></td>
+            <td colspan="2"></td>
+        </tr>
+    </tbody>
 </table>
 
 ### Reflection Statements
-| Team Member | Contribution Reflection Statement |
-|-------------|-------------------|
-|Mikaela| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Kyle| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Trevor| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Ethan| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
-|Eric| <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.> |
+<table>
+    <thead>
+        <tr>
+            <th>Team Member</th>
+            <th>Contribution Reflection Statement</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mikaela Dean</td>
+            <td>
+                <*Required*: The points and hours data are unlikely to tell the
+                whole story about your contribution. Write a brief statement
+                explaining and reflecting on your contribution to this milestone.>
+            </td>
+        </tr>
+        <tr>
+            <td>Kyle Hurd</td>
+            <td>
+                <*Required*: The points and hours data are unlikely to tell the
+                whole story about your contribution. Write a brief statement
+                explaining and reflecting on your contribution to this milestone.>
+            </td>
+        </tr>
+        <tr>
+            <td>Trevor Naze</td>
+            <td>
+                <*Required*: The points and hours data are unlikely to tell the
+                whole story about your contribution. Write a brief statement
+                explaining and reflecting on your contribution to this milestone.>
+            </td>
+        </tr>
+        <tr>
+            <td>Ethan Nelson</td>
+            <td>
+                <*Required*: The points and hours data are unlikely to tell the
+                whole story about your contribution. Write a brief statement
+                explaining and reflecting on your contribution to this milestone.>
+            </td>
+        </tr>
+        <tr>
+            <td>Eric Song</td>
+            <td>
+                <*Required*: The points and hours data are unlikely to tell the
+                whole story about your contribution. Write a brief statement
+                explaining and reflecting on your contribution to this milestone.>
+            </td>
+        </tr>
+    </tbody>
+</table>
   
 ### Communication
 As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A5d8ece77ac41420a86770fdaee39b9cb%40thread.tacv2%2FMACBETH%2520V2%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=dcd68dfc-a6f9-4b0a-bf54-48138a776d04&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true) where most of our communication is done; we may have a brief one or two message exchange in our sponsor's Discord server from time-to-time to communicate directly with him. 
@@ -98,36 +189,90 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
 ### Video Meetings
 
 <table> 
-  <thead>
-    <tr>
-      <th colspan="2"></th><th colspan="5">In attendance?</th>
-    </tr> 
-    <tr>
-      <th>Date</th><th>Duration (min)</th><th>Mikaela</th><th>Kyle</th><th>Trevor</th><th>Ethan</th><th>Eric</th><th>Type</th> 
-    </tr>
+    <thead>
+        <tr>
+            <th colspan="2"></th><th colspan="5">In attendance?</th>
+        </tr> 
+        <tr>
+            <th>Date</th>
+            <th>Duration (min)</th>
+            <th>Mikaela</th>
+            <th>Kyle</th>
+            <th>Trevor</th>
+            <th>Ethan</th>
+            <th>Eric</th>
+            <th>Type</th> 
+        </tr>
   </thead> 
   <tbody>
-    <tr>
-      <td>9/19/22</td><td>47</td><td>&check;</td><td>&check;</td><td></td><td>&check;</td><td></td><td>Work</td>
-    </tr>
-    <tr>
-      <td>9/20/22</td><td>56</td><td>&check;</td><td></td><td>&check;</td><td>&check;</td><td></td><td>Work</td>
-    </tr>
-    <tr>
-      <td>9/22/22</td><td>130</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
-    </tr>
-    <tr>
-      <td>9/23/22</td><td>50</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
-    </tr>
-    <tr>
-      <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Work</td>
-    </tr>
-    <tr>
-      <td>//22</td><td>0</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>&check;</td><td>Sponsor</td>
-    </tr>
-    <tr><td align="right"><b>Totals:</b></td><td><b>283</b></td><td><b>4</b></td><td><b>3</b></td><td><b>3</b></td><td><b>4</b></td><td><b>2</b></td>
-    </tr>
-  </tbody>
+        <tr>
+            <td>9/19/22</td>
+            <td>47</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td></td>
+            <td>&check;</td>
+            <td></td>
+            <td>Work</td>
+        </tr>
+        <tr>
+            <td>9/20/22</td>
+            <td>56</td>
+            <td>&check;</td>
+            <td></td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td></td><td>Work</td>
+        </tr>
+        <tr>
+            <td>9/22/22</td>
+            <td>130</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>Work</td>
+        </tr>
+        <tr>
+            <td>9/23/22</td>
+            <td>50</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>Work</td>
+        </tr>
+        <tr>
+            <td>//22</td><td>0</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>Work</td>
+        </tr>
+        <tr>
+            <td>//22</td>
+            <td>0</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>Sponsor</td>
+        </tr>
+        <tr>
+            <td align="right"><b>Totals:</b></td>
+            <td><b>283</b></td>
+            <td><b>4</b></td>
+            <td><b>3</b></td>
+            <td><b>3</b></td>
+            <td><b>4</b></td>
+            <td><b>2</b></td>
+        </tr>
+    </tbody>
 </table>
 
 ### Retrospective
