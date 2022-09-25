@@ -33,5 +33,44 @@
             "Max": 100.0,
             "DefaultValue": 0.1
         }
-    ]
+    ],
+    "GraphingData": {
+        "X": {
+            "Name": "Time",
+            "VariableName": "t",
+            "Type": "float",
+            "Description": "The time in hours.",
+            "Units": "hours"
+        },
+        "Y": [
+            {
+                "Name": "Susceptible",
+                "VariableName": "s",
+                "Type": "float",
+                "Description": "The number of susceptible individuals.",
+                "Units": "individuals"
+            },
+            {
+                "Name": "Exposed",
+                "VariableName": "e",
+                "Type": "float",
+                "Description": "The number of exposed individuals.",
+                "Units": "individuals"
+            },
+            {
+                "Name": "Infected",
+                "VariableName": "i",
+                "Type": "float",
+                "Description": "The number of infected individuals.",
+                "Units": "individuals"
+            },
+            {
+                "Name": "Recovered",
+                "VariableName": "R",
+                "Type": "float",
+                "Description": "The number of recovered individuals.",
+                "Units": "individuals"
+            }
+        ]
+    }
 }
