@@ -261,6 +261,15 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
             <td>Work</td>
         </tr>
         <tr>
+            <td>9/26/22</td><td>45</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td></td>
+            <td>Work</td>
+        </tr>
+        <tr>
             <td>//22</td><td>0</td>
             <td>&check;</td>
             <td>&check;</td>
@@ -281,11 +290,11 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
         </tr>
         <tr>
             <td align="right"><b>Totals:</b></td>
-            <td><b>283</b></td>
+            <td><b>328</b></td>
+            <td><b>5</b></td>
             <td><b>4</b></td>
-            <td><b>3</b></td>
-            <td><b>3</b></td>
             <td><b>4</b></td>
+            <td><b>5</b></td>
             <td><b>2</b></td>
         </tr>
     </tbody>
