@@ -8,6 +8,7 @@
 import numpy
 from scipy import integrate
 from macbeth_backend.computations.interface_compute_model import InterfaceComputeModel
+from macbeth_backend.computations.zombie_seir.zombie_seir_result import ZombieSEIRResult
 
 
 class ZombieSEIR(InterfaceComputeModel):
@@ -61,10 +62,9 @@ class ZombieSEIR(InterfaceComputeModel):
         if count == 1:  # Something is wrong
             return False
 
-        t = numpy.vstack(time_series)
+        t = numpy.vstack(time_series).flatten()
         s, e, i, r = numpy.column_stack(outcome_series)
-
-        return t, s, e, i, r
+        return ZombieSEIRResult(t, s, e, i, r)
 
 
 if __name__ == '__main__':

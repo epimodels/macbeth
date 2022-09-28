@@ -8,6 +8,7 @@
     "Parameters": [
         {
             "Name": "Infect Probability",
+            "VariableName": "infect_prob",
             "Type": "float",
             "Description": "The probability that a susceptible person will become infected.",
             "Min": 0.0,
@@ -16,6 +17,7 @@
         },
         {
             "Name": "Infect Duration",
+            "VariableName": "infect_duration",
             "Type": "double",
             "Description": "The duration of the infection.",
             "Min": -1.0,
