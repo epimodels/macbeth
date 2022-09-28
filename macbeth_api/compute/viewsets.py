@@ -7,8 +7,10 @@
 
 from rest_framework import status, viewsets
 from rest_framework.decorators import action
+from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
+from rest_framework_dataclasses.serializers import DataclassSerializer
 from macbeth_backend import COMPUTE_MODELS, ComputeModel
 from macbeth_backend.computations.config import Config
 from macbeth_core.logging import log
@@ -63,27 +65,21 @@ class ComputeModelsViewSet(viewsets.ViewSet):
         try:
             log.info('Performing computation')
             model_info: ComputeModel = MODEL_TO_CONF_DICT[pk]
-            # I need to match the request body to the model's input.
             kwargs = Config.generate_kwargs_for_obj(model_info.model, request.query_params)
-            # TODO: This is hardcoded for the SEIR model.
-            # TODO: Once graph is implemented this will need to be changed.
-            # TODO: Most likely, config file needs to describe the outputs.
-            # TODO: This could be a nice feature to display outputs in the UI.
-            t, s, e, i, r = model_info.model(**kwargs).compute_model()
-            import numpy as np
-            return(Response({
-                't': list(np.concatenate(t).flat),
-                's': s,
-                'e': e,
-                'i': i,
-                'r': r,
-                }, status=status.HTTP_200_OK))
+            computed_result = model_info.model(**kwargs).compute_model()
+            serializer = DataclassSerializer(instance=computed_result, dataclass=type(computed_result))
+            return Response(serializer.data, status=status.HTTP_200_OK)
 
         except KeyError:
             log.exception(f'Model not found with id: {pk}', exc_info=True)
             return Response({
                 'error': 'Model not found.',
             }, status=status.HTTP_404_NOT_FOUND)
+        except ValidationError:
+            log.exception(f'Invalid request body: {request.data}', exc_info=True)
+            return Response({
+                'error': 'Invalid request body.',
+            }, status=status.HTTP_400_BAD_REQUEST)
         except Exception:
             log.exception(f'Unknown error computing model: {pk}', exc_info=True)
             return Response({

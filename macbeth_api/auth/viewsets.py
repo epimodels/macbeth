@@ -32,7 +32,7 @@ class LoginViewSet(TokenObtainPairView, ModelViewSet):
             serializer = self.get_serializer(data=request.data)
             serializer.is_valid(raise_exception=True)
         except Exception as e:
-            log.exception(f'Unkown error: {e}', exc_info=True)
+            log.exception(f'Unknown error: {e}', exc_info=True)
             return Response('Invalid token or user not found.', status=status.HTTP_400_BAD_REQUEST)
         finally:
             log.info('Finished')
@@ -62,7 +62,7 @@ class RegisterViewSet(ModelViewSet, TokenObtainPairView):
                 'access': str(refresh.access_token),
             }
         except Exception as e:
-            log.exception(f'Unkown error: {e}', exc_info=True)
+            log.exception(f'Unknown error: {e}', exc_info=True)
             return Response('Invalid token or user not found.', status=status.HTTP_400_BAD_REQUEST)
         finally:
             log.info('Finished')
@@ -89,7 +89,7 @@ class RefreshViewSet(viewsets.ViewSet, TokenRefreshView):
             serializer = self.get_serializer(data=request.data)
             serializer.is_valid(raise_exception=True)
         except Exception as e:
-            log.exception(f'Unkown error: {e}', exc_info=True)
+            log.exception(f'Unknown error: {e}', exc_info=True)
             return Response('Invalid token or user not foudn.', status=status.HTTP_400_BAD_REQUEST)
         finally:
             log.info('Finished')
@@ -113,7 +113,7 @@ class BlacklistTokenViewSet(viewsets.ViewSet):
             token = RefreshToken(refresh_token)
             token.blacklist()
         except Exception as e:
-            log.exception(f'Unkown error: {e}', exc_info=True)
+            log.exception(f'Unknown error: {e}', exc_info=True)
             return Response(status=status.HTTP_400_BAD_REQUEST)
         finally:
             log.info('Finished')
