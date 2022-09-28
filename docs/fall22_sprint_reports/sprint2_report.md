@@ -122,7 +122,7 @@ Please follow the repository instructions for the prototype
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/80">PR #80</a>
             </td>
             <td>0<br/>0</td>
-            <td>0<br/>4.25</td>
+            <td>0<br/>5.25</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
