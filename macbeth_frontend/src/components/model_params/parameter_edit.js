@@ -27,6 +27,7 @@ const ParameterEdit = (props) => {
         setParameters(res.data.Parameters);
         setAuthor(res.data.Author);
         setDescription(res.data.Description);
+        localStorage.setItem('compute-selected-model-graph', JSON.stringify(res.data.GraphingData));
       })
     }
   , []);

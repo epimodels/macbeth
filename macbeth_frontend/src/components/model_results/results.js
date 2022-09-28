@@ -11,22 +11,18 @@ export default function Results() {
   const [xData, setXData] = React.useState([]);
   const [yData, yDataDispatch] = React.useReducer(yDataReducer, [
     {
-      'label': 'Survivors',
       'borderColor': 'rgb(255, 99, 132)',
       'backgroundColor': 'rgba(255, 99, 132, 0.5)',
     },
     {
-      'label': 'Latent',
       'borderColor': 'rgb(25, 255, 100)',
       'backgroundColor': 'rgba(53, 162, 235, 0.5)',
     },
     {
-      'label': 'Zombies',
       'borderColor': 'rgb(53, 162, 235)',
       'backgroundColor': 'rgba(53, 162, 235, 0.5)',
     },
     {
-      'label': 'Dead',
       'borderColor': 'rgb(0, 0, 0)',
       'backgroundColor': 'rgba(0, 0, 0, 0.5)',
     }
@@ -36,10 +32,11 @@ export default function Results() {
    * Reducer function for the datasets that are the y-axis (updating just the data)
    */
   function yDataReducer(state, action) {
-    state[0].data = action.sSet;
-    state[1].data = action.eSet;
-    state[2].data = action.iSet;
-    state[3].data = action.rSet;
+    for (let i = 0; i < action.yOutput.length; i++)
+    {
+      state[i].label = action.yOutput[i].Name;
+      state[i].data = action.yData[action.yOutput[i].VariableName];
+    }
     return [...state];
   }
 
@@ -48,8 +45,9 @@ export default function Results() {
       .get('http://127.0.0.1:8000/api/compute/models/ZombieSEIR/perform_computation/?infect_prob\=0.5\&infect_duration\=0.1\&latent_period\=0.5', {})
       .then(res => {
         // Set x and y data
-        setXData(res.data.t);
-        yDataDispatch( { sSet: res.data.s, eSet: res.data.e, iSet: res.data.i, rSet: res.data.r } );
+        const graphingData = JSON.parse(localStorage.getItem('compute-selected-model-graph'));
+        setXData(res.data[graphingData.X.VariableName]);
+        yDataDispatch( { yOutput: graphingData.Y, yData: res.data } );
       });
   }, []);
 
