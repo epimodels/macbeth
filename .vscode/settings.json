@@ -11,4 +11,9 @@
     ],
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
+    "cSpell.words": [
+        "khurd",
+        "Mikaela",
+        "mikalooloo"
+    ],
 }
