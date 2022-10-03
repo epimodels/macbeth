@@ -22,7 +22,7 @@ const ParameterEdit = (props) => {
 
   useEffect(() => {
     axiosInstance
-      .get('/compute/models/' + URLparams.modelid +'/', {})
+      .get('/compute/models/' + URLparams.modelid + '/', {})
       .then(res => {
         setParameters(res.data.Parameters);
         setAuthor(res.data.Author);
@@ -59,7 +59,9 @@ const ParameterEdit = (props) => {
             {parameters.map((item, idx) => {
               return (
                 <Col xs={'auto'} key={item.Name}>
-                  <Parameter controlID='default' label={item.Name} type='basicDefualt' 
+                  <Parameter controlID='default' type='basicDefault' 
+                    label={item.Name} 
+                    variableName={item.VariableName}
                     placeholder={item.DefaultValue} 
                     text={item.Description} />
                 </Col>
@@ -68,7 +70,7 @@ const ParameterEdit = (props) => {
           </Row>
         </Form>
         <NavButton label='Back' redirect='/compute/model-select' variant='prev'/>
-        <NavButton label='Submit' redirect='/compute/results' variant='next'/>
+        <NavButton label='Submit' redirect={'/compute/results/' + localStorage.getItem('compute-selected-model')} variant='next'/>
       </div>
   )
 }
