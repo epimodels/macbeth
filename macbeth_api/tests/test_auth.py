@@ -10,9 +10,12 @@ from rest_framework.test import APITestCase
 
 from parameterized import parameterized
 
+from macbeth_backend.models.account import user
+
 
 REGISTER_URL = '/api/auth/register/'
 LOGIN_URL = '/api/auth/login/'
+REFRESH_URL = '/api/auth/refresh/'
 
 
 def _register_info():
@@ -100,3 +103,52 @@ class TestRegisterView(APITestCase):
         if errors:
             for field, message in errors:
                 self.assertEqual(response.data[field][0].__str__(), message)
+
+
+def _refresh_info():
+    return [
+        (status.HTTP_200_OK,),
+    ]
+
+
+def _refresh_info_invalid():
+    return [
+        (
+            {},
+            status.HTTP_400_BAD_REQUEST,
+            [('refresh', 'This field is required.')],
+        ),
+        (
+            {'refresh': '5'},
+            status.HTTP_401_UNAUTHORIZED,
+            [('refresh', 'Token is invalid or expired.')],
+        ),
+    ]
+
+
+class TestRefreshView(APITestCase):
+    def setUp(self):
+        response = self.client.post(REGISTER_URL, {
+            "email": "test@test.com",
+            "password": "testtest",
+            "nickname": "test",
+            "over13": True,
+        }, format='json')
+
+        # get both of the tokens from the register return
+        # (the access token is just called token here)
+        self.access = response.data['token']
+        self.refresh = response.data['refresh']
+
+    @parameterized.expand(_refresh_info)
+    def test_refresh(self, expected_status):
+        response = self.client.post(REFRESH_URL, {'refresh': self.refresh}, format='json')
+        self.assertEqual(response.status_code, expected_status)
+        self.assertNotEqual(self.access, response.data['access'])
+
+    @parameterized.expand(_refresh_info_invalid)
+    def test_refresh_invalid(self, token_input, expected_status, errors):
+        response = self.client.post(REFRESH_URL, token_input)
+        self.assertEqual(response.status_code, expected_status)
+        for field, message in errors:
+            self.assertEqual(response.data[field][0].__str__(), message)
