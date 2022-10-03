@@ -13,14 +13,14 @@ class Parameter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: ""
+      text: "",
     };
   }
 
   componentDidMount() {
     const paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
-    if (paramDict[this.props.label] !== undefined) {
-      this.setState({text: paramDict[this.props.label]});
+    if (paramDict[this.props.variableName] !== undefined) {
+      this.setState({text: paramDict[this.props.variableName]});
     }
   }
 
@@ -28,7 +28,7 @@ class Parameter extends React.Component {
   onEditHandler(e) {
     console.log("onEditHandler");
     const paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
-    paramDict[this.props.label] = e.target.value;
+    paramDict[this.props.variableName] = e.target.value;
     localStorage.setItem('compute-selected-model-params', JSON.stringify(paramDict));
   }
   
@@ -53,7 +53,8 @@ Parameter.defaultProps = {
   label: 'Default',
   type: 'basicDefault',
   placeholder: 'Enter info here',
-  text: ''
+  text: '',
+  variableName: '',
 }
 
 export default Parameter;
