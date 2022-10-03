@@ -154,7 +154,7 @@ class TestRefreshView(APITestCase):
         response = self.client.post(REFRESH_URL, token_input)
         self.assertEqual(response.status_code, expected_status)
         self.assertEqual(response.data, message)
-        
+
     @parameterized.expand(_refresh_info_validation_error)
     def test_refresh_validation_error(self, token_input, expected_status, errors):
         response = self.client.post(REFRESH_URL, token_input)
@@ -173,8 +173,8 @@ def _blacklist_info():
             ),
         ),
     ]
-    
-    
+
+
 def _blacklist_info_invalid():
     return [
         (
