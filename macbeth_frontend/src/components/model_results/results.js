@@ -4,6 +4,7 @@ import Progress from '../compute/progress';
 import ResultsGraph from './results_graph';
 import axiosInstance from '../../axios';
 import { useParams } from 'react-router-dom';
+import { TestColor, GetNextColor, GetCertainColor } from './color_manager';
 
 /*
  * Sub-page of Compute
@@ -12,24 +13,7 @@ export default function Results() {
   const URLparams = useParams();
 
   const [xData, setXData] = React.useState([]);
-  const [yData, yDataDispatch] = React.useReducer(yDataReducer, [
-    {
-      'borderColor': 'rgb(255, 99, 132)',
-      'backgroundColor': 'rgba(255, 99, 132, 0.5)',
-    },
-    {
-      'borderColor': 'rgb(25, 255, 100)',
-      'backgroundColor': 'rgba(53, 162, 235, 0.5)',
-    },
-    {
-      'borderColor': 'rgb(53, 162, 235)',
-      'backgroundColor': 'rgba(53, 162, 235, 0.5)',
-    },
-    {
-      'borderColor': 'rgb(0, 0, 0)',
-      'backgroundColor': 'rgba(0, 0, 0, 0.5)',
-    }
-  ]);
+  const [yData, yDataDispatch] = React.useReducer(yDataReducer, []);
 
   /*
    * Reducer function for the datasets that are the y-axis (updating just the data)
@@ -37,8 +21,27 @@ export default function Results() {
   function yDataReducer(state, action) {
     for (let i = 0; i < action.yOutput.length; i++)
     {
+      state[i] = {};
       state[i].label = action.yOutput[i].Name;
       state[i].data = action.yData[action.yOutput[i].VariableName];
+
+      // Setting color
+      const color = action.yOutput[i]["color"];
+      if (color !== undefined) {
+        // If in config, is it already in hexadecimal?
+        if (TestColor(color)) { 
+          state[i].borderColor = color;
+        }
+        else {
+          state[i].borderColor = GetCertainColor(color);
+        }
+      }
+      // Not set in config? Get default color
+      else {
+        state[i].borderColor = GetNextColor(i);
+      }
+      // Add 60 to the end of the hexadecimal to make backgroundColor sorta transparent
+      state[i].backgroundColor = state[i].borderColor + "60";
     }
     return [...state];
   }
@@ -64,7 +67,7 @@ export default function Results() {
         setXData(res.data[graphingOutput.X.VariableName]);
         yDataDispatch( { yOutput: graphingOutput.Y, yData: res.data } );
       });
-  }, []);
+  }, [URLparams.modelid]);
 
   return (
     <div>
