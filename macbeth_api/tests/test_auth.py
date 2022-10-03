@@ -5,6 +5,7 @@
 # ------------------------------------------------------------
 # Tests Login Register Blacklist ViewSet
 
+from django.test import TestCase
 from rest_framework import status
 from rest_framework.test import APITestCase
 
@@ -96,6 +97,34 @@ class TestRegisterView(APITestCase):
     @parameterized.expand(_register_info)
     def test_register(self, user_data, expected_status, errors=None):
         response = self.client.post(REGISTER_URL, user_data)
+        self.assertEqual(response.status_code, expected_status)
+        if errors:
+            for field, message in errors:
+                self.assertEqual(response.data[field][0].__str__(), message)
+
+
+def _login_info():
+    return [
+        ({
+            'email': 'test@test.com',
+            'password': 'testtest',
+        }, status.HTTP_200_OK),
+    ]
+
+
+class TestLoginView(APITestCase):
+    def setUp(self):
+        self.client.post(REGISTER_URL, {
+            'email': 'test@test.com',
+            'nickname': 'test',
+            'password': 'testtest',
+            'over13': True,
+        })
+
+    @parameterized.expand(_login_info)
+    def test_login(self, user_data, expected_status, errors=None):
+        self.client.logout()
+        response = self.client.post(LOGIN_URL, user_data)
         self.assertEqual(response.status_code, expected_status)
         if errors:
             for field, message in errors:
