@@ -3,11 +3,14 @@ import NavButton from '../nav_button';
 import Progress from '../compute/progress';
 import ResultsGraph from './results_graph';
 import axiosInstance from '../../axios';
+import { useParams } from 'react-router-dom';
 
 /*
  * Sub-page of Compute
  */
 export default function Results() {
+  const URLparams = useParams();
+
   const [xData, setXData] = React.useState([]);
   const [yData, yDataDispatch] = React.useReducer(yDataReducer, [
     {
@@ -41,13 +44,25 @@ export default function Results() {
   }
 
   React.useEffect(() => {
+    const parameterInput = JSON.parse(localStorage.getItem('compute-selected-model-params'));
+    const graphingOutput = JSON.parse(localStorage.getItem('compute-selected-model-graph'));
+
+    let computeCall = '/compute/models/' + URLparams.modelid + '/perform_computation/?';
+    let first = true;
+
+    for (const [key, value] of Object.entries(parameterInput))
+    {
+      if (!first) computeCall += '&';
+      computeCall += key + '=' + value;
+      first = false;
+    }
+
     axiosInstance
-      .get('http://127.0.0.1:8000/api/compute/models/ZombieSEIR/perform_computation/?infect_prob\=0.5\&infect_duration\=0.1\&latent_period\=0.5', {})
+      .get(computeCall, {})
       .then(res => {
         // Set x and y data
-        const graphingData = JSON.parse(localStorage.getItem('compute-selected-model-graph'));
-        setXData(res.data[graphingData.X.VariableName]);
-        yDataDispatch( { yOutput: graphingData.Y, yData: res.data } );
+        setXData(res.data[graphingOutput.X.VariableName]);
+        yDataDispatch( { yOutput: graphingOutput.Y, yData: res.data } );
       });
   }, []);
 
