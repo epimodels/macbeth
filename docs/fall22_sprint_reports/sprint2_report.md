@@ -295,9 +295,9 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
             <td>35</td>
             <td>&check;</td>
             <td>&check;</td>
+            <td></td>
             <td>&check;</td>
-            <td>&check;</td>
-            <td>&check;</td>
+            <td></td>
             <td>Work</td>
         </tr>
         <tr>
@@ -323,10 +323,10 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
         <tr>
             <td align="right"><b>Totals:</b></td>
             <td><b>476</b></td>
+            <td><b>8</b></td>
             <td><b>7</b></td>
-            <td><b>6</b></td>
             <td><b>5</b></td>
-            <td><b>7</b></td>
+            <td><b>8</b></td>
             <td><b>3</b></td>
         </tr>
     </tbody>
