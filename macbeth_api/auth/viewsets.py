@@ -97,7 +97,7 @@ class RefreshViewSet(viewsets.ViewSet, TokenRefreshView):
             return Response(e.detail, status=status.HTTP_400_BAD_REQUEST)
         except TokenError as e:
             log.exception(f'Token error: {e}', exc_info=True)
-            return Response({'refresh': ['Token is invalid or expired.']}, status=status.HTTP_401_UNAUTHORIZED)
+            return Response('Token is invalid or expired.', status=status.HTTP_401_UNAUTHORIZED)
         except Exception as e:
             log.exception(f'Unknown error: {e}', exc_info=True)
             return Response('Invalid token or user not found.', status=status.HTTP_400_BAD_REQUEST)
@@ -122,6 +122,9 @@ class BlacklistTokenViewSet(viewsets.ViewSet):
             refresh_token = request.data['refresh_token']
             token = RefreshToken(refresh_token)
             token.blacklist()
+        except TokenError as e:
+            log.exception(f'Token error: {e}', exc_info=True)
+            return Response('Token is invalid or blacklisted.', status=status.HTTP_401_UNAUTHORIZED)
         except Exception as e:
             log.exception(f'Unknown error: {e}', exc_info=True)
             return Response(status=status.HTTP_400_BAD_REQUEST)
