@@ -31,7 +31,7 @@
             "Description": "The duration of the latent period in hours.",
             "Min": 0.0,
             "Max": 100.0,
-            "DefaultValue": 0.1
+            "DefaultValue": 0.5
         }
     ],
     "GraphingData": {

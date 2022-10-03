@@ -106,13 +106,10 @@ export default function ResultsGraph(props) {
             // Then if the range is over 25, round to the nearest 5, and if under 25, round to the nearest 0.1
             state.scales.y.ticks.stepSize = (max - min) >= 25 ? Math.round((max - min) / 50.0) * 5 : Math.round((max - min) * 2) / 10;
         }
+        chartRef.current.options = state;
+        chartRef.current.update();
         return state;
     }
-
-    React.useEffect(() => {
-        chartRef.current.options = options;
-        chartRef.current.update();
-    }, [options]);
 
     // If parameters are updated
     React.useEffect(() => {
