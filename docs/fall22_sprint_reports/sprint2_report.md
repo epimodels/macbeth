@@ -122,7 +122,7 @@ Please follow the repository instructions for the prototype
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/80">PR #80</a>
             </td>
             <td>0<br/>0</td>
-            <td>0<br/>5.25</td>
+            <td>0<br/>13</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
@@ -267,7 +267,7 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
         </tr>
         <tr>
             <td>9/23/22</td>
-            <td>50</td>
+            <td>58</td>
             <td>&check;</td>
             <td>&check;</td>
             <td>&check;</td>
@@ -276,7 +276,18 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
             <td>Work</td>
         </tr>
         <tr>
-            <td>9/26/22</td><td>45</td>
+            <td>9/23/22</td>
+            <td>30</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td></td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>Sponsor</td>
+        </tr>
+        <tr>
+            <td>9/26/22</td>
+            <td>45</td>
             <td>&check;</td>
             <td>&check;</td>
             <td>&check;</td>
@@ -285,7 +296,28 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
             <td>Work</td>
         </tr>
         <tr>
-            <td>//22</td><td>0</td>
+            <td>9/28/22</td>
+            <td>75</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td></td>
+            <td>Professor/Work</td>
+        </tr>
+        <tr>
+            <td>10/3/22</td>
+            <td>35</td>
+            <td>&check;</td>
+            <td>&check;</td>
+            <td></td>
+            <td>&check;</td>
+            <td></td>
+            <td>Work</td>
+        </tr>
+        <tr>
+            <td>//22</td>
+            <td>0</td>
             <td>&check;</td>
             <td>&check;</td>
             <td>&check;</td>
@@ -305,12 +337,12 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
         </tr>
         <tr>
             <td align="right"><b>Totals:</b></td>
-            <td><b>328</b></td>
+            <td><b>476</b></td>
+            <td><b>8</b></td>
+            <td><b>7</b></td>
             <td><b>5</b></td>
-            <td><b>4</b></td>
-            <td><b>4</b></td>
-            <td><b>5</b></td>
-            <td><b>2</b></td>
+            <td><b>8</b></td>
+            <td><b>3</b></td>
         </tr>
     </tbody>
 </table>
