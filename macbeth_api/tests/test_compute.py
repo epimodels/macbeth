@@ -76,6 +76,26 @@ class ComputeViewSetTest(TestCase):
         self.assertIn('X', graphing_data, msg='GraphingData must contain X')
         self.assertIn('Y', graphing_data, msg='GraphingData must contain Y')
 
+    @parameterized.expand(_model_ids)
+    def test_xy_coordinates_have_correct_attributes(self, _title, _version, id):
+        response = self.compute_view_set.as_view({'get': 'retrieve'})(self.request, pk=id)
+        graphing_data = response.data.get('GraphingData')
+        x = graphing_data.get('X')
+        y = graphing_data.get('Y')
+
+        self.assertIn('Name', x, msg='X must contain Name')
+        self.assertIn('VariableName', x, msg='X must contain VariableName')
+        self.assertIn('Type', x, msg='X must contain Type')
+        self.assertIn('Description', x, msg='X must contain Description')
+        self.assertIn('Units', x, msg='X must contain Units')
+
+        for y_item in y:
+            self.assertIn('Name', y_item, msg='Y must contain Name')
+            self.assertIn('VariableName', y_item, msg='Y must contain VariableName')
+            self.assertIn('Type', y_item, msg='Y must contain Type')
+            self.assertIn('Description', y_item, msg='Y must contain Description')
+            self.assertIn('Units', y_item, msg='Y must contain Units')
+
     @parameterized.expand(_valid_compute_query_strings)
     def test_compute_returns_valid_response(self, id, parameters):
         request = self.factory.get(self.compute_api, parameters)
