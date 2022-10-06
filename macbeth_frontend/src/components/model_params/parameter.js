@@ -68,7 +68,7 @@ function Parameter(props) {
           // See: https://stackoverflow.com/questions/66950716/react-bootstrap-component-form-control-onchange-event-listener-doesnt-fire-wh#comment126154329_66951536
           onSelect={(e) => valueDispatch({ label: props.label, default: props.placeholder, value: e.target.value })} />
         {/* Currently hides reset icon by inversing the colors to white */}
-        <FontAwesomeIcon icon={faRotateLeft} id="resetField" onClick={() => valueDispatch({ label: props.label, default: props.placeholder, value: '' })} className={value == '' ? 'fa-inverse' : ''}/>
+        <FontAwesomeIcon icon={faRotateLeft} id="resetField" onClick={() => valueDispatch({ label: props.label, default: props.placeholder, value: '' })} className={value === '' ? 'fa-inverse' : ''}/>
         </Stack>
         <Form.Text className="text-muted">
           {props.text}

@@ -14,7 +14,6 @@ import { useParams } from 'react-router-dom';
  */
 
 const ParameterEdit = (props) => {
-  const [rowNum, setRowNum] = useState('');
   const URLparams = useParams();
   const [parameters, setParameters] = useState([]);
   const [description, setDescription] = useState('');
@@ -28,23 +27,7 @@ const ParameterEdit = (props) => {
         setAuthor(res.data.Author);
         setDescription(res.data.Description);
       })
-    }
-  , []);
-
-  const _create2dArray = () => {
-    let rows = [[], []];
-    let cols = 1;
-    parameters.forEach((parameter, idx) => {
-      if (idx % rowNum === 0 && idx !== 0) {
-        cols++;
-        rows.push([]);
-        rows[cols].push(parameter);
-      } else {
-        rows[cols].push(parameter);
-      }
-    })
-    return rows;
-  }
+  }, [URLparams.modelid]);
 
   return(
     <div>
