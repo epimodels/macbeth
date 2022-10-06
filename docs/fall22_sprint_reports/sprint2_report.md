@@ -121,13 +121,13 @@ Please follow the repository instructions for the prototype
             <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/80">PR #80</a>
             </td>
-            <td>0<br/>0</td>
-            <td>0<br/>13</td>
-            <td>0<br/>0</td>
-            <td>0<br/>0</td>
+            <td>8<br/>15</td>
+            <td>8<br/>15</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
-            <td>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>100</td>
             <td></td>
         </tr>
         <tr>
@@ -144,6 +144,21 @@ Please follow the repository instructions for the prototype
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/69">Issue #69</a>
+            </td>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/107">PR #107</a>
+            </td>
+            <td>0<br/>0</td>
+            <td>2.7<br/>2</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>100</td>
         </tr>
         <tr>
             <td colspan="2" align="right">
