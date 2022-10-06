@@ -39,6 +39,9 @@ export default function ResultsGraph(props) {
                 data: dataset.data,
                 borderColor: dataset.borderColor,
                 backgroundColor: dataset.backgroundColor,
+                borderDash: dataset.borderDash,
+                borderWidth: dataset.borderDash.length == 0 ? 2 : 4,
+                pointRadius: dataset.borderDash.length == 0 ? 1 : 0,
             }
         ))
     });
@@ -125,6 +128,9 @@ export default function ResultsGraph(props) {
                     data: dataset.data,
                     borderColor: dataset.borderColor,
                     backgroundColor: dataset.backgroundColor,
+                    borderDash: dataset.borderDash,
+                    borderWidth: dataset.borderDash.length == 0 ? 2 : 4,
+                    pointRadius: dataset.borderDash.length == 0 ? 1 : 0,
                 }
             ))
         });
