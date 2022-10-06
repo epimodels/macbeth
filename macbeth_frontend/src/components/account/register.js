@@ -60,7 +60,7 @@ export default function Register() {
     <div>
       <h2 style={{'margin-top':'2%'}}>Register an Account</h2>
       <Form>
-        <Form.Group as={Row} controlId="formEmail" className="justify-content-center" style={{'margin-top':'3%'}}>
+        <Form.Group as={Row} controlId="formEmail" className="justify-content-center" style={{'marginTop':'3%'}}>
           <Form.Label column sm={1} style={{display:'flex',justifyContent:'right'}}>
             email:
           </Form.Label>
@@ -73,7 +73,7 @@ export default function Register() {
           <Col sm={1}></Col>
         </Form.Group>
 
-        <Form.Group as={Row} controlId="formName" className="justify-content-center" style={{'margin-top':'1%'}}>
+        <Form.Group as={Row} controlId="formName" className="justify-content-center" style={{'marginTop':'1%'}}>
           <Form.Label column sm={1} style={{display:'flex',justifyContent:'right'}}>
             nickname:
           </Form.Label>
@@ -83,7 +83,7 @@ export default function Register() {
           <Col sm={1}></Col>
         </Form.Group>
 
-        <Form.Group as={Row} controlId="formPassword" className="justify-content-sm-center" style={{'margin-top':'1%'}}>
+        <Form.Group as={Row} controlId="formPassword" className="justify-content-sm-center" style={{'marginTop':'1%'}}>
           <Form.Label column sm={1} style={{display:'flex',justifyContent:'right'}}>
             password:
           </Form.Label>
@@ -95,7 +95,7 @@ export default function Register() {
           </Col>
         </Form.Group>
 
-        <Form.Group as={Row} controlID="formPasswordConfirmation" className="justify-content-center" style={{'margin-top':'1%'}}>
+        <Form.Group as={Row} controlID="formPasswordConfirmation" className="justify-content-center" style={{'marginTop':'1%'}}>
           <Form.Label column sm={1} style={{display:'flex',justifyContent:'right'}}>
             repeat password:
           </Form.Label>
@@ -107,7 +107,7 @@ export default function Register() {
           </Col>
         </Form.Group>
 
-        <Form.Group as={Row} controlId="formOver13" className="justify-content-center" style={{'margin-top':'2%', 'margin-bottom':'2%'}}>
+        <Form.Group as={Row} controlId="formOver13" className="justify-content-center" style={{'marginTop':'2%', 'marginBottom':'2%'}}>
         <Col sm={3}>
           <Form.Check type="checkbox" label="By checking this box, I verify that I am over 13 years old" name="over13" onChange={handleChange} />
         </Col>
