@@ -25,25 +25,20 @@ export default function Results() {
       state[i].label = action.yOutput[i].Name;
       state[i].data = action.yData[action.yOutput[i].VariableName];
 
-      // Setting color
+      // **Setting color**
       const color = action.yOutput[i]["Color"];
       if (color !== undefined) {
         // If in config, is it already in hexadecimal?
-        if (TestColor(color)) { 
-          state[i].borderColor = color;
-        }
-        else {
-          state[i].borderColor = GetCertainColor(color);
-        }
+        if (TestColor(color)) state[i].borderColor = color;
+        else state[i].borderColor = GetCertainColor(color);  
       }
       // Not set in config? Get default color
-      else {
-        state[i].borderColor = GetNextColor(i);
-      }
+      else state[i].borderColor = GetNextColor(i);
+
       // Add 60 to the end of the hexadecimal to make backgroundColor sorta transparent
       state[i].backgroundColor = state[i].borderColor + "60";
 
-      // Setting line type
+      // **Setting line type**
       const lineType = action.yOutput[i]["LineType"];
       switch (lineType) {
         case 'dashed':
@@ -75,6 +70,7 @@ export default function Results() {
     const parameterInput = JSON.parse(localStorage.getItem('compute-selected-model-params'));
     const graphingOutput = JSON.parse(localStorage.getItem('compute-selected-model-graph'));
 
+    // Change this to a post/job request eventually
     let computeCall = '/compute/models/' + URLparams.modelid + '/perform_computation/?';
     let first = true;
 
@@ -99,7 +95,7 @@ export default function Results() {
       <Progress currentStep={3} />
       <h4>Viewing Results</h4>
       <div style={{'width':'50%', 'height':'50%', 'paddingLeft':'5%'}}>
-        <ResultsGraph title={"Test"} xData={xData} yData={yData} />
+        <ResultsGraph title={localStorage.getItem('compute-selected-model-name')} xData={xData} yData={yData} />
       </div>
       <NavButton label='Back' redirect='/compute/parameter-edit' variant='prev'/>
     </div>
