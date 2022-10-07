@@ -51,47 +51,47 @@ class TestComputeModels(unittest.TestCase):
         '''Tests that the compute models have the correct attributes.
         '''
         for model in mb.COMPUTE_MODELS:
-            if model['name'] == name:
+            if model.name == name:
                 model_under_test = model
                 break
 
         for attribute in attributes:
-            assert attribute in model_under_test['attributes']
+            assert attribute in model_under_test.attributes
 
     @parameterized.expand(_compute_models)
     def test_compute_models_have_correct_name(self, name, _):
         '''Tests that the compute models have the correct name.
         '''
         for model in mb.COMPUTE_MODELS:
-            if model['name'] == name:
+            if model.name == name:
                 model_under_test = model
                 break
 
-        assert model_under_test['name'] == name
+        assert model_under_test.name == name
 
     def test_load_config_file(self):
         '''Tests that the compute models have the correct name.
         '''
         for model in mb.COMPUTE_MODELS:
-            assert Config.load_config_from_obj(model['model']) is not None
+            assert Config.load_config_from_obj(model.model) is not None
 
     def test_title_config_file(self):
         '''Tests that the config files for the compute models have the correct
         title.
         '''
         for model in mb.COMPUTE_MODELS:
-            assert Config.title(model['model']) is not None
+            assert Config.title(model.model) is not None
 
     def test_description_config_file(self):
         '''Tests that the config files for the compute models have the correct
         description.
         '''
         for model in mb.COMPUTE_MODELS:
-            assert Config.description(model['model']) is not None
+            assert Config.description(model.model) is not None
 
     def test_version_config_file(self):
         '''Tests that the config files for the compute models have the correct
         version.
         '''
         for model in mb.COMPUTE_MODELS:
-            assert Config.version(model['model']) is not None
+            assert Config.version(model.model) is not None
