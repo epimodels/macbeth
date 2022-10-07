@@ -68,6 +68,38 @@ Please follow the repository instructions for the prototype
     <tbody>
         <tr>
             <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/89">Issue #89</a>
+            </td>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/101">PR #101</a>
+            </td>
+            <td>2<br/>2</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>2<br/>2</td>
+            <td>0<br/>0</td>
+            <td>100</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/102">Issue #102</a>
+            </td>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/103">PR #103</a>
+            </td>
+            <td>2<br/>1</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>2<br/>1</td>
+            <td>0<br/>0</td>
+            <td>100</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/94">Issue #94</a>
             </td>
             <td>
