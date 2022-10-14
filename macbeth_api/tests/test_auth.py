@@ -1,146 +1,218 @@
-from django.test import TestCase, Client
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# ------------------------------------------------------------
+# File: test_auth.py
+# ------------------------------------------------------------
+# Tests Login Register Blacklist ViewSet
+
 from rest_framework import status
-from macbeth_backend.models.account.user import User
-import datetime
+from rest_framework.test import APITestCase
+from parameterized import parameterized
 
 
-class LoginViewSetTest(TestCase):
-    '''Login ViewSet Tests for the :class: `LoginViewSet`.
+REGISTER_URL = '/api/auth/register/'
+LOGIN_URL = '/api/auth/login/'
+REFRESH_URL = '/api/auth/refresh/'
+BLACKLIST_URL = '/api/auth/logout/'
 
-    :param: TestCase: The base class for test cases.
-    :type: TestCase: class
-    '''
+
+def _register_info():
+    return [
+        ({
+            'email': 'test@test.com',
+            'nickname': 'test',
+            'password': 'testtest',
+            'over13': True,
+        }, status.HTTP_201_CREATED),
+        ({
+            'email': 'test@test.com',
+            'nickname': 'test',
+            'password': '123',
+            'over13': True,
+        }, status.HTTP_400_BAD_REQUEST,
+            [('password', 'Ensure this field has at least 8 characters.')]),
+        ({
+            'email': 'test',
+            'nickname': 'test',
+            'password': 'testtest',
+            'over13': True,
+        }, status.HTTP_400_BAD_REQUEST,
+            [('email', 'Enter a valid email address.')]),
+        ({
+            'email': 'test@test.com',
+            'nickname': '',
+            'password': 'testtest',
+            'over13': True,
+        }, status.HTTP_400_BAD_REQUEST,
+            [('nickname', 'This field may not be blank.')]),
+        ({
+            'email': 'test@test.com',
+            'nickname': 'test',
+            'password': 'testtest',
+            'over13': '',
+        }, status.HTTP_400_BAD_REQUEST,
+            [('over13', 'Must be a valid boolean.')]),
+        ({
+            'email': 'test@test.com',
+            'nickname': 'fbersbfgurbsdfgbrusdbygrsbdygrydsogvbyrdsxygb' +
+                        'ydsigbysdogyisdrybgoirsdbygiosdrbygirbdsiogby' +
+                        'sdrgbyrsdbygrsdobyguirdsyugbrdshvbyusbgvuyrdg' +
+                        'scfyvrhdtsersmdbgcfysevnj5senhktjgbvsnrhygcfv' +
+                        'dkgsdyrhtvguyrkhsneyfugvesgnkvrsyvjsjdkmrknvj' +
+                        'yhg5d7hjyg8snfgviwevtgmwlmhgilrsvbdkgnriosdvg' +
+                        'hksuhgwemjhv5lsehmvyo,4eot875473965492386y567' +
+                        '86856787^&^*@&$*&^$(B$@ $JK@BF& ($CX@IQ',
+            'password': 'testtest',
+            'over13': True,
+        }, status.HTTP_400_BAD_REQUEST,
+            [('nickname', 'Ensure this field has no more than 128 characters.')]),
+        ({
+            'email': 't',
+            'nickname': 'test',
+            'password': '123',
+            'over13': True,
+        }, status.HTTP_400_BAD_REQUEST,
+            [
+                ('email', 'Enter a valid email address.'),
+                ('password', 'Ensure this field has at least 8 characters.'),
+            ],
+        ),
+        ({
+            'email': '',
+            'password': '',
+            'nickname': '',
+            'over13': '',
+        }, status.HTTP_400_BAD_REQUEST,
+            [
+                ('email', 'This field may not be blank.'),
+                ('password', 'This field may not be blank.'),
+                ('nickname', 'This field may not be blank.'),
+                ('over13', 'Must be a valid boolean.'),
+            ],
+        ),
+    ]
+
+
+class TestRegisterView(APITestCase):
+    @parameterized.expand(_register_info)
+    def test_register(self, user_data, expected_status, errors=None):
+        response = self.client.post(REGISTER_URL, user_data)
+        self.assertEqual(response.status_code, expected_status)
+        if errors:
+            for field, message in errors:
+                self.assertEqual(response.data[field][0].__str__(), message)
+
+
+def _refresh_info():
+    return [
+        (status.HTTP_200_OK,),
+    ]
+
+
+def _refresh_info_validation_error():
+    return [
+        (
+            {},
+            status.HTTP_400_BAD_REQUEST,
+            [('refresh', 'This field is required.')],
+        ),
+    ]
+
+
+def _refresh_info_invalid_token():
+    return [
+        (
+            {'refresh': '5'},
+            status.HTTP_401_UNAUTHORIZED,
+            'Token is invalid or expired.',
+        ),
+    ]
+
+
+class TestRefreshView(APITestCase):
     def setUp(self):
-        self.user = User.objects.create_user(
-            email="test@123.com",
-            password='123456',
-            **{'nickname': 'Test',
-               'over13': True, },
-        )
-        self.client = Client()
+        response = self.client.post(REGISTER_URL, {
+            "email": "test@test.com",
+            "password": "testtest",
+            "nickname": "test",
+            "over13": True,
+        }, format='json')
 
-    def test_api_login_valid(self):
-        response = self.client.post(
-            '/api/auth/login/', 
-            {'email': self.user.email, 'password': '123456'},
-        )
+        # get both of the tokens from the register return
+        # (the access token is just called token here)
+        self.access = response.data['token']
+        self.refresh = response.data['refresh']
 
-        data = response.data['user']
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(data['email'], self.user.email)
-        self.assertEqual(data['nickname'], self.user.nickname)
-        self.assertEqual(data['over13'], self.user.over13)
-        self.assertEqual(data['is_active'], self.user.is_active)
-        self.assertEqual(data['is_staff'], self.user.is_staff)
-        self.assertEqual(data['is_superuser'], self.user.is_superuser)
-        return
+    @parameterized.expand(_refresh_info)
+    def test_refresh(self, expected_status):
+        response = self.client.post(REFRESH_URL, {'refresh': self.refresh}, format='json')
+        self.assertEqual(response.status_code, expected_status)
+        self.assertNotEqual(self.access, response.data['access'])
 
-    def test_api_login_invalid(self):
-        invalid_pass = self.client.post(
-            '/api/auth/login/', 
-            {'email': self.user.email, 'password': '1234567'},
-        )
-        invalid_email = self.client.post(
-            '/api/auth/login/',
-            {'email': '2142124323', 'password': '123456'},
-        )
+    @parameterized.expand(_refresh_info_invalid_token)
+    def test_refresh_invalid_token(self, token_input, expected_status, message):
+        response = self.client.post(REFRESH_URL, token_input)
+        self.assertEqual(response.status_code, expected_status)
+        self.assertEqual(response.data, message)
 
-        self.assertEqual(invalid_pass.status_code, status.HTTP_401_UNAUTHORIZED)
-        self.assertEqual(invalid_email.status_code, status.HTTP_401_UNAUTHORIZED)
-        return
+    @parameterized.expand(_refresh_info_validation_error)
+    def test_refresh_validation_error(self, token_input, expected_status, errors):
+        response = self.client.post(REFRESH_URL, token_input)
+        self.assertEqual(response.status_code, expected_status)
+        for field, message in errors:
+            self.assertEqual(response.data[field][0].__str__(), message)
 
 
-class RegisterViewSetTest(TestCase):
+def _blacklist_info():
+    return [
+        (
+            status.HTTP_200_OK,
+            (
+                status.HTTP_401_UNAUTHORIZED,
+                "Token is invalid or blacklisted.",
+            ),
+        ),
+    ]
+
+
+def _blacklist_info_invalid():
+    return [
+        (
+            {"refresh_token": "5"},
+            status.HTTP_401_UNAUTHORIZED,
+            "Token is invalid or blacklisted.",
+        ),
+    ]
+
+
+class TestBlacklistView(APITestCase):
     def setUp(self):
-        self.user = User.objects.create_user(
-            email='taken@test.com',
-            password='12345678',
-            **{'nickname': 'Taken',
-               'over13': True, },
-        )
-        self.client = Client()
-        return
+        response = self.client.post(REGISTER_URL, {
+            "email": "test@test.com",
+            "password": "testtest",
+            "nickname": "test",
+            "over13": True,
+        }, format='json')
 
-    def test_api_register_valid(self):
-        response = self.client.post(
-            '/api/auth/register/', {
-                'email': 'test@test.com',
-                'password': '12345678',
-                'nickname': 'test',
-                'over13': True,
-            },
-        )
-        
-        data = response.data['user']
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-        self.assertEqual(data['is_active'], False)
-        self.assertEqual(data['is_staff'], False)
-        self.assertEqual(data['is_superuser'], False)
+        # get both of the tokens from the register return
+        # (the access token is just called token here)
+        self.access = response.data['token']
+        self.refresh = response.data['refresh']
 
-        query = User.objects.get(email="test@test.com")
-        self.assertEqual(query.email, 'test@test.com')
-        self.assertEqual(query.nickname, 'test')
-        self.assertEqual(query.over13, True)
-        return
+    @parameterized.expand(_blacklist_info)
+    def test_blacklist(self, first_status, second_status):
+        response = self.client.post(BLACKLIST_URL, {
+            'refresh_token': self.refresh,
+        }, format='json')
+        self.assertEqual(response.status_code, first_status)
 
-    def test_api_register_invalid_email(self):
-        response = self.client.post(
-            '/api/auth/register/', {
-                'email': 'test',
-                'password': '12345678',
-                'nickname': 'test',
-                'over13': True,
-            },
-        )
-        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        self.assertEqual(response.data['email'][0], 'Enter a valid email address.')
-        self.assertEqual(User.objects.filter(email='test').count(), 0)
-        return
+        # try to blacklist token again
+        response = self.client.post(BLACKLIST_URL, {'refresh_token': self.refresh}, format='json')
+        self.assertEqual(response.status_code, second_status[0])
+        self.assertEqual(response.data, second_status[1])
 
-    def test_api_register_invalid_password(self):
-        response = self.client.post(
-            '/api/auth/register/', {
-                'email': 'tester@test.com',
-                'password': '1234',
-                'nickname': 'test',
-                'over13': True,
-            },
-        )
-
-        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        self.assertEqual(User.objects.filter(email='tester@test.com').count(), 0)
-        return
-
-
-class BlacklistTokenViewSetTest(TestCase):
-    '''BlacklistToken ViewSet Tests for the :class: `BlacklistTokenViewSet`.
-
-    :param: TestCase: The base class for test cases.
-    :type: TestCase: class
-    '''
-    def setUp(self):
-        self.user = User.objects.create_user(
-            email="test@123.com",
-            password='12345678',
-            **{'nickname': 'Test',
-               'over13': True, },
-        )
-        self.client = Client()
-
-    def test_api_logout_valid(self):
-        login_response = self.client.post(
-            '/api/auth/login/',
-            {'email': self.user.email, 'password': '12345678'}
-        )
-        logout_response = self.client.post(
-            '/api/auth/logout/', 
-            {'refresh_token': login_response.data['refresh']},
-        )
-        response = self.client.post(
-            '/api/auth/refresh',
-            {'refresh_token': login_response.data['refresh']},
-        )
-
-        self.assertEqual(logout_response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.status_code, status.HTTP_301_MOVED_PERMANENTLY)
-        return
+    @parameterized.expand(_blacklist_info_invalid)
+    def test_blacklist_invalid(self, token, expected_status, message):
+        response = self.client.post(BLACKLIST_URL, token)
+        self.assertEqual(response.status_code, expected_status)
+        self.assertEqual(response.data, message)

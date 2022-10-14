@@ -1,5 +1,9 @@
-from django.urls import path
-# from .views import User, Jobs
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# ------------------------------------------------------------
+# File: urls.py
+# ------------------------------------------------------------
+#
 
 app_name = "macbeth_api"
 

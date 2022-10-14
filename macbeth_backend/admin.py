@@ -1,15 +1,21 @@
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# ------------------------------------------------------------
+# File: admin.py
+# ------------------------------------------------------------
+#
+
 from django.contrib import admin
 from .models import User
 from .models.jobs import Job
 from django.contrib.auth.admin import UserAdmin
-from django.forms import TextInput, Textarea, CharField
-from django import forms
+from django.forms import Textarea
 from django.db import models
 
 
 class UserAdminConfig(UserAdmin):
     model = User
-    search_fields = ('email', 'nickname',)
+    search_fields = ('email', 'tnickname')
     list_filter = ('email', 'nickname', 'is_active', 'is_staff')
     ordering = ('date_joined',)
     list_display = ('id', 'email', 'nickname', 'is_active', 'is_staff', 'is_superuser', 'date_joined')
@@ -23,7 +29,7 @@ class UserAdminConfig(UserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'password1', 'password2', 'is_active', 'is_staff', 'is_superuser')}
+            'fields': ('email', 'password1', 'password2', 'is_active', 'is_staff', 'is_superuser')},
          ),
     )
 

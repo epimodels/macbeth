@@ -27,6 +27,31 @@ class Config:
         return config
 
     @staticmethod
+    def generate_kwargs_for_obj(obj, input_params: dict):
+        parameters = Config.parameters(obj)
+        kwargs = {}
+        for parameter in parameters:
+            variable_name = parameter['VariableName']
+            type_ = parameter['Type']
+            if variable_name in input_params:
+                arg = input_params[variable_name]
+                if type_ in ['double', 'float']:
+                    arg = float(arg)
+                elif type_ in ['int', 'integer', 'long']:
+                    arg = int(arg)
+                elif type_ in ['bool', 'boolean']:
+                    arg = bool(arg)
+                kwargs[variable_name] = arg
+        return kwargs
+
+    @staticmethod
+    def parameters(obj):
+        config = Config.load_config_from_obj(obj)
+        if 'Parameters' in config:
+            return config['Parameters']
+        return None
+
+    @staticmethod
     def title(obj):
         '''Returns the title of the config file for a given object.
         '''

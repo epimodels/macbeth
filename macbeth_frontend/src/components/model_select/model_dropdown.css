@@ -1,12 +1,17 @@
 #model-dropdown {
   margin-top: 2%;
   margin-bottom: 5%;
-  background-color: #9C7D77;
+  background-color: #916f69;
   border: #9C7D77;
 }
 
 #model-dropdown:hover {
-  background-color: #B1827A;
+  box-shadow: 0 0 2px 1px #331c17;
+}
+
+#model-dropdown:focus {
+  box-shadow: 0 0 5px 1px #1d0d0a;
+  background-color: #9b7973;
 }
 
 .model {
@@ -15,11 +20,15 @@
   min-width: 184px;
 }
 
-.model-item:hover {
+.model a:hover, .model a:hover:active:focus {
+  color: #4C3936;
   background-color: #E5C8C2;
+  z-index: 0;
 }
 
-.model-item:focus, .model-item:active {
+.model a:active, .model a:active:focus {
   color: #4C3936;
-  background-color: #EED6D1;
+  background-color: #E5C8C2;
+  box-shadow: 0 0 5px 1px #3b2520;
+  z-index: 1;
 }

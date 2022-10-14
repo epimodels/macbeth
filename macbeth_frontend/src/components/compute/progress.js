@@ -6,7 +6,7 @@ import './progress.css'
  * Compute progress bar
  * currentStep: 1, 2, or 3
  */
-function Progress(props) {
+export default function Progress(props) {
   switch(props.currentStep) {
     case 1:
       return (
@@ -33,5 +33,3 @@ function Progress(props) {
       return null;
   }
 }
-
-export default Progress;

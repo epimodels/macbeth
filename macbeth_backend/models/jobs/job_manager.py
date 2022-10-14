@@ -1,9 +1,12 @@
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# ------------------------------------------------------------
+# File: job_manager.py
+# ------------------------------------------------------------
+#
 
-import json
 from django.db import models
-from django.core.exceptions import ObjectDoesNotExist
 from macbeth_backend import COMPUTE_MODELS
-from macbeth_backend.models.account import User
 
 
 class JobManager(models.Manager):

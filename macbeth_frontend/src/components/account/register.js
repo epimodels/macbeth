@@ -112,7 +112,7 @@ export default function Register() {
           <Form.Check type="checkbox" label="By checking this box, I verify that I am over 13 years old" name="over13" onChange={handleChange} />
         </Col>
         </Form.Group>
-        <NavButton label="Register" variant="account" clickEvent={handleSubmit}/>
+        <NavButton label="Register" variant="nextnopos" clickEvent={handleSubmit}/>
       </Form>
     </div>
   );
