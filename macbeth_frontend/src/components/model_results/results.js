@@ -10,7 +10,7 @@ export default function Results() {
     <div>
       <Progress currentStep={3} />
       <h4>Viewing Results</h4>
-      <NavButton label='Back' redirect='/compute/parameter-edit' variant='prev'/>
+      <NavButton label='Back' redirect={'/compute/parameter-edit/' + localStorage.getItem('compute-selected-model')} variant='prev'/>
     </div>
   )
 }
