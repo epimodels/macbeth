@@ -105,8 +105,8 @@ Please follow the repository instructions for the prototype
             <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a>
             </td>
-            <td>0<br/>0.2</td>
-            <td>0<br/>0.2</td>
+            <td>0<br/>0.5</td>
+            <td>0<br/>0.5</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
@@ -121,11 +121,11 @@ Please follow the repository instructions for the prototype
             <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a>
             </td>
-            <td>0<br/>2.85</td>
-            <td>0<br/>0.95</td>
+            <td>3<br/>2.85</td>
+            <td>1<br/>0.95</td>
             <td>0<br>0</td>
-            <td>0<br/>0.95</td>
-            <td>0<br/>0.95</td>
+            <td>1<br/>0.95</td>
+            <td>1<br/>0.95</td>
             <td>0<br/>0</td>
             <td>0</td>
             <td></td>
@@ -137,7 +137,7 @@ Please follow the repository instructions for the prototype
             <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/99">PR #99</a>
             </td>
-            <td>0<br/>0</td>
+            <td>3<br/>3.5</td>
             <td>0<br/>0</td>
             <td>3<br/>3.5</td>
             <td>0<br/>0</td>
@@ -169,7 +169,7 @@ Please follow the repository instructions for the prototype
             <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/105">PR #105</a>
             </td>
-            <td>0<br/>0</td>
+            <td>3<br/>0.5</td>
             <td>0<br/>0</td>
             <td>3<br/>0.5</td>
             <td>0<br/>0</td>
@@ -184,7 +184,7 @@ Please follow the repository instructions for the prototype
             <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/107">PR #107</a>
             </td>
-            <td>0<br/>0</td>
+            <td>2.7<br/>2</td>
             <td>2.7<br/>2</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
@@ -197,7 +197,7 @@ Please follow the repository instructions for the prototype
                 <b>Totals:</b>
             </td>
             <td>0<br/>0</td>
-            <td>0<br/>0</td>
+            <td>11.7<br/>18.45</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
@@ -221,9 +221,7 @@ Please follow the repository instructions for the prototype
         <tr>
             <td>Mikaela Dean</td>
             <td>
-                <*Required*: The points and hours data are unlikely to tell the
-                whole story about your contribution. Write a brief statement
-                explaining and reflecting on your contribution to this milestone.>
+                This sprint I worked on finishing up the dynamic graphing and the resettable parameters. Working closely with Kyle, we were able to add new parameters for the model config; this includes what dataset is on the X-axis and what datasets are on the Y-axis and optional information like colors and line types. I was able to add the ability for the frontend to recognize 30 named colors and also take in any valid hex input, as well as the ability to accept 6 different line type names. This all took me a lot of time - one part that took longer were figuring out how to get the X-axis values to not be crowding the bottom with very long decimals, which turned out I needed to alter the step size. Another part that took longer was figuring out why line types weren't displaying as expected, and this was because there were too many datapoints to display anything other than a solid line; this was solved by having the pointRadius and borderWidth of the lines be dynamic based on the graphing input. I also added an arrow icon to the editing parameters page. If the value is not default, it appears, and if clicked, it resets the field and disappears. This also took some time trying to figure out how to position the arrow icon. Overall, successful sprint.
             </td>
         </tr>
         <tr>
@@ -393,11 +391,11 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
             <td>Work</td>
         </tr>
         <tr>
-            <td>//22</td>
-            <td>0</td>
+            <td>10/14/22</td>
+            <td>26</td>
             <td>&check;</td>
             <td>&check;</td>
-            <td>&check;</td>
+            <td></td>
             <td>&check;</td>
             <td>&check;</td>
             <td>Work</td>
@@ -414,12 +412,12 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
         </tr>
         <tr>
             <td align="right"><b>Totals:</b></td>
-            <td><b>602</b></td>
+            <td><b>618</b></td>
+            <td><b>12</b></td>
             <td><b>11</b></td>
-            <td><b>10</b></td>
             <td><b>7</b></td>
-            <td><b>11</b></td>
-            <td><b>4</b></td>
+            <td><b>12</b></td>
+            <td><b>5</b></td>
         </tr>
     </tbody>
 </table>
