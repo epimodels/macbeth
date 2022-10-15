@@ -25,31 +25,29 @@ function Parameter(props) {
     let paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
     // if the parameter is already in the dict and it's not default, set the text to that
     if (paramDict[props.variableName] !== undefined && paramDict[props.variableName] !== props.placeholder) {
-      valueDispatch({ label: props.label, default: props.placeholder, params: paramDict, value: paramDict[props.variableName] });
+      valueDispatch({ variableName: props.variableName, default: props.placeholder, value: paramDict[props.variableName] });
     }
     // otherwise, have the text be nothing so the placeholder text (that holds the default value) shows
     else {
-      valueDispatch({ label: props.label, default: props.placeholder, params: paramDict, value: '' });
+      valueDispatch({ variableName: props.variableName, default: props.placeholder, value: '' });
     }
   }, [props]);
   /*
    * Reducer function for a parameter value
-   * label: props.label (label/key for param)
+   * variableName: props.variableName (key for param)
    * default: props.placeholder (default value for param -- just in case we want to reset to default (when new value is empty))
    * value: new value
    */
   function valueReducer(value, action) {
-    // To reduce unnecessary changing
-    if (value !== action.value) {
-      // get fresh params
-      let paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
-      // set new value in localStorage dict -- if our new value is empty, use default value instead
-      paramDict[action.label] = (action.value === '') ? action.default : action.value;
-      localStorage.setItem('compute-selected-model-params', JSON.stringify(paramDict));
-      parameterRef.current.value = action.value;
-    }
-    
+    // get fresh params
+    let paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
+    // set new value in localStorage dict -- if our new value is empty, use default value instead
+    paramDict[action.variableName] = (action.value === '') ? action.default : action.value;
+    localStorage.setItem('compute-selected-model-params', JSON.stringify(paramDict));
+    parameterRef.current.value = action.value;
+
     return action.value;
+  }
   
   return (
     <InputGroup>
@@ -61,12 +59,12 @@ function Parameter(props) {
           type={props.type} 
           placeholder={props.placeholder} 
           defaultValue={value} 
-          onChange={(e) => valueDispatch({ label: props.label, default: props.placeholder, value: e.target.value })} 
+          onChange={(e) => valueDispatch({ variableName: props.variableName, default: props.placeholder, value: e.target.value })} 
           // Added onSelect because onChange does not trigger when there is a defaultValue and you select all text and delete
           // See: https://stackoverflow.com/questions/66950716/react-bootstrap-component-form-control-onchange-event-listener-doesnt-fire-wh#comment126154329_66951536
-          onSelect={(e) => valueDispatch({ label: props.label, default: props.placeholder, value: e.target.value })} />
+          onSelect={(e) => valueDispatch({ variableName: props.variableName, default: props.placeholder, value: e.target.value })} />
         {/* Currently hides reset icon by inversing the colors to white */}
-        <FontAwesomeIcon icon={faRotateLeft} id="resetField" onClick={() => valueDispatch({ label: props.label, default: props.placeholder, value: '' })} className={value === '' ? 'fa-inverse' : ''}/>
+        <FontAwesomeIcon icon={faRotateLeft} id="resetField" onClick={() => valueDispatch({ variableName: props.variableName, default: props.placeholder, value: '' })} className={value === '' ? 'fa-inverse' : ''}/>
         </Stack>
         <Form.Text className="text-muted">
           {props.text}

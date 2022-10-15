@@ -69,7 +69,8 @@ export default function Results() {
   React.useEffect(() => {
     const parameterInput = JSON.parse(localStorage.getItem('compute-selected-model-params'));
     const graphingOutput = JSON.parse(localStorage.getItem('compute-selected-model-graph'));
-
+    console.log(parameterInput);
+    
     // Change this to a post/job request eventually
     let computeCall = '/compute/models/' + URLparams.modelid + '/perform_computation/?';
     let first = true;
