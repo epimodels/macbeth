@@ -139,7 +139,7 @@ Please follow the repository instructions for the prototype
             </td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
-            <td>3<br/>3.5</td>
+            <td>3<br/>4</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
@@ -171,7 +171,7 @@ Please follow the repository instructions for the prototype
             </td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
-            <td>3<br/>0.5</td>
+            <td>3<br/>2</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
@@ -187,6 +187,21 @@ Please follow the repository instructions for the prototype
             <td>0<br/>0</td>
             <td>2.7<br/>2</td>
             <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/104">Issue #104</a>
+            </td>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/109">PR #109</a>
+            </td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>3<br/>4</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
