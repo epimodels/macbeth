@@ -97,7 +97,7 @@ export default function Results() {
       <div style={{'width':'50%', 'height':'50%', 'paddingLeft':'5%'}}>
         <ResultsGraph title={localStorage.getItem('compute-selected-model-name')} xData={xData} yData={yData} />
       </div>
-      <NavButton label='Back' redirect='/compute/parameter-edit' variant='prev'/>
+      <NavButton label='Back' redirect={'/compute/parameter-edit/' + localStorage.getItem('compute-selected-model')} variant='prev'/>
     </div>
   )
 }

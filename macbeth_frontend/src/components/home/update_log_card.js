@@ -20,7 +20,6 @@ class UpdateLogCard extends React.Component {
         <Card.Body>
           <Card.Title>What's New</Card.Title>
           <Card.Title className={'card-' + this.state.theme + '-muted'}>Update Log</Card.Title>
-          <Card.Text>
             <Accordion>
             <Accordion.Item className={'accordion-' + this.state.theme} eventKey="1">
                 <Accordion.Header>April 14, 2022</Accordion.Header>
@@ -35,7 +34,6 @@ class UpdateLogCard extends React.Component {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-          </Card.Text>
         </Card.Body>
       </Card>
     )
