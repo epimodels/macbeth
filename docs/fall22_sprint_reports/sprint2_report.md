@@ -171,7 +171,7 @@ Please follow the repository instructions for the prototype
             </td>
             <td>3<br/>0.5</td>
             <td>0<br/>0</td>
-            <td>3<br/>2</td>
+            <td>3<br/>4</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
@@ -213,7 +213,7 @@ Please follow the repository instructions for the prototype
             </td>
             <td>0<br/>0</td>
             <td>11.7<br/>18.45</td>
-            <td>0<br/>0</td>
+            <td>9<br/>12</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
@@ -242,9 +242,19 @@ Please follow the repository instructions for the prototype
         <tr>
             <td>Kyle Hurd</td>
             <td>
-                <*Required*: The points and hours data are unlikely to tell the
-                whole story about your contribution. Write a brief statement
-                explaining and reflecting on your contribution to this milestone.>
+                This sprint I worked closely with Mikaela to work on dynamic graphing for
+                a model. We needed to construct the config file to be in a specific format
+                that provided all of the information needed for the frontend to graph the
+                model. I wrote tests to make sure that the config file was being constructed
+                correctly and also wrote tests for each model to make sure it was in the
+                correct format. The last element I put a lot of time into was creating a
+                document that explained how to create a new model. I am very happy with
+                the design of it and I think it will be very helpful for people who want
+                to add a model into Macbeth. I wanted to get more completed in regards
+                to the stochastic models, but one blocker was waiting for our sponsor
+                to send the files of the models. Now that we have them, I will be able
+                to convert them to work with Macbeth and focus on how we can compute them
+                efficiently.
             </td>
         </tr>
         <tr>
