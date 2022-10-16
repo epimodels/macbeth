@@ -439,19 +439,19 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
 
 ### Retrospective
 
-[Link to Recording](https://wsu.zoom.us/recording)
+[Link to Recording](https://emailwsu.sharepoint.com/:v:/t/2022.PULLM.CptS.421.423-MACBETHV2/EWjVGotNAA1Ljow1KO9INCMB2eAj7IXNE77tospe1nfa0Q?e=aP5Y98)
 
 #### What went well
-  - Item 1 <i>(Be as concrete and specific as possible)</i>
-  - Item 2 <i>(Be as concrete and specific as possible)</i>
-  - Item x <i>(Be as concrete and specific as possible)</i>
+  - Our **progress on graphing** the results went smoothly and developed at a good pace
+  - Our **teamwork** was excellent, specifically with Mikaela/Kyle working together on the aforementioned graphing
+  - **Communication** was generally better, and if someone didn't show up to a meeting, we could still get a hold of them in a timely manner
   
 #### What we'd like to improve
-  - Item 1 <i>(Be as concrete and specific as possible)</i>
-  - Item 2 <i>(Be as concrete and specific as possible)</i>
-  - Item x <i>(Be as concrete and specific as possible)</i>
+  - Our time management
+  - How much progress we made/how much work we put in on this project
+  - Our workflow, how much dependency each feature has on each other
   
 #### Changes we plan to implement in next sprint period
-  - Item 1 <i>(Express in concrete, observable, measurable terms so that progress can be assessed)</i>
-  - Item 2 <i>(Express in concrete, observable, measurable terms so that progress can be assessed)</i>
-  - Item x <i>(Express in concrete, observable, measurable terms so that progress can be assessed)</i>
+  - Create a plan to figure out how to develop parts of our project so they can be implemented in parallel
+  - Finish testing, for both frontend and adding testing with reflection for the models
+  - Review pull requests within a few days, 3 at most; start letting each other know when one is needed to be reviewed
