@@ -21,11 +21,12 @@ const ParameterEdit = (props) => {
 
   useEffect(() => {
     axiosInstance
-      .get('/compute/models/' + URLparams.modelid +'/', {})
+      .get('/compute/models/' + URLparams.modelid + '/', {})
       .then(res => {
         setParameters(res.data.Parameters);
         setAuthor(res.data.Author);
         setDescription(res.data.Description);
+        localStorage.setItem('compute-selected-model-graph', JSON.stringify(res.data.GraphingData));
       })
   }, [URLparams.modelid]);
 
@@ -41,7 +42,9 @@ const ParameterEdit = (props) => {
             {parameters.map((item, idx) => {
               return (
                 <Col xs={'auto'} key={item.Name}>
-                  <Parameter controlID='default' label={item.Name} type='basicDefault' 
+                  <Parameter controlID='default' type='basicDefault' 
+                    label={item.Name}
+                    variableName={item.VariableName}
                     placeholder={item.DefaultValue} 
                     text={item.Description} />
                 </Col>
@@ -50,7 +53,7 @@ const ParameterEdit = (props) => {
           </Row>
         </Form>
         <NavButton label='Back' redirect='/compute/model-select' variant='prev'/>
-        <NavButton label='Submit' redirect='/compute/results' variant='next'/>
+        <NavButton label='Submit' redirect={'/compute/results/' + localStorage.getItem('compute-selected-model')} variant='next'/>
       </div>
   )
 }
