@@ -153,8 +153,8 @@ Please follow the repository instructions for the prototype
             <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/80">PR #80</a>
             </td>
-            <td>8<br/>15</td>
-            <td>8<br/>15</td>
+            <td>8<br/>16</td>
+            <td>8<br/>16</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
@@ -184,8 +184,8 @@ Please follow the repository instructions for the prototype
             <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/107">PR #107</a>
             </td>
-            <td>2.7<br/>2</td>
-            <td>2.7<br/>2</td>
+            <td>2.7<br/>3</td>
+            <td>2.7<br/>3</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
@@ -212,7 +212,7 @@ Please follow the repository instructions for the prototype
                 <b>Totals:</b>
             </td>
             <td>0<br/>0</td>
-            <td>11.7<br/>18.45</td>
+            <td>11.7<br/>20.45</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
@@ -416,23 +416,23 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
             <td>Work</td>
         </tr>
         <tr>
-            <td>//22</td>
-            <td>0</td>
+            <td>10/16/22</td>
+            <td>42</td>
             <td>&check;</td>
             <td>&check;</td>
             <td>&check;</td>
             <td>&check;</td>
             <td>&check;</td>
-            <td>Sponsor</td>
+            <td>Work</td>
         </tr>
         <tr>
             <td align="right"><b>Totals:</b></td>
-            <td><b>618</b></td>
+            <td><b>660</b></td>
+            <td><b>13</b></td>
             <td><b>12</b></td>
-            <td><b>11</b></td>
-            <td><b>7</b></td>
-            <td><b>12</b></td>
-            <td><b>5</b></td>
+            <td><b>8</b></td>
+            <td><b>13</b></td>
+            <td><b>6</b></td>
         </tr>
     </tbody>
 </table>
