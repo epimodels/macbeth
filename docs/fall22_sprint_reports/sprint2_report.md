@@ -105,13 +105,13 @@ Please follow the repository instructions for the prototype
             <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a>
             </td>
-            <td>0<br/>0.5</td>
-            <td>0<br/>0.5</td>
+            <td>3<br/>1</td>
+            <td>3<br/>1</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
-            <td>0</td>
+            <td>100</td>
             <td></td>
         </tr>
         <tr>
@@ -137,7 +137,7 @@ Please follow the repository instructions for the prototype
             <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/99">PR #99</a>
             </td>
-            <td>3<br/>3.5</td>
+            <td>3<br/>4</td>
             <td>0<br/>0</td>
             <td>3<br/>4</td>
             <td>0<br/>0</td>
@@ -169,7 +169,7 @@ Please follow the repository instructions for the prototype
             <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/105">PR #105</a>
             </td>
-            <td>3<br/>0.5</td>
+            <td>3<br/>4</td>
             <td>0<br/>0</td>
             <td>3<br/>4</td>
             <td>0<br/>0</td>
@@ -199,7 +199,7 @@ Please follow the repository instructions for the prototype
             <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/109">PR #109</a>
             </td>
-            <td>0<br/>0</td>
+            <td>3<br/>4</td>
             <td>0<br/>0</td>
             <td>3<br/>4</td>
             <td>0<br/>0</td>
@@ -209,12 +209,12 @@ Please follow the repository instructions for the prototype
         </tr>
         <tr>
             <td>
-                <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/104">Issue #68</a>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/68">Issue #68</a>
             </td>
             <td>
                 <a>N/A</a>
             </td>
-            <td>0<br/>0</td>
+            <td>5<br/>4</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
@@ -229,8 +229,8 @@ Please follow the repository instructions for the prototype
             <td>
                 <a>N/A</a>
             </td>
-            <td>3<br/>7</td>
-            <td>0<br/>0</td>
+            <td>5<br/>15</td>
+            <td>1<br/>3</td>
             <td>1<br/>3</td>
             <td>1<br/>5</td>
             <td>1<br/>3</td>
@@ -273,13 +273,13 @@ Please follow the repository instructions for the prototype
             <td colspan="2" align="right">
                 <b>Totals:</b>
             </td>
-            <td>0<br/>0</td>
-            <td>11.7<br/>20.45</td>
+            <td>44.7<br/>61.85</td>
+            <td>15.7<br/>23.95</td>
             <td>10<br/>15</td>
-            <td>6<br/>9</td>
+            <td>7<br/>9.95</td>
             <td>6<br/>7.95</td>
             <td>6<br/>5</td>
-            <td>0</td>
+            <td></td>
             <td></td>
             <td colspan="2"></td>
         </tr>
@@ -328,7 +328,7 @@ Please follow the repository instructions for the prototype
         <tr>
             <td>Ethan Nelson</td>
             <td>
-                I spent the first part of the sprint finishing testing on the authentication API. This involved working on the tests for login, register, and token refresh/blacklist. FOr these tests, I followed the same structure as the other tests, using parameterized testing. For the second part of the sprint, I spent some time researching how we should test the front-end react application. I landed on Jest because it seems easy to use, set up, and has explicit support for react applications. Since all of the API endpoints have already been testing on the back-end, the front-end shouldn't need too many tests, just some basic UI testing.
+                I spent the first part of the sprint finishing testing on the authentication API. This involved working on the tests for login, register, and token refresh/blacklist. For these tests, I followed the same structure as the other tests, using parameterized testing. For the second part of the sprint, I spent some time researching how we should test the front-end react application. I landed on Jest because it seems easy to use, set up, and has explicit support for react applications. Since all of the API endpoints have already been testing on the back-end, the front-end shouldn't need too many tests, just some basic UI testing.
             </td>
         </tr>
         <tr>
@@ -495,7 +495,7 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
         </tr>
         <tr>
             <td align="right"><b>Totals:</b></td>
-            <td><b>660</b></td>
+            <td><b>670</b></td>
             <td><b>13</b></td>
             <td><b>12</b></td>
             <td><b>8</b></td>
