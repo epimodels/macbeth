@@ -89,11 +89,11 @@ Please follow the repository instructions for the prototype
             <td>
                 <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/103">PR #103</a>
             </td>
-            <td>2<br/>1</td>
+            <td>2<br/>2</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
-            <td>2<br/>1</td>
+            <td>2<br/>2</td>
             <td>0<br/>0</td>
             <td>100</td>
             <td></td>
@@ -233,7 +233,7 @@ Please follow the repository instructions for the prototype
             <td>0<br/>0</td>
             <td>1<br/>3</td>
             <td>1<br/>5</td>
-            <td>0<br/>0</td>
+            <td>1<br/>3</td>
             <td>1<br/>1</td>
             <td>10</td>
             <td>No POC yet, research and discussion completed</td>
@@ -277,7 +277,7 @@ Please follow the repository instructions for the prototype
             <td>11.7<br/>20.45</td>
             <td>10<br/>15</td>
             <td>6<br/>9</td>
-            <td>0<br/>0</td>
+            <td>6<br/>7.95</td>
             <td>6<br/>5</td>
             <td>0</td>
             <td></td>
@@ -328,9 +328,7 @@ Please follow the repository instructions for the prototype
         <tr>
             <td>Ethan Nelson</td>
             <td>
-                <*Required*: The points and hours data are unlikely to tell the
-                whole story about your contribution. Write a brief statement
-                explaining and reflecting on your contribution to this milestone.>
+                I spent the first part of the sprint finishing testing on the authentication API. This involved working on the tests for login, register, and token refresh/blacklist. FOr these tests, I followed the same structure as the other tests, using parameterized testing. For the second part of the sprint, I spent some time researching how we should test the front-end react application. I landed on Jest because it seems easy to use, set up, and has explicit support for react applications. Since all of the API endpoints have already been testing on the back-end, the front-end shouldn't need too many tests, just some basic UI testing.
             </td>
         </tr>
         <tr>
