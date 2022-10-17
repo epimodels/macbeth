@@ -39,7 +39,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run migrations # will make migrations and migrate database
         run: |
-          bash scripts/run-backend.sh dropdb
-          bash scripts/run-backend.sh creatdb
+          bash scripts/sh/run-backend.sh dropdb
+          bash scripts/sh/run-backend.sh creatdb
       - name: Run tests
-        run: bash scripts/run-backend.sh test
+        run: bash scripts/sh/run-backend.sh test

@@ -32,7 +32,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
     EMAIL_FIELD = 'email'
-    REQUIRED_FIELDS = ['nickname', 'over13', ]
+    REQUIRED_FIELDS = ['nickname', 'over13']
 
     def __str__(self) -> str:
         '''Returns the unique identifier of the :class: `account.User`.

@@ -8,6 +8,7 @@
     "Parameters": [
         {
             "Name": "Infect Probability",
+            "VariableName": "infect_prob",
             "Type": "float",
             "Description": "The probability that a susceptible person will become infected.",
             "Min": 0.0,
@@ -16,11 +17,44 @@
         },
         {
             "Name": "Infect Duration",
+            "VariableName": "infect_duration",
             "Type": "double",
             "Description": "The duration of the infection.",
             "Min": -1.0,
             "Max": 1,
             "DefaultValue": 0.1
         }
-    ]
+    ],
+    "GraphingData": {
+        "X": {
+            "Name": "Time",
+            "VariableName": "t",
+            "Type": "float",
+            "Description": "Time in hours.",
+            "Units": "hours"
+        },
+        "Y": [
+            {
+                "Name": "Susceptible",
+                "VariableName": "s",
+                "Type": "float",
+                "Description": "Number of susceptible individuals.",
+                "Units": "individuals"
+            },
+            {
+                "Name": "Infected",
+                "VariableName": "i",
+                "Type": "float",
+                "Description": "Number of infected individuals.",
+                "Units": "individuals"
+            },
+            {
+                "Name": "Recovered",
+                "VariableName": "r",
+                "Type": "float",
+                "Description": "Number of recovered individuals.",
+                "Units": "individuals"
+            }
+        ]
+    }
 }

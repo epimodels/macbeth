@@ -1,3 +1,10 @@
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# ------------------------------------------------------------
+# File: settings.py
+# ------------------------------------------------------------
+#
+
 """
 Django settings for macbeth_core project.
 
@@ -90,7 +97,7 @@ DATABASES = {
         'PASSWORD': '123',
         'HOST': 'localhost',
         'PORT': '5432',
-    }
+    },
 }
 
 # Github actions configuration
@@ -103,7 +110,7 @@ if os.environ.get('GITHUB_ACTIONS'):
             'PASSWORD': '123',
             'HOST': 'localhost',
             'PORT': '5432',
-        }
+        },
     }
 
 # Rest Framework Settings
@@ -115,7 +122,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
-    )
+    ),
 }
 
 # Password validation

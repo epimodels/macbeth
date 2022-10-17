@@ -1,6 +1,10 @@
-from typing_extensions import Required
-from numpy import require
-from macbeth_backend.models.epimodels import EpiModel
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+# ------------------------------------------------------------
+# File: job.py
+# ------------------------------------------------------------
+#
+
 from macbeth_backend.models.account import User
 from django.db import models
 from django.utils import timezone
@@ -21,19 +25,19 @@ class Job(models.Model):
     # results = models.JSONField() # this is the goal, but we have to figure out JSON serialization
     objects = JobManager()
 
-    REQUIRED_FIELDS = ['model_id', 'created_by', 'input_params', ]
+    REQUIRED_FIELDS = ['model_id', 'created_by', 'input_params']
 
     def __str__(self):
         '''Returns the unique identifier of the :class: `Job`
-        
+
         :return: the unique identifer
         :rtype: str
         '''
         return f"{self.id}"
-    
+
     def get_status(self):
         '''Returns the status of the :class: `Job`
-        
+
         :return: the status
         :rtype: int
         '''

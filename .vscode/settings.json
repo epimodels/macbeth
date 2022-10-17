@@ -1,19 +1,27 @@
 {
     "files.eol": "\n",
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.typeCheckingMode": "off",
     "python.linting.pycodestyleEnabled": false,
     "python.linting.flake8Enabled": true,
-    // I want to change the pycodestyle args to extend the length of a line
     "python.linting.flake8Args": [
         "--max-line-length",
         "120",
-        "--ignore",
-        "F401", // Unused imports give an error. This is not ideal due to __init__.py files
     ],
-    "python.linting.pylintEnabled": true,
+    "python.linting.pylintEnabled": false,
     "python.linting.enabled": true,
     "cSpell.words": [
         "khurd",
         "Mikaela",
         "mikalooloo"
     ],
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
 }

@@ -8,6 +8,7 @@
     "Parameters": [
         {
             "Name": "Infect Prob",
+            "VariableName": "infect_prob",
             "Type": "float",
             "Description": "The probability that an infected individual will infect a susceptible individual.",
             "Min": 0.0,
@@ -16,11 +17,60 @@
         },
         {
             "Name": "Infect Duration",
+            "VariableName": "infect_duration",
             "Type": "double",
             "Description": "The duration of the infection in hours.",
             "Min": 0.0,
             "Max": 100.0,
             "DefaultValue": 0.1
+        },
+        {
+            "Name": "Latent Period",
+            "VariableName": "latent_period",
+            "Type": "double",
+            "Description": "The duration of the latent period in hours.",
+            "Min": 0.0,
+            "Max": 100.0,
+            "DefaultValue": 0.5
         }
-    ]
+    ],
+    "GraphingData": {
+        "X": {
+            "Name": "Time",
+            "VariableName": "t",
+            "Type": "float",
+            "Description": "The time in hours.",
+            "Units": "hours"
+        },
+        "Y": [
+            {
+                "Name": "Susceptible",
+                "VariableName": "s",
+                "Type": "float",
+                "Description": "The number of susceptible individuals.",
+                "Units": "individuals"
+            },
+            {
+                "Name": "Exposed",
+                "VariableName": "e",
+                "Type": "float",
+                "Description": "The number of exposed individuals.",
+                "Units": "individuals"
+            },
+            {
+                "Name": "Infected",
+                "VariableName": "i",
+                "Type": "float",
+                "Description": "The number of infected individuals.",
+                "Units": "individuals"
+            },
+            {
+                "Name": "Recovered",
+                "VariableName": "r",
+                "Type": "float",
+                "Description": "The number of recovered individuals.",
+                "Units": "individuals"
+            }
+        ]
+    }
 }

@@ -20,7 +20,6 @@ class InfoCard extends React.Component {
         <Card.Body>
           <Card.Title>New to MACBETH?</Card.Title>
           <Card.Subtitle className='mb-2 text-muted'></Card.Subtitle>
-          <Card.Text>
             <Accordion defaultActiveKey="0"> {/* would be cool to implement if signed in, no default key, but if not, then this is active */}
               <Accordion.Item className={'accordion-' + this.state.theme} eventKey="0">
                 <Accordion.Header>About MACBETH</Accordion.Header>
@@ -57,12 +56,11 @@ class InfoCard extends React.Component {
                     <li>Nickname</li>
                     <li>Password</li>
                     <li>Age </li>
-                    <span className='text-muted'>We only need you to verify you are over the age of 13</span>
+                    <span className='text-muted'>We only need to verify that you are over the age of 13</span>
                   </ul>
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>       
-          </Card.Text>
         </Card.Body>
       </Card>
     )
