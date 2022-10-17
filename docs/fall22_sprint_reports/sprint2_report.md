@@ -208,6 +208,36 @@ Please follow the repository instructions for the prototype
             <td>100</td>
         </tr>
         <tr>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/104">Issue #68</a>
+            </td>
+            <td>
+                <a>N/A</a>
+            </td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>5<br/>4</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/100">Issue #100</a>
+            </td>
+            <td>
+                <a>N/A</a>
+            </td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>1<br/>1</td>
+            <td>10</td>
+        </tr>
+        <tr>
             <td colspan="2" align="right">
                 <b>Totals:</b>
             </td>
@@ -216,7 +246,7 @@ Please follow the repository instructions for the prototype
             <td>9<br/>12</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
-            <td>0<br/>0</td>
+            <td>6<br/>5</td>
             <td>0</td>
             <td></td>
             <td colspan="2"></td>
