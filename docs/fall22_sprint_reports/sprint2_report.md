@@ -1,7 +1,7 @@
 # Report for Fall 2022: Sprint #2 - *Team Nightingale*
 
 ## Link to Sprint Summary Video
-[Summary video link](https://youtube.com/)
+[Summary video link](https://www.youtube.com/watch?v=9Mdr3jVaaPs)
 
 ## Link to Online Communication Channel (MS Teams/Slack/Discord)
 [MS Teams link](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A5d8ece77ac41420a86770fdaee39b9cb%40thread.tacv2%2FMACBETH%2520V2%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=dcd68dfc-a6f9-4b0a-bf54-48138a776d04&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true)
@@ -229,13 +229,45 @@ Please follow the repository instructions for the prototype
             <td>
                 <a>N/A</a>
             </td>
+            <td>3<br/>7</td>
             <td>0<br/>0</td>
-            <td>0<br/>0</td>
-            <td>0<br/>0</td>
-            <td>0<br/>0</td>
+            <td>1<br/>3</td>
+            <td>1<br/>5</td>
             <td>0<br/>0</td>
             <td>1<br/>1</td>
             <td>10</td>
+            <td>No POC yet, research and discussion completed</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/95">Issue #95</a>
+            </td>
+            <td>
+                <a>N/A</a>
+            </td>
+            <td>3<br/>3</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>3<br/>3</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/110">Issue #110</a>
+            </td>
+            <td>
+                <a>N/A</a>
+            </td>
+            <td>2<br/>1</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>2<br/>1</td>
+            <td>0<br/>0</td>
+            <td>0<br/>0</td>
+            <td>95</td>
+            <td>Pending final review</td>
         </tr>
         <tr>
             <td colspan="2" align="right">
@@ -243,8 +275,8 @@ Please follow the repository instructions for the prototype
             </td>
             <td>0<br/>0</td>
             <td>11.7<br/>20.45</td>
-            <td>9<br/>12</td>
-            <td>0<br/>0</td>
+            <td>10<br/>15</td>
+            <td>6<br/>9</td>
             <td>0<br/>0</td>
             <td>6<br/>5</td>
             <td>0</td>
@@ -290,9 +322,7 @@ Please follow the repository instructions for the prototype
         <tr>
             <td>Trevor Naze</td>
             <td>
-                <*Required*: The points and hours data are unlikely to tell the
-                whole story about your contribution. Write a brief statement
-                explaining and reflecting on your contribution to this milestone.>
+                Most of my sprint was spent communicating with Kyle and doing research into some future software onboarding that we wanted to do as a team. With the immenent addition of Stochastic models to our project, we recognized a potential need to decouple computation from the API side of the program, and as part of that, I did research into systems like message queueing and started learning how to work with Zero MQ, which was recommended by our professor. While I didn't make as much progress as I would have wanted to this sprint, I feel that some of the barriers to making progress should be clear for major improvement in Sprint 3.
             </td>
         </tr>
         <tr>
