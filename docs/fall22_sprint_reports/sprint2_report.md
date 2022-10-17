@@ -127,7 +127,7 @@ Please follow the repository instructions for the prototype
             <td>1<br/>0.95</td>
             <td>1<br/>0.95</td>
             <td>0<br/>0</td>
-            <td>0</td>
+            <td>100</td>
             <td></td>
         </tr>
         <tr>
@@ -143,7 +143,7 @@ Please follow the repository instructions for the prototype
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
-            <td>0</td>
+            <td>100</td>
             <td></td>
         </tr>
         <tr>
@@ -175,7 +175,7 @@ Please follow the repository instructions for the prototype
             <td>0<br/>0</td>
             <td>0<br/>0</td>
             <td>0<br/>0</td>
-            <td>0</td>
+            <td>100</td>
         </tr>
         <tr>
             <td>
