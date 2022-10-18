@@ -197,6 +197,15 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
             <td>&check;</td>
             <td>Sponsor</td>
         </tr>
+        <tr>
+            <td align="right"><b>Totals:</b></td>
+            <td><b>0</b></td>
+            <td><b>0</b></td>
+            <td><b>0</b></td>
+            <td><b>0</b></td>
+            <td><b>0</b></td>
+            <td><b>0</b></td>
+        </tr>
     </tbody>
 </table>
 
