@@ -334,9 +334,9 @@ Please follow the repository instructions for the prototype
         <tr>
             <td>Eric Song</td>
             <td>
-                <*Required*: The points and hours data are unlikely to tell the
-                whole story about your contribution. Write a brief statement
-                explaining and reflecting on your contribution to this milestone.>
+                During this sprint, I mostly spent time making sure our haven stochastic model was running correctly in our backend. This involved changing our existing unit tests and 
+                testing whether the api requests for computing the haven model was working properly. I also spend some time doing background research on implementing jobs in Django, 
+                and reviewed other team members' pull reqeuests. 
             </td>
         </tr>
     </tbody>
