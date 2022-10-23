@@ -29,9 +29,11 @@ through the process of adding a new model to the system. This document
 assumes that you have already set up the development environment as
 described in the [README](../README.md).
 
-In the current form, Macbeth only supports deterministic models. We plan to
-add support for stochastic models in the future, but for now, this document
-will only assume you are adding a deterministic model.
+In the current form, Macbeth only supports deterministic models, so this document
+will assume that is what you are adding. We plan to
+add support for stochastic models in the future.
+
+In this guide, we repeatedly say `<model_name>`; we expect that you replace `<model_name>` fully with the name of your model.
 
 <br>
 
@@ -40,12 +42,13 @@ will only assume you are adding a deterministic model.
 
 ### Generate a New Compute Model
 
+<br>
+
 For quick development, you can quickly create a skeleton of a new model by using the
 <i>[generate-new-compute-model.sh](../scripts/sh/generate-new-compute-model.sh)</i>
-script. This script will generate a new model package in the
+script as shown below. This script will generate a new model package in the
 <i>[macbeth_backend.computations](../macbeth_backend/computations/)</i> directory
 based on the `<model_name>` passed in as an argument. 
-
 
 ### ➜ MacOS or Linux
 ```sh
@@ -78,6 +81,7 @@ adding a new model to the system.
 For any model to be added to the system, it must follow the following package structure.
 Each file will be explained in this section.
 
+<b>Required Files for a New Model</b>
 ```
 macbeth_backend/computations/<model_name>/
 ├── __init__.py
@@ -85,8 +89,6 @@ macbeth_backend/computations/<model_name>/
 ├── <model_name>_result.py
 └── config.json
 ```
-
-<br>
 
 ### ➜ __init__.py
 
@@ -99,21 +101,27 @@ you can refer to the
 
 <br>
 
-### ➜ model_name.py
+### ➜ <model_name>.py
 
 <br>
 
 The `<model_name>.py` file hosts your computation of the model. Because Macbeth loads in these
-models dynamically, it is important to use the same function names for performing the computation
+models dynamically, it is important to use the same function names for performing the computation.
 Each model needs to inherit from the
-[InterfaceComputeModel](../macbeth_backend/computations/interface_compute_model.py)
+[InterfaceComputeModel](../macbeth_backend/computations/interface_compute_model.py).
 
-Here is how the class needs to be structured. The `self.__init__()` needs to accept all input
-parameters needed to perform the computation. Using the
-[ZombieSEIR](../macbeth_backend/computations/zombie_seir/zombie_seir.py)
-as an example, it requires three parameters: infection probability, infection duration, and
-latent period. The `self.compute_model()` should accept no arguments. All arguments needed to
-perform the computation must be passed in to the `self.__init__()` method.
+The `self.__init__()` method needs to accept all input
+parameters needed to perform the computation. 
+
+The `self.compute_model()` method should accept no arguments and should do the computation using the parameters defined in the `self.__init__()` method. 
+
+<br>
+
+<b>Example</b>
+
+For the computation of [ZombieSEIR](../macbeth_backend/computations/zombie_seir/zombie_seir.py), 
+it requires three parameters: <i>infection probability</i>, <i>infection duration</i>, and
+<i>latent period</i>, so the `self.__init__()` method should look like: 
 
 ```py
 def __init__(self, infect_prob, infect_duration, latent_period):
@@ -122,8 +130,11 @@ def __init__(self, infect_prob, infect_duration, latent_period):
         self.latent_period = latent_period
 ```
 
+<br>
 
-### ➜ model_name_result.py
+### ➜ <model_name>_result.py
+
+<br>
 
 When implementing the `self.compute_model()` method in the
 [InterfaceComputeModel](../macbeth_backend/computations/interface_compute_model.py),
@@ -133,8 +144,18 @@ it is necessary to use a Python dataclass object. Using the ZombieSEIR as an exa
 again, [zombie_seir_result.py](../macbeth_backend/computations/zombie_seir/zombie_seir_result.py)
 is a dataclass that contains each output variable from the computation.
 
-When declaring types for each parameter in the dataclass, make sure the types are
-not derived from an external library. Use types such as `int`, `float`, `str`, and `list`.
+In the `self.compute_model()` method in [InterfaceComputeModel](../macbeth_backend/computations/interface_compute_model.py),
+it is required to return the results as a Python dataclass object defined in `<model_name>_result.py`.
+
+For each variable being returned, include its type as well as shown in the example. Use types such as `int`, `float`, `str`, and `list`. 
+Do not use types that are derived from an external library.
+
+<br>
+
+<b>Example</b>
+
+For ZombieSEIR, [zombie_seir_result.py](../macbeth_backend/computations/zombie_seir/zombie_seir_result.py)
+is a dataclass that contains each output variable from the computation as shown below.
 
 ```py
 @dataclass
@@ -146,6 +167,8 @@ class ZombieSEIRResult:
     i: list
     r: list
 ```
+
+Here is how the `self.compute_model()` method for ZombieSEIR returns the output using the dataclass defined above.
 
 ```py
 def compute_model(self, **kwargs):
@@ -167,10 +190,10 @@ def compute_model(self, **kwargs):
 
 <br>
 
-The config file contains a lot of metadata regarding the model. It allows the frontend to
-display information such as the author, a description of the model,
-and the parameters that it needs in order to work properly. Here is a list of
-attributes the config expects:
+The config file contains information regarding the model. 
+This enables us to display who is the author, a description of the model,
+and the parameters that it needs in order to work properly. 
+Include the following information in your config file:
 
 <table>
     <tr>
@@ -220,15 +243,15 @@ attributes the config expects:
     </tr>
 </table>
 
----
-
-Below is an example of the body of the `config.json` and how it should be formatted.
-
 IMPORTANT: For the `VariableName` field, it is important that the
 variable it is representing in the model matches exactly with
 this name. `VariableName` will try to match to the argument name given in the
 `self.__init__()` arguments. If they do not match, then the parameter will not
 properly be injected into the compute model.
+
+<br>
+
+<b>Example</b>
 
 ```json
 {
@@ -270,14 +293,28 @@ properly be injected into the compute model.
 }
 ```
 
+<br>
+
 ### ➜ Optional Config Parameters
 
+<br>
+
 Macbeth also supports the use of changing line type and color for the graphed output. These can
-be described in the `GraphingData` section of the config. The optional parameters are as follows:
+be described in the `GraphingData` section of the config.
+
+If no <i>line type</i> is specified, by default it will use the solid line type.
+If no <i>color</i> is specified, by default it will use one of six default colors.
+
+For <i>line types</i>, the following are supported by name:
 
 ![Line Types](./imgs/line-graphing-types.png)
 
-There are also colors you can specify for a line. Here are a few examples of colors that are supported:
+For <i>colors</i>, there are two ways to indicate what color to use:
+
+- a valid hex code like `#A52A2A`
+- a supported color name
+
+Here are a few examples of color names that are supported:
 
 ```
 black,
@@ -312,10 +349,11 @@ summersky,
 yellow
 ```
 
-Additionally, you can specifiy a color code like `#A52A2A` in the color attribute
-for a custom color.
+This can be added to the `config.json` in the `Y` axis objects.
 
-This can be added to the `config.json` in the `Y` axis objects. For example:
+<br>
+
+<b>Example</b>
 
 ```json
 // Example 1
@@ -350,6 +388,7 @@ This can be added to the `config.json` in the `Y` axis objects. For example:
 
 ```
 
+<br>
 
 ## Conclusion
 
