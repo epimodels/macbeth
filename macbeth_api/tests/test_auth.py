@@ -12,6 +12,8 @@ from parameterized import parameterized
 
 REGISTER_URL = '/api/auth/register/'
 LOGIN_URL = '/api/auth/login/'
+REFRESH_URL = '/api/auth/refresh/'
+BLACKLIST_URL = '/api/auth/logout/'
 
 
 def _register_info():
@@ -99,6 +101,121 @@ class TestRegisterView(APITestCase):
         if errors:
             for field, message in errors:
                 self.assertEqual(response.data[field][0].__str__(), message)
+
+
+def _refresh_info():
+    return [
+        (status.HTTP_200_OK,),
+    ]
+
+
+def _refresh_info_validation_error():
+    return [
+        (
+            {},
+            status.HTTP_400_BAD_REQUEST,
+            [('refresh', 'This field is required.')],
+        ),
+    ]
+
+
+def _refresh_info_invalid_token():
+    return [
+        (
+            {'refresh': '5'},
+            status.HTTP_401_UNAUTHORIZED,
+            'Token is invalid or expired.',
+        ),
+    ]
+
+
+class TestRefreshView(APITestCase):
+    def setUp(self):
+        response = self.client.post(REGISTER_URL, {
+            "email": "test@test.com",
+            "password": "testtest",
+            "nickname": "test",
+            "over13": True,
+        }, format='json')
+
+        # get both of the tokens from the register return
+        # (the access token is just called token here)
+        self.access = response.data['token']
+        self.refresh = response.data['refresh']
+
+    @parameterized.expand(_refresh_info)
+    def test_refresh(self, expected_status):
+        response = self.client.post(REFRESH_URL, {'refresh': self.refresh}, format='json')
+        self.assertEqual(response.status_code, expected_status)
+        self.assertNotEqual(self.access, response.data['access'])
+
+    @parameterized.expand(_refresh_info_invalid_token)
+    def test_refresh_invalid_token(self, token_input, expected_status, message):
+        response = self.client.post(REFRESH_URL, token_input)
+        self.assertEqual(response.status_code, expected_status)
+        self.assertEqual(response.data, message)
+
+    @parameterized.expand(_refresh_info_validation_error)
+    def test_refresh_validation_error(self, token_input, expected_status, errors):
+        response = self.client.post(REFRESH_URL, token_input)
+        self.assertEqual(response.status_code, expected_status)
+        for field, message in errors:
+            self.assertEqual(response.data[field][0].__str__(), message)
+
+
+def _blacklist_info():
+    return [
+        (
+            status.HTTP_200_OK,
+            (
+                status.HTTP_401_UNAUTHORIZED,
+                "Token is invalid or blacklisted.",
+            ),
+        ),
+    ]
+
+
+def _blacklist_info_invalid():
+    return [
+        (
+            {"refresh_token": "5"},
+            status.HTTP_401_UNAUTHORIZED,
+            "Token is invalid or blacklisted.",
+        ),
+    ]
+
+
+class TestBlacklistView(APITestCase):
+    def setUp(self):
+        response = self.client.post(REGISTER_URL, {
+            "email": "test@test.com",
+            "password": "testtest",
+            "nickname": "test",
+            "over13": True,
+        }, format='json')
+
+        # get both of the tokens from the register return
+        # (the access token is just called token here)
+        self.access = response.data['token']
+        self.refresh = response.data['refresh']
+
+    @parameterized.expand(_blacklist_info)
+    def test_blacklist(self, first_status, second_status):
+        response = self.client.post(BLACKLIST_URL, {
+            'refresh_token': self.refresh,
+        }, format='json')
+        self.assertEqual(response.status_code, first_status)
+
+        # try to blacklist token again
+        response = self.client.post(BLACKLIST_URL, {'refresh_token': self.refresh}, format='json')
+        self.assertEqual(response.status_code, second_status[0])
+        self.assertEqual(response.data, second_status[1])
+
+    @parameterized.expand(_blacklist_info_invalid)
+    def test_blacklist_invalid(self, token, expected_status, message):
+        response = self.client.post(BLACKLIST_URL, token)
+        self.assertEqual(response.status_code, expected_status)
+        self.assertEqual(response.data, message)
 
 
 def _login_info():
