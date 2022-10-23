@@ -6,7 +6,7 @@
 # Login and Register ViewSets
 
 from rest_framework import status, viewsets
-from rest_framework.exceptions import ValidationError
+from rest_framework.exceptions import ValidationError, AuthenticationFailed
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import AllowAny
@@ -32,6 +32,12 @@ class LoginViewSet(TokenObtainPairView, ModelViewSet):
         try:
             serializer = self.get_serializer(data=request.data)
             serializer.is_valid(raise_exception=True)
+        except AuthenticationFailed as e:  # occurs when login information does not match a user
+            log.exception(f'Authentication error: {e}', exc_info=True)
+            return Response(e.detail, status=status.HTTP_400_BAD_REQUEST)
+        except ValidationError as e:  # occurs when missing a field in the data
+            log.exception(f'Validation error: {e}', exc_info=True)
+            return Response(e.detail, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             log.exception(f'Unknown error: {e}', exc_info=True)
             return Response('Invalid token or user not found.', status=status.HTTP_400_BAD_REQUEST)

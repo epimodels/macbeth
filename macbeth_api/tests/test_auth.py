@@ -216,3 +216,64 @@ class TestBlacklistView(APITestCase):
         response = self.client.post(BLACKLIST_URL, token)
         self.assertEqual(response.status_code, expected_status)
         self.assertEqual(response.data, message)
+
+
+def _login_info():
+    return [
+        ({
+            'email': 'test@test.com',
+            'password': 'testtest',
+        }, status.HTTP_200_OK),
+        ({
+            'email': 'test@test.com',
+            'password': 't',
+        }, status.HTTP_400_BAD_REQUEST,
+            [
+                'No active account found with the given credentials',
+            ],
+        ),
+        ({
+            'email': 'test',
+            'password': 'testtest',
+        }, status.HTTP_400_BAD_REQUEST,
+            [
+                'No active account found with the given credentials',
+            ],
+        ),
+    ]
+
+
+def _login_info_validation_errors():
+    return [
+        ({},
+            status.HTTP_400_BAD_REQUEST,
+            [
+                ('email', 'This field is required.'),
+                ('password', 'This field is required.'),
+        ]),
+    ]
+
+
+class TestLoginView(APITestCase):
+    def setUp(self):
+        self.client.post(REGISTER_URL, {
+            'email': 'test@test.com',
+            'nickname': 'test',
+            'password': 'testtest',
+            'over13': True,
+        }, format='json')
+
+    @parameterized.expand(_login_info)
+    def test_login(self, user_data, expected_status, errors=None):
+        response = self.client.post(LOGIN_URL, user_data)
+        self.assertEqual(response.status_code, expected_status)
+        if errors:
+            for message in errors:
+                self.assertEqual(response.data, message)
+
+    @parameterized.expand(_login_info_validation_errors)
+    def test_login_validation_errors(self, user_data, expected_status, errors):
+        response = self.client.post(LOGIN_URL, user_data)
+        self.assertEqual(response.status_code, expected_status)
+        for field, message in errors:
+            self.assertEqual(response.data[field][0].__str__(), message)
