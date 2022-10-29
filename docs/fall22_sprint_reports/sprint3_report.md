@@ -67,14 +67,14 @@ Please follow the repository instructions for the prototype <a href="https://git
   <tbody>
     <tr>
       <td>
-        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue #</a>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/115">Issue #115</a>
       </td>
       <td>
         <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a>
       </td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
-      <td>0<br/>0</td>
+      <td>0<br/>5</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
