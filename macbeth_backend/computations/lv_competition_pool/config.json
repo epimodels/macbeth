@@ -1,0 +1,116 @@
+{
+    "Title": "LVPredatorPreyWithRungeKutta",
+    "Version": 1.0,
+    "Author": "Kyle Hurd",
+    "Description": "Simulates predator-prey interactions using the 4th order Runge-Kutta method.",
+    "Type": "Deterministic",
+    "Authorlink": "https://www.sciencedirect.com/topics/earth-and-planetary-sciences/lotka-volterra-model",
+    "Parameters": [
+        {
+            "Name": "Start Time",
+            "VariableName": "start_time",
+            "Type": "int",
+            "Description": "The time in which to start.",
+            "Min": 0,
+            "Max": 100,
+            "DefaultValue": 0
+        },
+        {
+            "Name": "Number of Iterations",
+            "VariableName": "num_iterations",
+            "Type": "int",
+            "Description": "The number of iterations for the model to perform.",
+            "Min": 10,
+            "Max": 10000,
+            "DefaultValue": 200
+        },
+        {
+            "Name": "Initial Prey Population",
+            "VariableName": "initial_prey_population",
+            "Type": "int",
+            "Description": "The starting population for the prey.",
+            "Min": 0,
+            "Max": 10000,
+            "DefaultValue": 60
+        },
+        {
+            "Name": "Initial Predator Population",
+            "VariableName": "initial_predator_population",
+            "Type": "int",
+            "Description": "The starting population for the predators.",
+            "Min": 0,
+            "Max": 10000,
+            "DefaultValue": 25
+        },
+        {
+            "Name": "Growth Rate of Prey",
+            "VariableName": "alpha",
+            "Type": "float",
+            "Description": "The growth rate for the prey.",
+            "Min": 1.0,
+            "Max": 35.0,
+            "DefaultValue": 10.0
+        },
+        {
+            "Name": "Attack Rate",
+            "VariableName": "beta",
+            "Type": "float",
+            "Description": "The searching efficiency or attack rate of the predators.",
+            "Min": 1.0,
+            "Max": 35.0,
+            "DefaultValue": 7.0
+        },
+        {
+            "Name": "Predator Mortality Rate",
+            "VariableName": "gamma",
+            "Type": "float",
+            "Description": "The predator or consumer mortality rate",
+            "Min": 1.0,
+            "Max": 35.0,
+            "DefaultValue": 3.0
+        },
+        {
+            "Name": "Conversion Efficiency",
+            "VariableName": "sigma",
+            "Type": "float",
+            "Description": "The predators or consumers efficiency at turning food into offspring.",
+            "Min": 1.0,
+            "Max": 35.0,
+            "DefaultValue": 5.0
+        },
+        {
+            "Name": "Step Size",
+            "VariableName": "step_size",
+            "Type": "float",
+            "Description": "The step size for each iteration.",
+            "Min": 0.001,
+            "Max": 35.0,
+            "DefaultValue": 0.01
+        }
+    ],
+    "GraphingData": {
+        "X": {
+            "Name": "Time",
+            "VariableName": "time",
+            "Type": "int",
+            "Description": "The time, represented as number of iterations.",
+            "Units": "iterations"
+        },
+        "Y": [
+            {
+                "Name": "Prey",
+                "VariableName": "prey_population",
+                "Type": "int",
+                "Description": "The population of prey over time.",
+                "Units": "preys"
+            },
+            {
+                "Name": "Predator",
+                "VariableName": "predators_population",
+                "Type": "int",
+                "Description": "The population of predators over time",
+                "Units": "predators"
+            }
+        ]
+    }
+}
