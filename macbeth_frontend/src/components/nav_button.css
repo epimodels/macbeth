@@ -15,9 +15,8 @@
 }
 
 .next {
-  position: fixed;
-  top: 80%;
-  right: 30%;
+  margin-top: 5%;
+  margin-right: -30%;
   background-color: #7CD47E;
   border: #7CD47E;
 }
@@ -34,9 +33,9 @@
 }
 
 .prev {
-  position: fixed;
-  top: 80%;
-  left: 30%;
+  margin-top: 5%;
+  margin-left: -30%;
+  margin-right: 30%;
   background-color: #84BC85;
   border: #84BC85;
 }

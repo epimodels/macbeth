@@ -7,7 +7,7 @@ export default function SignOut() {
   const history = useNavigate();
 
   useEffect(() => {
-    const response = axiosInstance
+    axiosInstance
       .post('auth/logout/', {
         refresh_token: localStorage.getItem('refresh_token'),
       })

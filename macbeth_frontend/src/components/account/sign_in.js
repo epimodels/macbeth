@@ -60,7 +60,7 @@ export default function SignIn() {
         <div className="signin">
           <h2 style={{'margin-top':'3%'}}>Sign In</h2>
           <Form>
-            <Form.Group as={Row} controlId="formUsername" className="justify-content-center" style={{'margin-top':'5%'}}>
+            <Form.Group as={Row} controlId="formUsername" className="justify-content-center" style={{'marginTop':'5%'}}>
               <Form.Label column sm={1} style={{display:'flex',justifyContent:'right'}}>
                 email:
               </Form.Label>
@@ -69,7 +69,7 @@ export default function SignIn() {
               </Col>
               <Col sm={1}></Col>
             </Form.Group>
-            <Form.Group as={Row} controlID="formPassword" className="justify-content-center" style={{'margin-top':'2%', 'margin-bottom':'3%'}}>
+            <Form.Group as={Row} controlID="formPassword" className="justify-content-center" style={{'marginTop':'2%', 'marginBottom':'3%'}}>
               <Form.Label column sm={1} style={{display:'flex',justifyContent:'right'}}>
                 password:
               </Form.Label>
@@ -77,7 +77,7 @@ export default function SignIn() {
                 <Form.Control type={formData.visiblePassword ? "text" : "password"} name = "password" placeholder="Enter password" onChange={handleChange} />
               </Col>
               <Col sm={1}>
-                <FontAwesomeIcon icon={formData.visiblePassword ? faEyeSlash : faEye} id="togglepassword" onClick={() => updateFormData({...formData, visiblePassword: !formData.visiblePassword})} style={{'margin-top':'10%', 'margin-left':'-100%'}}/>
+                <FontAwesomeIcon icon={formData.visiblePassword ? faEyeSlash : faEye} id="togglepassword" onClick={() => updateFormData({...formData, visiblePassword: !formData.visiblePassword})} style={{'marginTop':'10%', 'marginLeft':'-100%'}}/>
               </Col>
             </Form.Group>
             <NavButton label="Sign In" variant="nextnopos" clickEvent={handleSubmit} />
