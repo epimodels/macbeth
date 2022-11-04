@@ -74,7 +74,7 @@ Please follow the repository instructions for the prototype <a href="https://git
       </td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
-      <td>0<br/>5</td>
+      <td>0<br/>8</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
@@ -188,14 +188,54 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
       <td>Work</td>
     </tr>
     <tr>
-      <td>//22</td>
-      <td>0</td>
+      <td>10/21/22</td>
+      <td>22</td>
       <td>&check;</td>
       <td>&check;</td>
       <td>&check;</td>
       <td>&check;</td>
       <td>&check;</td>
-      <td>Sponsor</td>
+      <td>Work</td>
+    </tr>
+    <tr>
+      <td>10/24/22</td>
+      <td>16</td>
+      <td></td>
+      <td>&check;</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Work</td>
+    </tr>
+    <tr>
+      <td>10/28/22</td>
+      <td>67</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td></td>
+      <td>Work</td>
+    </tr>
+    <tr>
+      <td>10/31/22</td>
+      <td>10</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td></td>
+      <td>Work</td>
+    </tr>
+    <tr>
+      <td>11/4/22</td>
+      <td>42</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td></td>
+      <td>&check;</td>
+      <td></td>
+      <td>Work</td>
     </tr>
     <tr>
       <td align="right"><b>Totals:</b></td>
