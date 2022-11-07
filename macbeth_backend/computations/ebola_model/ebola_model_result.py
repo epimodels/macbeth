@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 
 @dataclass
-class EbolaLiberiaResult:
+class EbolaModelResult:
 
     time: list
     infected: list

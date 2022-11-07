@@ -7,13 +7,13 @@
 # https://arxiv.org/pdf/1409.4607.pdf
 
 from pathlib import Path
-from macbeth_backend.computations.ebola_model.ebola_model_result import EbolaLiberiaResult
+from macbeth_backend.computations.ebola_model.ebola_model_result import EbolaModelResult
 from macbeth_backend.computations.interface_compute_model import InterfaceComputeModel
 from stochpy import SSA
 import numpy
 
 
-class EbolaLiberia(InterfaceComputeModel):
+class EbolaModel(InterfaceComputeModel):
 
     def __init__(self, start_time, end_time, n_runs,
                  beta_i, beta_h, beta_f,
@@ -80,4 +80,4 @@ class EbolaLiberia(InterfaceComputeModel):
         infected = [x if not numpy.isnan(x) else 0 for x in infected]
         hospitalized = [x if not numpy.isnan(x) else 0 for x in hospitalized]
         total_size = [x if not numpy.isnan(x) else 0 for x in total_size]
-        return EbolaLiberiaResult(time, infected, hospitalized, total_size)
+        return EbolaModelResult(time, infected, hospitalized, total_size)
