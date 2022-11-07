@@ -74,12 +74,12 @@ Please follow the repository instructions for the prototype <a href="https://git
       </td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
-      <td>0<br/>8</td>
+      <td>0<br/>17</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
-      <td>0</td>
-      <td></td>
+      <td>100</td>
+      <td>Adds stochastic modelling to Macbeth.</td>
     </tr>
     <tr>
       <td>
