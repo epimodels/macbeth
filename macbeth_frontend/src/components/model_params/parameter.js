@@ -21,17 +21,21 @@ function Parameter(props) {
   const [value, valueDispatch] = React.useReducer(valueReducer, '');
 
   React.useEffect(() => {
-    // get fresh params
-    let paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
     // if the parameter is already in the dict and it's not default, set the text to that
-    if (paramDict[props.variableName] !== undefined && paramDict[props.variableName] !== props.placeholder) {
-      valueDispatch({ variableName: props.variableName, default: props.placeholder, value: paramDict[props.variableName] });
+    if (props.modelParams[props.variableName] !== undefined && props.modelParams[props.variableName] !== props.placeholder) {
+      valueDispatch({ variableName: props.variableName, default: props.placeholder, value: props.modelParams[props.variableName] });
     }
     // otherwise, have the text be nothing so the placeholder text (that holds the default value) shows
     else {
       valueDispatch({ variableName: props.variableName, default: props.placeholder, value: '' });
     }
   }, [props]);
+
+  // after the reducer changes the value, update the local storage with the new change
+  React.useEffect(() => {
+    props.setModelParams(props.modelParams);
+  }, [value]);
+
   /*
    * Reducer function for a parameter value
    * variableName: props.variableName (key for param)
@@ -39,11 +43,8 @@ function Parameter(props) {
    * value: new value
    */
   function valueReducer(value, action) {
-    // get fresh params
-    let paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
     // set new value in localStorage dict -- if our new value is empty, use default value instead
-    paramDict[action.variableName] = (action.value === '') ? action.default : action.value;
-    localStorage.setItem('compute-selected-model-params', JSON.stringify(paramDict));
+    props.modelParams[action.variableName] = (action.value === '') ? action.default : action.value;
     parameterRef.current.value = action.value;
 
     return action.value;
