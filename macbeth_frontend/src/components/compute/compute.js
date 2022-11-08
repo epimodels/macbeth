@@ -9,6 +9,7 @@ import Stack from 'react-bootstrap/Stack';
 import useLocalStorage from '../useLocalStorage';
 import ModelDropdown from '../model_select/model_dropdown';
 import ParameterEdit from '../model_params/parameter_edit';
+import Results from '../model_results/results';
 
 /*
  * Base page for Compute
@@ -27,7 +28,7 @@ export default function Compute() {
         <Row>
           <Col>
             <Stack>
-              <div>Results</div>
+              <Results generateGraph={true} modelName={modelName} modelID={modelID} modelParams={modelParams} modelGraphing={modelGraphing} />
             </Stack>
           </Col>
           <Col>

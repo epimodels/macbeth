@@ -9,9 +9,7 @@ import { TestColor, GetNextColor, GetCertainColor } from './color_manager';
 /*
  * Sub-page of Compute
  */
-export default function Results() {
-  const URLparams = useParams();
-
+export default function Results(props) {
   const [xData, setXData] = React.useState([]);
   const [yData, yDataDispatch] = React.useReducer(yDataReducer, []);
 
@@ -67,38 +65,31 @@ export default function Results() {
   }
 
   React.useEffect(() => {
-    const parameterInput = JSON.parse(localStorage.getItem('compute-selected-model-params'));
-    const graphingOutput = JSON.parse(localStorage.getItem('compute-selected-model-graph'));
-    console.log(parameterInput);
-    
-    // Change this to a post/job request eventually
-    let computeCall = '/compute/models/' + URLparams.modelid + '/perform_computation/?';
-    let first = true;
+    if (props.generateGraph) {
+      // Change this to a post/job request eventually
+      let computeCall = '/compute/models/' + props.modelID + '/perform_computation/?';
+      let first = true;
 
-    for (const [key, value] of Object.entries(parameterInput))
-    {
-      if (!first) computeCall += '&';
-      computeCall += key + '=' + value;
-      first = false;
+      for (const [key, value] of Object.entries(props.modelParams))
+      {
+        if (!first) computeCall += '&';
+        computeCall += key + '=' + value;
+        first = false;
+      }
+
+      axiosInstance
+        .get(computeCall, {})
+        .then(res => {
+          // Set x and y data
+          setXData(res.data[props.modelGraphing.X.VariableName]);
+          yDataDispatch( { yOutput: props.modelGraphing.Y, yData: res.data } );
+        });
     }
-
-    axiosInstance
-      .get(computeCall, {})
-      .then(res => {
-        // Set x and y data
-        setXData(res.data[graphingOutput.X.VariableName]);
-        yDataDispatch( { yOutput: graphingOutput.Y, yData: res.data } );
-      });
-  }, [URLparams.modelid]);
+  }, [props.generateGraph]);
 
   return (
     <div>
-      <Progress currentStep={3} />
-      <h4>Viewing Results</h4>
-      <div style={{'width':'50%', 'height':'50%', 'paddingLeft':'5%'}}>
-        <ResultsGraph title={localStorage.getItem('compute-selected-model-name')} xData={xData} yData={yData} />
-      </div>
-      <NavButton label='Back' redirect={'/compute/parameter-edit/' + localStorage.getItem('compute-selected-model')} variant='prev'/>
+      <ResultsGraph title={props.modelName} xData={xData} yData={yData} />
     </div>
   )
 }
