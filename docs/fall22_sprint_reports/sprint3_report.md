@@ -83,19 +83,19 @@ Please follow the repository instructions for the prototype <a href="https://git
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue #</a>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/119">Issue #119</a>
       </td>
       <td>
-        <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a>
+        <a href="">N/A</a>
       </td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
+      <td>4<br/>4</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
-      <td>0<br/>0</td>
-      <td>0</td>
-      <td></td>
+      <td>50</td>
+      <td>Unable to convert the LV Model.</td>
     </tr>
     <tr>
       <td colspan="2" align="right">
@@ -237,6 +237,15 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
       <td></td>
       <td>Work</td>
     </tr>
+    <tr>
+        <td>11/11/22</td>
+        <td>15</td>
+        <td>&check;</td>
+        <td>&check;</td>
+        <td></td>
+        <td>&check;</td>
+        <td></td>
+        <td>Work</td>
     <tr>
       <td align="right"><b>Totals:</b></td>
       <td><b>126</b></td>
