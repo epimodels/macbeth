@@ -5,9 +5,11 @@
 # ------------------------------------------------------------
 # Loads the config file for a given object
 
-import os
-import json
 import inspect
+import json
+import os
+import numpy
+from dataclasses import fields
 
 CONFIG_FILENAME = 'config.json'
 
@@ -15,6 +17,17 @@ CONFIG_FILENAME = 'config.json'
 class Config:
     '''Config class to retreive the config file for a given object.
     '''
+
+    @staticmethod
+    def sanitize_dataclass(dataclass):
+        '''Sanitizes the dataclass by removing `nan`, `inf`, and `None` values.
+        '''
+        for field in fields(dataclass):
+            if field.type == list:
+                value = getattr(dataclass, field.name)
+                value = [0 if numpy.isnan(item) else item for item in value]
+                setattr(dataclass, field.name, value)
+        return dataclass
 
     @staticmethod
     def load_config_from_obj(obj):

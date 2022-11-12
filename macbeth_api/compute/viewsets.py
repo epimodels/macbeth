@@ -66,7 +66,7 @@ class ComputeModelsViewSet(viewsets.ViewSet):
             log.info('Performing computation')
             model_info: ComputeModel = MODEL_TO_CONF_DICT[pk]
             kwargs = Config.generate_kwargs_for_obj(model_info.model, request.query_params)
-            computed_result = model_info.model(**kwargs).compute_model()
+            computed_result = Config.sanitize_dataclass(model_info.model(**kwargs).compute_model())
             serializer = DataclassSerializer(instance=computed_result, dataclass=type(computed_result))
             return Response(serializer.data, status=status.HTTP_200_OK)
 

@@ -76,8 +76,4 @@ class EbolaModel(InterfaceComputeModel):
             total_size[i] = (i * total_size[i] + population[2][0][-1]+population[3][0][-1]+population[3][0][-1]) \
                 / (i + 1)
 
-        # Get rid of nan values
-        infected = [x if not numpy.isnan(x) else 0 for x in infected]
-        hospitalized = [x if not numpy.isnan(x) else 0 for x in hospitalized]
-        total_size = [x if not numpy.isnan(x) else 0 for x in total_size]
         return EbolaModelResult(time, infected, hospitalized, total_size)
