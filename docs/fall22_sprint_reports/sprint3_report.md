@@ -67,14 +67,15 @@ Please follow the repository instructions for the prototype <a href="https://git
   <tbody>
     <tr>
       <td>
-        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/115">Issue #115</a>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/115">Issue #115</a>,
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/120">Issue #120</a>
       </td>
       <td>
-        <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/116">PR #116</a>
       </td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
-      <td>0<br/>17</td>
+      <td>9<br/>17</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
@@ -90,7 +91,7 @@ Please follow the repository instructions for the prototype <a href="https://git
       </td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
-      <td>4<br/>4</td>
+      <td>2<br/>4</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
