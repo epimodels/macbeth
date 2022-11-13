@@ -28,6 +28,14 @@ def _compute_models():
             'ZombieSIR',
             ('infect_prob', 'infect_duration'),
         ),
+        (
+            'EbolaModel',
+            ('beta_i', 'beta_h', 'beta_f',
+             'alpha', 'gamma_i', 'gamma_h',
+             'gamma_f', 'gamma_d', 'gamma_dh',
+             'gamma_ih', 'dx', 'delta_1',
+             'delta_2'),
+        ),
     ]
 
 

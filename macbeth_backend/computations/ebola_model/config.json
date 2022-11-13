@@ -1,0 +1,179 @@
+{
+    "Title": "EbolaModel",
+    "Version": 1.0,
+    "Author": "Eric Lofgren",
+    "Description": "PML implementation of Legrand et al. (2007) model of Ebola virus dynamics. Default parameters represent fitted data for the Liberia outbreak.",
+    "Type": "Stochastic",
+    "Authorlink": "",
+    "Parameters": [
+        {
+            "Name": "Start Time",
+            "VariableName": "start_time",
+            "Type": "int",
+            "Description": "The time at which the simulation starts",
+            "Min": 0,
+            "Max": 10000,
+            "DefaultValue": 0
+        },
+        {
+            "Name": "End Time",
+            "VariableName": "end_time",
+            "Type": "int",
+            "Description": "The time at which the simulation ends",
+            "Min": 0,
+            "Max": 10000,
+            "DefaultValue": 100
+        },
+        {
+            "Name": "Number of Runs",
+            "VariableName": "n_runs",
+            "Type": "int",
+            "Description": "The number of runs to perform",
+            "Min": 1,
+            "Max": 1000,
+            "DefaultValue": 20
+        },
+        {
+            "Name": "beta_i",
+            "VariableName": "beta_i",
+            "Type": "float",
+            "Description": "Contact rate in the community",
+            "Min": 0,
+            "Max": 10000,
+            "DefaultValue": 0.1595
+        },
+        {
+            "Name": "beta_h",
+            "VariableName": "beta_h",
+            "Type": "float",
+            "Description": "Contact rate in the hospital",
+            "Min": 0,
+            "Max": 10000,
+            "DefaultValue": 0.062
+        },
+        {
+            "Name": "beta_f",
+            "VariableName": "beta_f",
+            "Type": "float",
+            "Description": "Contact rate in the funeral",
+            "Min": 0,
+            "Max": 10000,
+            "DefaultValue": 0.489
+        },
+        {
+            "Name": "alpha",
+            "VariableName": "alpha",
+            "Type": "float",
+            "Description": "Incubation period (days)",
+            "Min": 0.0,
+            "Max": 10000.0,
+            "DefaultValue": 12.0
+        },
+        {
+            "Name": "gamma_i",
+            "VariableName": "gamma_i",
+            "Type": "float",
+            "Description": "Duration of infection (days)",
+            "Min": 0.0,
+            "Max": 10000.0,
+            "DefaultValue": 15.0
+        },
+        {
+            "Name": "gamma_h",
+            "VariableName": "gamma_h",
+            "Type": "float",
+            "Description": "Time until hospitalization (days)",
+            "Min": 0.0,
+            "Max": 10000.0,
+            "DefaultValue": 3.24
+        },
+        {
+            "Name": "gamma_f",
+            "VariableName": "gamma_f",
+            "Type": "float",
+            "Description": "Duration of traditional funeral (days)",
+            "Min": 0.0,
+            "Max": 10000.0,
+            "DefaultValue": 2.01
+        },
+        {
+            "Name": "gamma_d",
+            "VariableName": "gamma_d",
+            "Type": "float",
+            "Description": "Time from infection to death (days)",
+            "Min": 0.0,
+            "Max": 10000.0,
+            "DefaultValue": 13.31
+        },
+        {
+            "Name": "gamma_dh",
+            "VariableName": "gamma_dh",
+            "Type": "float",
+            "Description": "Time from hospitalization to death (days)",
+            "Min": 0.0,
+            "Max": 10000.0,
+            "DefaultValue": 10.07
+        },
+        {
+            "Name": "gamma_ih",
+            "VariableName": "gamma_ih",
+            "Type": "float",
+            "Description": "Time from hospitalization to recovery (days)",
+            "Min": 0.0,
+            "Max": 10000.0,
+            "DefaultValue": 15.88
+        },
+        {
+            "Name": "dx",
+            "VariableName": "dx",
+            "Type": "float",
+            "Description": "Fraction of infection that is hospitalized",
+            "Min": 0.0,
+            "Max": 1.0,
+            "DefaultValue": 0.2
+        },
+        {
+            "Name": "delta_1",
+            "VariableName": "delta_1",
+            "Type": "float",
+            "Description": "Case fatality rate, unhospitalized",
+            "Min": 0.0,
+            "Max": 1.0,
+            "DefaultValue": 0.5
+        },
+        {
+            "Name": "delta_2",
+            "VariableName": "delta_2",
+            "Type": "float",
+            "Description": "Case fatality rate, hospitalized",
+            "Min": 0.0,
+            "Max": 1.0,
+            "DefaultValue": 0.5
+        }
+    ],
+    "GraphingData": {
+        "X": {
+            "Name": "Time",
+            "VariableName": "time",
+            "Type": "int",
+            "Description": "The time at which the simulation is run",
+            "Units": "periods"
+        },
+        "Y": [
+            {
+                "Name": "Infected",
+                "VariableName": "infected",
+                "Type": "float",
+                "Description": "Number of infected",
+                "Units": "individuals"
+            },
+            {
+                "Name": "Hospitalized",
+                "VariableName": "hospitalized",
+                "Type": "float",
+                "Description": "Number of hospitalized",
+                "Units": "individuals"
+            }
+        ]
+    }
+}
