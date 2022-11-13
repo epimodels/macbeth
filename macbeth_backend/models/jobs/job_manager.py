@@ -6,7 +6,6 @@
 #
 
 from django.db import models
-from macbeth_backend import COMPUTE_MODELS
 from macbeth_core.logging import log
 
 
@@ -18,7 +17,6 @@ class JobManager(models.Manager):
         :param extra_fields:
         :return:
         """
-        #model = COMPUTE_MODELS[extra_fields['model_id']]['model'](**extra_fields['input_params'])
         log.info(extra_fields)
         extra_fields['results'] = ""
         job = self.create(**extra_fields)

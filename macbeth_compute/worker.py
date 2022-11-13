@@ -1,22 +1,17 @@
-import sys
 import zmq
 import psycopg2
-from settings import HOST_SETTINGS, DATABASE_SETTINGS
-import json
-
-# add parent directory to python path so we can find the backend modules
-sys.path.append('../macbeth')
-
-# import remaining required elements
+from macbeth_compute.settings import HOST_SETTINGS, DATABASE_SETTINGS
 from macbeth_backend import COMPUTE_MODELS, ComputeModel
 from macbeth_backend.computations.config import Config
+from macbeth_core.logging import log
+import json
 from rest_framework_dataclasses.serializers import DataclassSerializer
 
 # set up contexts
 context = zmq.Context()
 receiver = context.socket(zmq.PULL)
 binding = "tcp://{}:{}".format(HOST_SETTINGS['ADDRESS'], HOST_SETTINGS['PORT'])
-print("Establishing connection to host at {}".format(binding))
+log.info("Worker Establishing connection to host at {}".format(binding))
 receiver.connect(binding)
 
 # helpers
@@ -48,8 +43,10 @@ def get_job(jobid):
                 "params": jobresult[2],
             }
             return job
-    except (Exception, psycopg2.DatabaseError) as error:
-        print(error)
+    except (psycopg2.DatabaseError) as error:
+        log.error(f"Worker job retrieval error: {error}")
+    except (Exception) as error:
+        log.error(f"Unhandled exception in worker reading inputs from database for job {jobid}: {error}")
     finally:
         if conn is not None:
             conn.close()
@@ -68,18 +65,20 @@ def update_job_results(jobid, results):
             cur.execute(sql, (json.dumps(results), jobid))
             conn.commit()
             cur.close()
-    except (Exception, psycopg2.DatabaseError) as error:
-        print(error)
+    except (psycopg2.DatabaseError) as error:
+        log.error(f"Worker job results write error: {error}")
+    except (Exception) as error:
+        log.error(f"Unhandled exception in worker writing results to database for job {jobid}: {error}")
     finally:
         if conn is not None:
             conn.close()
 
 
-def main():
+def runworker():
     while True:
-        print("Waiting for job assignment.")
+        log.info("Worker Waiting for job assignment.")
         s = receiver.recv()
-        print("Received compute request for job {}".format(s))
+        log.info("Received compute request for job {}".format(s))
         jobid = int(s)
         job = get_job(jobid)
         model_info: ComputeModel = MODEL_TO_CONF_DICT[job['model_id']]
@@ -87,7 +86,4 @@ def main():
         computed_result = model_info.model(**kwargs).compute_model()
         serializer = DataclassSerializer(instance=computed_result, dataclass=type(computed_result))
         update_job_results(jobid, serializer.data)
-        print("Results for {} saved to database.".format(jobid))
-
-
-main()
+        log.info("Results for {} saved to database.".format(jobid))
