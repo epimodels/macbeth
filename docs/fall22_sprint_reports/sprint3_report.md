@@ -199,6 +199,16 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
       <td>Work</td>
     </tr>
     <tr>
+      <td>10/21/22</td>
+      <td>42</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td></td>
+      <td>&check;</td>
+      <td></td>
+      <td>Sponsor</td>
+    </tr>
+    <tr>
       <td>10/24/22</td>
       <td>16</td>
       <td></td>
@@ -207,6 +217,16 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
       <td></td>
       <td></td>
       <td>Work</td>
+    </tr>
+     <tr>
+      <td>10/27/22</td>
+      <td>48</td>
+      <td>&check;</td>
+      <td></td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td></td>
+      <td>Professor</td>
     </tr>
     <tr>
       <td>10/28/22</td>
@@ -239,41 +259,83 @@ As provided above, here is a link to our [MS Teams](https://teams.microsoft.com/
       <td>Work</td>
     </tr>
     <tr>
-        <td>11/11/22</td>
-        <td>15</td>
-        <td>&check;</td>
-        <td>&check;</td>
-        <td></td>
-        <td>&check;</td>
-        <td></td>
-        <td>Work</td>
+      <td>11/4/22</td>
+      <td>45</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td></td>
+      <td>&check;</td>
+      <td></td>
+      <td>Sponsor</td>
+    </tr>
+    <tr>
+      <td>11/7/22</td>
+      <td>45</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td></td>
+      <td>Work</td>
+    </tr>
+    <tr>
+      <td>11/10/22</td>
+      <td>20</td>
+      <td>&check;</td>
+      <td></td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td></td>
+      <td>Professor</td>
+    </tr>
+    <tr>
+      <td>11/11/22</td>
+      <td>15</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td></td>
+      <td>&check;</td>
+      <td></td>
+      <td>Work</td>
+    </tr>
+    <tr>
+      <td>11/13/22</td>
+      <td></td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td>&check;</td>
+      <td></td>
+      <td>Work</td>
+    </tr>
     <tr>
       <td align="right"><b>Totals:</b></td>
-      <td><b>126</b></td>
-      <td><b>1</b></td>
-      <td><b>1</b></td>
-      <td><b>1</b></td>
-      <td><b>1</b></td>
-      <td><b>1</b></td>
+      <td><b>498</b></td>
+      <td><b>12</b></td>
+      <td><b>11</b></td>
+      <td><b>8</b></td>
+      <td><b>12</b></td>
+      <td><b>2</b></td>
     </tr>
   </tbody>
 </table>
 
 ### Retrospective
 
-[Link to Recording](https://wsu.zoom.us/recording)
+[Link to Recording](https://emailwsu.sharepoint.com/:v:/t/2022.PULLM.CptS.421.423-MACBETHV2/EVCv7T3HVgpIpmOaCy_FHiwBcO9t_ruzodbASZjiEQdvLA?e=rh7riA)
 
 #### What went well
-  - Item 1 <i>(Be as concrete and specific as possible)</i>
-  - Item 2 <i>(Be as concrete and specific as possible)</i>
-  - Item x <i>(Be as concrete and specific as possible)</i>
+  - We were able to move past big blockers
+  - Adding new models works very well with the frontend, we've set ourselves up to be in a really good position for future expansion
+  - We're good at thinking ahead
+  - We have not had huge merge conflicts so far
   
 #### What we'd like to improve
-  - Item 1 <i>(Be as concrete and specific as possible)</i>
-  - Item 2 <i>(Be as concrete and specific as possible)</i>
-  - Item x <i>(Be as concrete and specific as possible)</i>
+  - Usage of helpful tools
+  - Attendance
+  - Amount of deliverables
   
 #### Changes we plan to implement in next sprint period
-  - Item 1 <i>(Express in concrete, observable, measurable terms so that progress can be assessed)</i>
-  - Item 2 <i>(Express in concrete, observable, measurable terms so that progress can be assessed)</i>
-  - Item x <i>(Express in concrete, observable, measurable terms so that progress can be assessed)</i>
+  - Implementation of Docker containers or something similar
+  - Starting to do check-ins / threads to encourage more interaction
+  - Create a plan for what we exactly want finished by the end of this last sprint
