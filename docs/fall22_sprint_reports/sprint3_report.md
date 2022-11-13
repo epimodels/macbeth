@@ -132,7 +132,12 @@ Please follow the repository instructions for the prototype <a href="https://git
     <tr>
       <td>Kyle Hurd</td>
       <td>
-        <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.>
+        In this sprint, I worked on implementing a stochastic model to be used in macbeth. I started with an old model our sponsor made regarding predator prey. This was initially
+        written in Python2 and the library that it relied on had undergone a major change. I was unable to get the model to run reliably in Python3. Since our goal was
+        to implement a stochastic model, I decided to implement a new model for Ebola. This one was less involved and had more documentation I could refer to to more
+        accurately implement it. The result of this effort was a working stochastic model that can be used in macbeth. This was an important step as there was
+        ambiguity on how this could be set up compared to the deterministic model. After this was completed, we were able to state with more certainty that
+        as long as any model can return data that can be graphed, it can be used in macbeth.
       </td>
     </tr>
     <tr>
