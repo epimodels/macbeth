@@ -15,6 +15,12 @@ from .serializers import JobSerializer
 from macbeth_backend.models.jobs.job import Job
 from macbeth_core.logging import log
 
+import zmq
+
+context = zmq.Context()
+assignment_socket = context.socket(zmq.PUSH)
+assignment_socket.bind('tcp://*:8888')
+
 
 class JobViewSet(ModelViewSet):
     '''ViewSet for the Job model
@@ -28,10 +34,11 @@ class JobViewSet(ModelViewSet):
         try:
             serializer = self.get_serializer(data=request.data)
             serializer.is_valid(raise_exception=True)
-            job = serializer.save()
-
+            newjob = serializer.save()
+            assignment_socket.send_string(f"{newjob.id}")
+            log.info(f'Dispatching job {newjob.id}')
             return Response({
-                'job_id': job.id,
+                'job_id': newjob.id,
             }, status=status.HTTP_201_CREATED)
 
         except Exception:
