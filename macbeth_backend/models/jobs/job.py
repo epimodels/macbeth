@@ -16,12 +16,12 @@ class Job(models.Model):
     Model for the Job table
     '''
     id = models.AutoField(primary_key=True)
-    model_id = models.IntegerField(default=None)
+    model_id = models.CharField(max_length=200, default=None)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created_on = models.DateTimeField(default=timezone.now)
     status = models.IntegerField(default=0)
     input_params = models.JSONField()
-    results = models.CharField(max_length=10000, default=None)
+    results = models.TextField(default=None)
     # results = models.JSONField() # this is the goal, but we have to figure out JSON serialization
     objects = JobManager()
 
