@@ -1,7 +1,7 @@
 # Report for Sprint #3: *Team Nightingale*
 
 ## Link to Sprint Summary Video
-[Summary video link](https://youtube.com/)
+[Summary video link](https://www.youtube.com/watch?v=b4eLgdeZJHs)
 
 ## Link to Online Communication Channel (MS Teams/Slack/Discord)
 [MS Teams link](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A5d8ece77ac41420a86770fdaee39b9cb%40thread.tacv2%2FMACBETH%2520V2%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=dcd68dfc-a6f9-4b0a-bf54-48138a776d04&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true)
@@ -99,13 +99,77 @@ Please follow the repository instructions for the prototype <a href="https://git
       <td>Unable to convert the LV Model.</td>
     </tr>
     <tr>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/100">Issue #100</a>
+      </td>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/121">PR #121</a>
+      </td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>5<br/>6</td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>100</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/100">Issue #92</a>
+      </td>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/121">PR #121</a>
+      </td>
+      <td>5<br/>0</td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>3<br/>3</td>
+      <td>2<br/>0</td>
+      <td>0<br/>0</td>
+      <td>90%</td>
+      <td>Front-end api calls need to be switched to new system</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="">N/A</a>
+      </td>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/122">PR #122</a>
+      </td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>0<br/>2.5</td>
+      <td>0<br/>2.5</td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>75%</td>
+      <td>Critical bug identified in depedency. PR created upstream for fix.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="">Issue #113</a>
+      </td>
+      <td>
+        <a href="">N/A</a>
+      </td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>0<br/></td>
+      <td>3<br/>3</td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>100%</td>
+      <td></td>
+    </tr>
+    <tr>
       <td colspan="2" align="right">
         <b>Totals:</b>
       </td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
-      <td>0<br/>0</td>
+      <td>11<br/>14.5</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
       <td></td>
@@ -143,7 +207,7 @@ Please follow the repository instructions for the prototype <a href="https://git
     <tr>
       <td>Trevor Naze</td>
       <td>
-        <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.>
+        For my portion of this sprint, I focused on implementing a worker pool system to run and save the results of computations to the database. Prior to this sprint, all run requests were being ran in real time as soon as the user submitted requests to run models, and were not saved in the database. I also worked very closely with Kyle to make sure everything implemented was compatible with our current flow for stochastic models. While the system is not fully implemented with the front-end, the API calls are all fully functional, and with this, a major user story was completed.
       </td>
     </tr>
     <tr>
