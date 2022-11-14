@@ -1,17 +1,18 @@
 import React from 'react';
-import NavButton from '../nav_button';
-import Progress from '../compute/progress';
 import ResultsGraph from './results_graph';
 import axiosInstance from '../../axios';
-import { useParams } from 'react-router-dom';
 import { TestColor, GetNextColor, GetCertainColor } from './color_manager';
 
 /*
  * Sub-page of Compute
  */
 export default function Results(props) {
-  const [xData, setXData] = React.useState([]);
+  const [xData, xDataDispatch] = React.useReducer(xDataReducer, []);
   const [yData, yDataDispatch] = React.useReducer(yDataReducer, []);
+
+  function xDataReducer(state, action) {
+    return action.xOutput;
+  }
 
   /*
    * Reducer function for the datasets that are the y-axis (updating just the data)
@@ -81,11 +82,11 @@ export default function Results(props) {
         .get(computeCall, {})
         .then(res => {
           // Set x and y data
-          setXData(res.data[props.modelGraphing.X.VariableName]);
+          xDataDispatch( { xOutput: res.data[props.modelGraphing.X.VariableName] } );
           yDataDispatch( { yOutput: props.modelGraphing.Y, yData: res.data } );
         });
     }
-  }, [props.generateGraph]);
+  }, [props]);
 
   return (
     <div>

@@ -1,43 +1,38 @@
 import React, { useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
-import {Row, Col} from 'react-bootstrap'
-import NavButton from '../nav_button'
-import Progress from '../compute/progress'
-import Parameter from './parameter'
+import {Row, Col} from 'react-bootstrap';
+import Parameter from './parameter';
 import axiosInstance from '../../axios';
-import { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import useLocalStorage from '../useLocalStorage';
 
 /*
  * Sub-page of Compute
  */
 
-const ParameterEdit = (props) => {
+const ParameterEdit = ({ modelID, modelParams, setModelParams, setModelInfo, setModelGraphing }) => {
   useEffect(() => {
-    if (props.modelID != -1)
+    if (modelID !== -1)
     {
       axiosInstance
-      .get('/compute/models/' + props.modelID + '/', {})
+      .get('/compute/models/' + modelID + '/', {})
       .then(res => {
-        props.setModelParams(res.data.Parameters);
-        props.setModelInfo({ "Author": res.data.Author, "Description": res.data.Description });
-        props.setModelGraphing(res.data.GraphingData);
+        setModelParams(res.data.Parameters);
+        setModelInfo({ "Author": res.data.Author, "Description": res.data.Description });
+        setModelGraphing(res.data.GraphingData);
       })
     }
-  }, [props.modelID]);
+  }, [modelID, setModelParams, setModelInfo, setModelGraphing]);
 
   return(
-    <div>
-        <Form> {/* dynamically organizes the parameters into rows and columns based on number */}
+    <div style={{"overflow-y":"scroll"}}>
+        <Form>
           <Row className='justify-content-center'>
-            {(Array.isArray(props.modelParams) && props.modelParams.length) ? 
-              props.modelParams.map((item, idx) => {
+            {(Array.isArray(modelParams) && modelParams.length) ? 
+              modelParams.map((item, idx) => {
                 return (
                   <Col xs={'auto'} key={item.Name}>
-                    <Parameter controlID='default' type='basicDefault' 
-                      modelParams={props.modelParams}
-                      setModelParams={props.setModelParams}
+                    <Parameter controlid='default' type='basicDefault' 
+                      modelParams={modelParams}
+                      setModelParams={setModelParams}
                       label={item.Name}
                       variableName={item.VariableName}
                       placeholder={item.DefaultValue} 
