@@ -23,7 +23,8 @@ const ParameterEdit = ({ modelID, modelParams, setModelParams, setModelInfo, set
   }, [modelID, setModelParams, setModelInfo, setModelGraphing]);
 
   return(
-    <div style={{"overflow-x":"hidden","overflow-y":"scroll", "maxHeight": "50vh"}}>
+    <div style={{"overflow-x":"hidden","overflow-y":"scroll", "maxHeight": "45vh"}}>
+        <h3>Model Parameters</h3>
         <Form>
           <Row className='justify-content-center'>
             {(Array.isArray(modelParams) && modelParams.length) ? 

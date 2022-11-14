@@ -32,18 +32,21 @@ export default function ModelDropdown(props) {
   }
 
   return (
-    <Dropdown>
-      <Dropdown.Toggle 
-        id='model-dropdown'
-        size='lg'
-        className='model'
-      > 
-      {props.modelName}
-        </Dropdown.Toggle>
-      <Dropdown.Menu className='model'>
-        <ModelDropdownItems onClick={(e) => handleChange(e)} models={modelOptions}/>
-      </Dropdown.Menu>
-    </Dropdown>
+    <div>
+      <h3>Model Selection</h3>
+      <Dropdown>
+        <Dropdown.Toggle 
+          id='model-dropdown'
+          size='lg'
+          className='model'
+        > 
+        {props.modelName}
+          </Dropdown.Toggle>
+        <Dropdown.Menu className='model'>
+          <ModelDropdownItems onClick={(e) => handleChange(e)} models={modelOptions}/>
+        </Dropdown.Menu>
+      </Dropdown>
+    </div>
   );
 }
 

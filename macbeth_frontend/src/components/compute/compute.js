@@ -7,6 +7,7 @@ import Stack from 'react-bootstrap/Stack';
 
 import useLocalStorage from '../useLocalStorage';
 import ModelDropdown from '../model_select/model_dropdown';
+import ModelInfo from './model_info';
 import ParameterEdit from '../model_params/parameter_edit';
 import Results from '../model_results/results';
 import NavButton from '../nav_button';
@@ -46,9 +47,11 @@ export default function Compute() {
             </Stack>
           </Col>
           <Col>
-            <Stack>
-              <ModelDropdown modelName={modelName} setModelName={setModelName} modelID={modelID} setModelID={setModelID} setModelParams={setModelParams} />
-              <div>Model info</div>
+            <Stack gap={4}>
+              <Stack gap={4} style={{"overflow-x":"hidden","overflow-y":"scroll", "maxHeight": "25vh"}}>
+                <ModelDropdown modelName={modelName} setModelName={setModelName} modelID={modelID} setModelID={setModelID} setModelParams={setModelParams} />
+                <ModelInfo modelInfo={modelInfo} />
+              </Stack>
               <ParameterEdit modelID={modelID} modelParams={modelParams} setModelParams={setModelParams} setModelInfo={setModelInfo} setModelGraphing={setModelGraphing} />
             </Stack>
           </Col>
