@@ -27,7 +27,7 @@ class WebNavbar extends React.Component  {
         <Nav.Link as={NavLink} to='/account/sign-in'>Sign In</Nav.Link></Nav>
     })
   }
-  
+
   render() {
     return (
       <Navbar bg="light" expand="lg" sticky="top">
@@ -54,12 +54,10 @@ class WebNavbar extends React.Component  {
                 <NavDropdown.Item as={NavLink} to='/help/contact-us'>Contact Us</NavDropdown.Item>
               </NavDropdown>
             </Nav>
+            <Nav className="ms-auto">
+              {this.state.accountNav}
+            </Nav>
           </Navbar.Collapse>
-        </Container>
-        <Container>
-          <Nav className="ms-auto">
-            {this.state.accountNav}
-          </Nav>
         </Container>
       </Navbar>
     );

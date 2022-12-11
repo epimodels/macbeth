@@ -9,6 +9,7 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
+from django.core.management.utils import get_random_secret_key
 
 from .user_manager import UserManager
 
@@ -20,8 +21,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         _('email address'), max_length=32,
         unique=True,
         )
-    nickname = models.CharField(max_length=32)
-    over13 = models.BooleanField(default=False)
+    secret_key = models.CharField(max_length=255, default=get_random_secret_key)
 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
@@ -32,7 +32,6 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
     EMAIL_FIELD = 'email'
-    REQUIRED_FIELDS = ['nickname', 'over13']
 
     def __str__(self) -> str:
         '''Returns the unique identifier of the :class: `account.User`.
@@ -41,14 +40,3 @@ class User(AbstractBaseUser, PermissionsMixin):
         :rtype: str
         '''
         return self.email
-
-    def get_nickname(self) -> str:
-        '''
-        A longer formal identifier for the user such as their nickname.
-        If implemented, this appears alongside the username in an object's
-        history in django.contrib.admin.
-
-        :return: The nickname of the :class: `account.User`.
-        :rtype: str
-        '''
-        return self.nickname
