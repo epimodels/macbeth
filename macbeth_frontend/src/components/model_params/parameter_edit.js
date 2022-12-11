@@ -1,23 +1,45 @@
 import React, { useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
-import {Row, Col} from 'react-bootstrap'
+import {Row, Col, Button} from 'react-bootstrap'
 import NavButton from '../nav_button'
 import Progress from '../compute/progress'
 import Parameter from './parameter'
 import axiosInstance from '../../axios';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 /*
  * Sub-page of Compute
  * Future: if no parameters are received, show an error screen (with potentially a report a bug button?)
  */
 
+
+
 const ParameterEdit = (props) => {
   const URLparams = useParams();
   const [parameters, setParameters] = useState([]);
   const [description, setDescription] = useState('');
   const [author, setAuthor] = useState('');
+  const navigate = useNavigate
+
+  function createJob()
+  {
+    const parameterInput = JSON.parse(localStorage.getItem('compute-selected-model-params'));
+    let data = {
+      "model_id" : localStorage.getItem('compute-selected-model'),
+      "created_by" : 1,
+      "input_params" : parameterInput
+    }
+    console.log(data)
+
+    axiosInstance
+      .post('compute/job/', data)
+      .then(res => {
+        console.log(res.data)
+        window.location.href = window.location.origin + "/results/" + res.data.job_id
+      })
+    
+  }
 
   useEffect(() => {
     axiosInstance
@@ -53,7 +75,7 @@ const ParameterEdit = (props) => {
           </Row>
         </Form>
         <NavButton label='Back' redirect='/compute/model-select' variant='prev'/>
-        <NavButton label='Submit' redirect={'/compute/results/' + localStorage.getItem('compute-selected-model')} variant='next'/>
+        <Button label ='Submit' onClick={createJob}>Submit</Button>
       </div>
   )
 }
