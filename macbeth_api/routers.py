@@ -7,7 +7,7 @@
 
 from rest_framework.routers import SimpleRouter
 from macbeth_backend.models.account import UserViewSet
-from .auth.viewsets import LoginViewSet, RegisterViewSet, RefreshViewSet, BlacklistTokenViewSet
+from .auth.viewsets import LoginViewSet, RefreshViewSet, BlacklistTokenViewSet
 from .compute.viewsets import ComputeModelsViewSet
 
 from .jobs.viewsets import JobViewSet
@@ -15,7 +15,6 @@ from .jobs.viewsets import JobViewSet
 routes = SimpleRouter()
 
 routes.register(r'auth/login', LoginViewSet, basename='login')
-routes.register(r'auth/register', RegisterViewSet, basename='register')
 routes.register(r'auth/refresh', RefreshViewSet, basename='refresh')
 routes.register(r'auth/logout', BlacklistTokenViewSet, basename='logout')
 

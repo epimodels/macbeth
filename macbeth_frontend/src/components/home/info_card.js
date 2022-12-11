@@ -48,16 +48,7 @@ class InfoCard extends React.Component {
               <Accordion.Item className={'accordion-' + this.state.theme} eventKey="2">
                 <Accordion.Header>Create an Account</Accordion.Header>
                 <Accordion.Body>
-                  To create an account, click on "Register" near the top right of this page.<br /><br />
-                  You will need to fill in information regarding your:
-                  <ul>
-                    <li>Email</li>
-                    <span className='text-muted'>We will never share your email with anyone else</span>
-                    <li>Nickname</li>
-                    <li>Password</li>
-                    <li>Age </li>
-                    <span className='text-muted'>We only need to verify that you are over the age of 13</span>
-                  </ul>
+                  To create an account, click on "Sign in" near the top right of this page.<br /><br />
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>       

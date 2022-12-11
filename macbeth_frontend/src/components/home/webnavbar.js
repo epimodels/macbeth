@@ -22,12 +22,17 @@ class WebNavbar extends React.Component  {
 
   tick() {
     this.setState({
-      accountNav: localStorage.getItem('access_token') ? <Nav className="ms-auto"><Nav.Link as={NavLink} to ='/account/view'>View Account</Nav.Link>
-      <Nav.Link as={NavLink} to='/account/sign-out'>Sign Out</Nav.Link></Nav> : <Nav className="ms-auto"><Nav.Link as={NavLink} to='/account/register'>Register</Nav.Link>
-        <Nav.Link as={NavLink} to='/account/sign-in'>Sign In</Nav.Link></Nav>
+      accountNav: localStorage.getItem('access_token') ?
+      <Nav>
+        <Nav.Link as={NavLink} to ='/account/view'>View Account</Nav.Link>
+        <Nav.Link as={NavLink} to='/account/sign-out'>Sign Out</Nav.Link>
+      </Nav> :
+        <Nav>
+          <Nav.Link as={NavLink} to='/account/sign-in'>Sign In</Nav.Link>
+        </Nav>
     })
   }
-  
+
   render() {
     return (
       <Navbar bg="light" expand="lg" sticky="top">
@@ -54,12 +59,10 @@ class WebNavbar extends React.Component  {
                 <NavDropdown.Item as={NavLink} to='/help/contact-us'>Contact Us</NavDropdown.Item>
               </NavDropdown>
             </Nav>
+            <Nav className="ms-auto">
+              {this.state.accountNav}
+            </Nav>
           </Navbar.Collapse>
-        </Container>
-        <Container>
-          <Nav className="ms-auto">
-            {this.state.accountNav}
-          </Nav>
         </Container>
       </Navbar>
     );
