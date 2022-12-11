@@ -57,12 +57,14 @@ export default function SignIn() {
       <Container>
         <div className="signin">
           <h2 style={{'margin-top':'3%'}}>Sign In</h2>
+          <center>
           <GoogleOAuthProvider clientId="881806212575-v01hph86no2rhp8vl4d7vp2dg9u58sjc.apps.googleusercontent.com">
           <GoogleLogin
               onSuccess={onGoogleLoginSuccess}
               onError={onGoogleLoginFailure}
             />
           </GoogleOAuthProvider>
+          </center>
         </div>
       </Container>
     );

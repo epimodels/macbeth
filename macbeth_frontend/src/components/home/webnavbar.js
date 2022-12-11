@@ -22,12 +22,12 @@ class WebNavbar extends React.Component  {
 
   tick() {
     this.setState({
-      accountNav: localStorage.getItem('access_token') ? 
-      <Nav className="ms-auto">
+      accountNav: localStorage.getItem('access_token') ?
+      <Nav>
         <Nav.Link as={NavLink} to ='/account/view'>View Account</Nav.Link>
         <Nav.Link as={NavLink} to='/account/sign-out'>Sign Out</Nav.Link>
-      </Nav> : 
-        <Nav className="ms-auto">
+      </Nav> :
+        <Nav>
           <Nav.Link as={NavLink} to='/account/sign-in'>Sign In</Nav.Link>
         </Nav>
     })
