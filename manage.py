@@ -10,9 +10,7 @@ def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'macbeth_core.settings')
     try:
         log.info('Starting Django')
-        originaldir = os.getcwd()
         from django.core.management import execute_from_command_line
-        os.chdir(originaldir)
     except ImportError as exc:
         log.exception('Exception while importing Django', exc_info=exc)
         raise ImportError(
