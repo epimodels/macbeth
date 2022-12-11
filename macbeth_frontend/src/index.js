@@ -12,7 +12,6 @@ import Results from './components/model_results/results';
 import Faq from './components/help/faq';
 import ContactUs from './components/help/contact_us';
 import SignIn from './components/account/sign_in';
-import Register from './components/account/register';
 import AccountView from './components/account/account_view';
 import SignOut from './components/account/sign_out';
 import reportWebVitals from './reportWebVitals';
@@ -38,7 +37,6 @@ ReactDOM.render(
           {/* add redirection based on whether user is signed in or not */}
           <Route path="account">
             <Route path="sign-in" element={<SignIn />} />
-            <Route path="register" element={<Register />} />
             <Route path="view" element={<AccountView />} />
             <Route path="sign-out" element={<SignOut />} />
           </Route>

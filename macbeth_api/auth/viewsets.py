@@ -54,10 +54,15 @@ class LoginViewSet(TokenObtainPairView, ModelViewSet):
     def create(self, request, *args, **kwargs):
         log.info(f'Called with request: {request}, args: {args}, kwargs: {kwargs}')
         try:
-            token_id = request.headers.get('Authorization')
-            google_validate_token_id(token_id=token_id)
+            token_id = request.data["token"]
+            unpacked_token = google_validate_token_id(token_id=token_id)
+            repacked_data = {
+                'email': unpacked_token["email"],
+                'first_name': unpacked_token["given_name"],
+                'last_name': unpacked_token["family_name"]
+            }
 
-            serializer = self.get_serializer(data=request.data)
+            serializer = self.get_serializer(data=repacked_data)
             serializer.is_valid(raise_exception=True)
             user, _ = get_or_create_user(email=serializer.validated_data['email'])
             response = Response(serializer.validated_data, status=status.HTTP_200_OK)

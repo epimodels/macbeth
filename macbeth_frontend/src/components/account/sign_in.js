@@ -28,15 +28,12 @@ export default function SignIn() {
     window.location.href = '/';
   }
 
-  const onGoogleLoginSuccess = useCallback(response => {
-    const tokenId = response.tokenId;
-    const data = {
-      email: response.profileObj.email,
-      first_name: response.profileObj.givenName,
-      last_name: response.profileObj.familyName,
-    };
+  const onGoogleLoginSuccess = useCallback(res => {
+    const tokenId = res.credential;
+    console.log(res)
 
-    validateTokenAndObtainSession({data, tokenId})
+
+    validateTokenAndObtainSession(tokenId)
       .then((res) => {
         console.log('RESULT');
         console.log(res);
@@ -60,29 +57,8 @@ export default function SignIn() {
       <Container>
         <div className="signin">
           <h2 style={{'margin-top':'3%'}}>Sign In</h2>
-          <GoogleOAuthProvider clientId="881806212575-v01hph86no2rhp8vl4d7vp2dg9u58sjc.apps.googleusercontent.com"></GoogleOAuthProvider>
-        </div>
-      </Container>
-    );
-
-    return (
-      <Container>
-        <div className="signin">
-          <h2 style={{'margin-top':'3%'}}>Sign In</h2>
-            <GoogleLogin
-              onSuccess={onGoogleLoginSuccess}
-              onError={onGoogleLoginFailure}
-            />
-        </div>
-      </Container>
-    );
-
-    return (
-      <Container>
-        <div className="signin">
-          <h2 style={{'margin-top':'3%'}}>Sign In</h2>
           <GoogleOAuthProvider clientId="881806212575-v01hph86no2rhp8vl4d7vp2dg9u58sjc.apps.googleusercontent.com">
-            <GoogleLogin
+          <GoogleLogin
               onSuccess={onGoogleLoginSuccess}
               onError={onGoogleLoginFailure}
             />
