@@ -55,14 +55,16 @@ def get_job(jobid):
 def update_job_results(jobid, results):
     """write the results of the job to the table"""
     sql = """ UPDATE macbeth_backend_job
-                SET results = %s
+                SET results = %s,
+                status = %s
                 WHERE id = %s"""
+    #
     conn = None
     try:
         conn = connect_to_db()
         with conn.cursor() as cur:
             print(len(json.dumps(results)))
-            cur.execute(sql, (json.dumps(results), jobid))
+            cur.execute(sql, (json.dumps(results), 1, jobid))
             conn.commit()
             cur.close()
     except (psycopg2.DatabaseError) as error:
@@ -83,7 +85,7 @@ def runworker():
         job = get_job(jobid)
         model_info: ComputeModel = MODEL_TO_CONF_DICT[job['model_id']]
         kwargs = Config.generate_kwargs_for_obj(model_info.model, job['params'])
-        computed_result = model_info.model(**kwargs).compute_model()
+        computed_result = Config.sanitize_dataclass(model_info.model(**kwargs).compute_model())
         serializer = DataclassSerializer(instance=computed_result, dataclass=type(computed_result))
         update_job_results(jobid, serializer.data)
         log.info("Results for {} saved to database.".format(jobid))
