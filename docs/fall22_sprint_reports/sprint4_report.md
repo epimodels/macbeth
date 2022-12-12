@@ -1,7 +1,7 @@
 # Report for Sprint #4: *Team Nightingale*
 
 ## Link to Sprint Summary Video
-[Summary video link](https://youtube.com/)
+[Summary video link](https://www.youtube.com/watch?v=GNV6Ts8SHl8)
 
 ## Link to Online Communication Channel (MS Teams/Slack/Discord)
 [MS Teams link](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A5d8ece77ac41420a86770fdaee39b9cb%40thread.tacv2%2FMACBETH%2520V2%3FgroupId%3D87fda352-e01f-4122-957a-6c68b129334b%26tenantId%3Db52be471-f7f1-47b4-a879-0c799bb53db5&type=channel&deeplinkId=dcd68dfc-a6f9-4b0a-bf54-48138a776d04&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true)
@@ -67,6 +67,54 @@ Please follow the repository instructions for the prototype <a href="https://git
   <tbody>
     <tr>
       <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/125">Issue #125</a>,
+      </td>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a>
+      </td>
+      <td>3<br/>3</td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>3<br/>3</td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>100</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/134">Issue #134</a>,
+      </td>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/135">PR #135</a>
+      </td>
+      <td>5<br/>5</td>
+      <td>0<br/>0</td>
+      <td>3<br/>8</td>
+      <td>2<br/>5</td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>100</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/132">Issue #132</a>,
+      </td>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/133">PR #133</a>
+      </td>
+      <td>3<br/>6</td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>3<br/>6</td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>100</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
         <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue</a>,
       </td>
       <td>
@@ -121,7 +169,7 @@ Please follow the repository instructions for the prototype <a href="https://git
     <tr>
       <td>Trevor Naze</td>
       <td>
-        <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.>
+        During this sprint, alongside helping Kyle implement the OAuth2 scheme when we ran into some issues getting the front-end to work and to communicate with the backend, I implemented the front-end changes necessary to use the new job request API endpoint that I created in sprint 3, as well as completing the job retrieval endpoint so jobs can be viewed via permalink on the front-end.
       </td>
     </tr>
     <tr>
