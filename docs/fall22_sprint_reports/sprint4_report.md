@@ -67,7 +67,7 @@ Please follow the repository instructions for the prototype <a href="https://git
   <tbody>
     <tr>
       <td>
-        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/125">Issue #125</a>,
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/125">Issue #125</a>
       </td>
       <td>
         <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a>
@@ -83,7 +83,7 @@ Please follow the repository instructions for the prototype <a href="https://git
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/134">Issue #134</a>,
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/134">Issue #134</a>
       </td>
       <td>
         <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/135">PR #135</a>
@@ -99,7 +99,7 @@ Please follow the repository instructions for the prototype <a href="https://git
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/132">Issue #132</a>,
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/132">Issue #132</a>
       </td>
       <td>
         <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/133">PR #133</a>
@@ -113,9 +113,25 @@ Please follow the repository instructions for the prototype <a href="https://git
       <td>100</td>
       <td></td>
     </tr>
+      <tr>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/98">Issue 98</a>
+      </td>
+      <td>
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a>
+      </td>
+      <td>2<br/>4</td>
+      <td>2<br/>4</td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>0<br/>0</td>
+      <td>90</td>
+      <td></td>
+    </tr>
     <tr>
       <td>
-        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue</a>,
+        <a href="https://github.com/wsu-cpts421-sp22/macbeth/issues/">Issue</a>
       </td>
       <td>
         <a href="https://github.com/wsu-cpts421-sp22/macbeth/pull/">PR #</a>
@@ -134,7 +150,7 @@ Please follow the repository instructions for the prototype <a href="https://git
         <b>Totals:</b>
       </td>
       <td>0<br/>0</td>
-      <td>0<br/>0</td>
+      <td>2<br/>4</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
       <td>0<br/>0</td>
@@ -157,7 +173,7 @@ Please follow the repository instructions for the prototype <a href="https://git
     <tr>
       <td>Mikaela Dean</td>
       <td>
-        <*Required*: The points and hours data are unlikely to tell the whole story about your contribution. Write a brief statement explaining and reflecting on your contribution to this milestone.>
+        During this sprint, I worked on updating the main page be an all-in-one page that consists of the model dropdown, model parameter editing, and model graphing/results viewing. I was able to accomplish this and added scroll-wheels for each component so we can have longer descriptions and longer lists of parameters than previously allowed. I also created a model information component that displays more nicely the information relating to the model. I did not work as much as previous sprints due to working on the presentation for this class as well as other courses.
       </td>
     </tr>
     <tr>
