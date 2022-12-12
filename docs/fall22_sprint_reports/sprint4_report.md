@@ -179,7 +179,8 @@ Please follow the repository instructions for the prototype <a href="https://git
     <tr>
       <td>Kyle Hurd</td>
       <td>
-        add info here
+        This sprint, I implemented Google OAuth2 sign in as well as miscellaneous front-end bugs such as the footer being misplaced. A 3rd party sign-in service was
+        an item on our list we thought was important to redesign.
       </td>
     </tr>
     <tr>
