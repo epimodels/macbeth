@@ -15,7 +15,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 
 
-const ParameterEdit = (props) => {
+const ParameterEdit = ({ modelID, modelParams, setModelParams, setModelInfo, setModelGraphing }) => {
   const URLparams = useParams();
   const [parameters, setParameters] = useState([]);
   const [description, setDescription] = useState('');
@@ -38,44 +38,42 @@ const ParameterEdit = (props) => {
         console.log(res.data)
         window.location.href = window.location.origin + "/results/" + res.data.job_id
       })
-    
+
   }
 
   useEffect(() => {
-    axiosInstance
-      .get('/compute/models/' + URLparams.modelid + '/', {})
-      .then(res => {
-        setParameters(res.data.Parameters);
-        setAuthor(res.data.Author);
-        setDescription(res.data.Description);
-        localStorage.setItem('compute-selected-model-graph', JSON.stringify(res.data.GraphingData));
-      })
+    if (modelID !== -1) {
+      axiosInstance
+        .get('/compute/models/' + modelID + '/', {})
+        .then(res => {
+          setModelParams(res.data.Parameters);
+          setModelInfo({ "Author": res.data.Author, "Description": res.data.Description });
+          setModelGraphing(res.data.GraphingData);
+        })
+      }
   }, [URLparams.modelid]);
 
   return(
-    <div>
-        <h4>{localStorage.getItem('compute-selected-model-name')}</h4>
-        <span className={'text-muted'} style={{'marginBottom':'2%'}}>{author}</span><br />
-        <span className={'text-muted'} style={{'marginBottom':'2%'}}>{description}</span>
-        <Progress currentStep={2} />
-        <h4 style={{'marginBottom':'2%'}}>Edit Parameters</h4>
-        <Form> {/* dynamically organizes the parameters into rows and columns based on number */}
-          <Row className='justify-content-center'>
-            {parameters.map((item, idx) => {
-              return (
-                <Col xs={'auto'} key={item.Name}>
-                  <Parameter controlID='default' type='basicDefault' 
-                    label={item.Name}
-                    variableName={item.VariableName}
-                    placeholder={item.DefaultValue} 
-                    text={item.Description} />
-                </Col>
-              )
-            })}
-          </Row>
-        </Form>
-        <NavButton label='Back' redirect='/compute/model-select' variant='prev'/>
-        <Button label ='Submit' onClick={createJob}>Submit</Button>
+    <div style={{"overflow-x":"hidden","overflow-y":"scroll", "maxHeight": "45vh"}}>
+      <h3>Model Parameters</h3>
+      <Form>
+        <Row className='justify-content-center'>
+        {(Array.isArray(modelParams) && modelParams.length) ?
+              modelParams.map((item, idx) => {
+                return (
+                  <Col xs={'auto'} key={item.Name}>
+                    <Parameter controlid='default' type='basicDefault'
+                      modelParams={modelParams}
+                      setModelParams={setModelParams}
+                      label={item.Name}
+                      variableName={item.VariableName}
+                      placeholder={item.DefaultValue}
+                      text={item.Description} />
+                  </Col>
+                )
+              }) : <div/>}
+        </Row>
+      </Form>
       </div>
   )
 }
@@ -91,8 +89,8 @@ const ParameterEdit = (props) => {
 
 /*ParameterEdit.defaultProps = {
   // This is for testing only
-  parameters: [<Parameter controlId='formBasicParameter' label='Parameter1' type='parameter' placeholder='enter parameter here'/>, 
-              <Parameter controlId='formBasicParameter' label='Parameter2' type='parameter' placeholder='enter parameter here'/>, 
+  parameters: [<Parameter controlId='formBasicParameter' label='Parameter1' type='parameter' placeholder='enter parameter here'/>,
+              <Parameter controlId='formBasicParameter' label='Parameter2' type='parameter' placeholder='enter parameter here'/>,
               <Parameter controlId='formBasicParameter' label='Parameter3' type='parameter' placeholder='enter parameter here'/>]
 }*/
 

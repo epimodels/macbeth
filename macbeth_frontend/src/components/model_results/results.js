@@ -30,7 +30,7 @@ export default function Results() {
       if (color !== undefined) {
         // If in config, is it already in hexadecimal?
         if (TestColor(color)) state[i].borderColor = color;
-        else state[i].borderColor = GetCertainColor(color);  
+        else state[i].borderColor = GetCertainColor(color);
       }
       // Not set in config? Get default color
       else state[i].borderColor = GetNextColor(i);
@@ -61,7 +61,7 @@ export default function Results() {
           state[i].borderDash = [];
           break;
       }
-      
+
     }
     return [...state];
   }
@@ -69,7 +69,7 @@ export default function Results() {
   React.useEffect(() => {
     const parameterInput = JSON.parse(localStorage.getItem('compute-selected-model-params'));
     const graphingOutput = JSON.parse(localStorage.getItem('compute-selected-model-graph'));
-    
+
     let data = {
       "model_id" : localStorage.getItem('compute-selected-model'),
       "created_by" : 1,
@@ -84,7 +84,7 @@ export default function Results() {
         window.location.href = '/results/' + res.data.job_id
       })
     return
-    
+
     // Change this to a post/job request eventually
     let computeCall = '/compute/models/' + URLparams.modelid + '/perform_computation/?';
     let first = true;
@@ -107,7 +107,6 @@ export default function Results() {
 
   return (
     <div>
-      <Progress currentStep={3} />
       <h4>Viewing Results</h4>
       <div style={{'width':'50%', 'height':'50%', 'paddingLeft':'5%'}}>
         <ResultsGraph title={localStorage.getItem('compute-selected-model-name')} xData={xData} yData={yData} />
