@@ -21,8 +21,6 @@ function Parameter({controlId, type, modelParams, setModelParams, label, variabl
   const [value, valueDispatch] = React.useReducer(valueReducer, '');
 
   React.useEffect(() => {
-    // get fresh params
-    let paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
     // if the parameter is already in the dict and it's not default, set the text to that
     if (modelParams[variableName] !== undefined && modelParams[variableName] !== placeholder) {
       valueDispatch({ variableName: variableName, default: placeholder, value: modelParams[variableName] });
@@ -45,7 +43,7 @@ function Parameter({controlId, type, modelParams, setModelParams, label, variabl
    */
   function valueReducer(value, action) {
     // set new value in localStorage dict -- if our new value is empty, use default value instead
-    modelParams[action.variableName] = (action.value === '') ? action.default : action.value;
+    modelParams[action.variableName] = (action.value === '') ? action.default : Number(action.value);
     parameterRef.current.value = action.value;
 
     return action.value;

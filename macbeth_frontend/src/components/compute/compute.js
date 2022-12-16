@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Outlet } from 'react-router-dom'
 import { Container, Row, Col, Stack } from 'react-bootstrap';
 
+import axiosInstance from '../../axios';
 import useLocalStorage from '../useLocalStorage';
 import ModelDropdown from '../model_select/model_dropdown';
 import ModelInfo from './model_info';
@@ -24,15 +25,30 @@ export default function Compute() {
 
   const [modelName, setModelName] = useLocalStorage("selected-model-name", "Select a Model");
   const [modelID, setModelID] = useLocalStorage("selected-model-id", "-1");
+  const [modelParamsInfo, setModelParamsInfo] = useLocalStorage("selected-model-params-info", []);
   const [modelParams, setModelParams] = useLocalStorage("selected-model-params", []);
   const [modelInfo, setModelInfo] = useLocalStorage("selected-model-info", {});
-  const [modelGraphing, setModelGraphing] = useLocalStorage("selected-model-graphing", {});
-  const [generateGraph, setGenerateGraph] = React.useState(false);
 
-  const GraphClick = (e) => {
-    e.preventDefault();
-    setGenerateGraph(true);
-  };
+  console.log(modelParams)
+
+  function createJob()
+  {
+    let data = {
+      "model_id" : modelID,
+      "created_by" : 1,
+      "input_params" : modelParams
+    }
+    console.log('CREATE JOB')
+    console.log(data)
+    console.log(modelParams)
+
+    axiosInstance
+      .post('compute/job/', data)
+      .then(res => {
+        console.log(res.data)
+        window.location.href = window.location.origin + "/results/" + res.data.job_id
+      })
+  }
 
   return (
     <Container style={{ marginBottom: '15%' }}>
@@ -52,13 +68,16 @@ export default function Compute() {
               <ParameterEdit
                 modelID={modelID}
               modelParams={modelParams}
+              modelParamsInfo={modelParamsInfo}
               setModelParams={setModelParams}
+              setModelParamsInfo={setModelParamsInfo}
               setModelInfo={setModelInfo}
             />
             </Stack>
           </Col>
         </Row>
       </Container>
+      <NavButton clickEvent={createJob} label='Run Model' />
     </Container>
   );
 }

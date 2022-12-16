@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
-import {Row, Col, Button} from 'react-bootstrap'
+import {Row, Col, Button, Container, Nav} from 'react-bootstrap'
 import NavButton from '../nav_button'
 import Progress from '../compute/progress'
 import Parameter from './parameter'
 import axiosInstance from '../../axios';
+import useLocalStorage from '../useLocalStorage';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -15,51 +16,32 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 
 
-const ParameterEdit = ({ modelID, modelParams, setModelParams, setModelInfo, setModelGraphing }) => {
-  const URLparams = useParams();
-  const [parameters, setParameters] = useState([]);
-  const [description, setDescription] = useState('');
-  const [author, setAuthor] = useState('');
-  const navigate = useNavigate
-
-  function createJob()
-  {
-    const parameterInput = JSON.parse(localStorage.getItem('compute-selected-model-params'));
-    let data = {
-      "model_id" : localStorage.getItem('compute-selected-model'),
-      "created_by" : 1,
-      "input_params" : parameterInput
-    }
-    console.log(data)
-
-    axiosInstance
-      .post('compute/job/', data)
-      .then(res => {
-        console.log(res.data)
-        window.location.href = window.location.origin + "/results/" + res.data.job_id
-      })
-
-  }
+const ParameterEdit = ({ modelID, modelParams, modelParamsInfo, setModelParams, setModelParamsInfo, setModelInfo }) => {
 
   useEffect(() => {
     if (modelID !== -1) {
       axiosInstance
         .get('/compute/models/' + modelID + '/', {})
         .then(res => {
-          setModelParams(res.data.Parameters);
+          console.log(res.data.Parameters);
+          setModelParamsInfo(res.data.Parameters);
           setModelInfo({ "Author": res.data.Author, "Description": res.data.Description });
-          setModelGraphing(res.data.GraphingData);
+          console.log('MODEL PARAMS INFO')
+          console.log(modelParamsInfo)
+          console.log('MODEL PARAMS')
+          console.log(modelParams)
         })
       }
-  }, [URLparams.modelid]);
+  }, [modelID]);
 
   return(
-    <div style={{"overflow-x":"hidden","overflow-y":"scroll", "maxHeight": "45vh"}}>
+    <Container>
+    <Container style={{"overflow-x":"hidden","overflow-y":"scroll", "maxHeight": "45vh", 'marginBottom': '70px'}}>
       <h3>Model Parameters</h3>
       <Form>
         <Row className='justify-content-center'>
-        {(Array.isArray(modelParams) && modelParams.length) ?
-              modelParams.map((item, idx) => {
+        {(Array.isArray(modelParamsInfo) && modelParamsInfo.length) ?
+              modelParamsInfo.map((item, idx) => {
                 return (
                   <Col xs={'auto'} key={item.Name}>
                     <Parameter controlid='default' type='basicDefault'
@@ -74,7 +56,8 @@ const ParameterEdit = ({ modelID, modelParams, setModelParams, setModelInfo, set
               }) : <div/>}
         </Row>
       </Form>
-      </div>
+      </Container>
+      </Container>
   )
 }
 

@@ -83,26 +83,6 @@ export default function Results() {
         console.log(res.data)
         window.location.href = '/results/' + res.data.job_id
       })
-    return
-
-    // Change this to a post/job request eventually
-    let computeCall = '/compute/models/' + URLparams.modelid + '/perform_computation/?';
-    let first = true;
-
-    for (const [key, value] of Object.entries(parameterInput))
-    {
-      if (!first) computeCall += '&';
-      computeCall += key + '=' + value;
-      first = false;
-    }
-
-    axiosInstance
-      .get(computeCall, {})
-      .then(res => {
-        // Set x and y data
-        setXData(res.data[graphingOutput.X.VariableName]);
-        yDataDispatch( { yOutput: graphingOutput.Y, yData: res.data } );
-      });
   }, [URLparams.modelid]);
 
   return (

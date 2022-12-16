@@ -3,20 +3,25 @@ import ResultsGraph from './results_graph';
 import axiosInstance from '../../axios';
 import { useHref, useParams } from 'react-router-dom';
 import { TestColor, GetNextColor, GetCertainColor } from './color_manager';
+import { Button, Col, Container, Row, Stack } from 'react-bootstrap';
+import ParameterEdit from '../model_params/parameter_edit';
+import JobParameterView from '../model_params/job_parameter_view';
 
 /*
  * Sub-page of Results
  */
 export default function JobView() {
   const {job_id} = useParams();
-  console.log(job_id)
 
   const [xData, setXData] = React.useState([]);
   const [yData, yDataDispatch] = React.useReducer(yDataReducer, []);
-  const [Title, setTitle] = React.useState([]);
-  const [Pending, setPending] = React.useState(true);
-
-  let graphingOutput = ""
+  const [title, setTitle] = React.useState([]);
+  const [pending, setPending] = React.useState(true);
+  const [type, setType] = React.useState("");
+  const [author, setAuthor] = React.useState("");
+  const [description, setDescription] = React.useState("");
+  const [parameters, setParameters] = React.useState([]);
+  const [parameterInfo, setParameterInfo] = React.useState([]);
 
   /*
    * Reducer function for the datasets that are the y-axis (updating just the data)
@@ -33,7 +38,7 @@ export default function JobView() {
       if (color !== undefined) {
         // If in config, is it already in hexadecimal?
         if (TestColor(color)) state[i].borderColor = color;
-        else state[i].borderColor = GetCertainColor(color);  
+        else state[i].borderColor = GetCertainColor(color);
       }
       // Not set in config? Get default color
       else state[i].borderColor = GetNextColor(i);
@@ -64,56 +69,93 @@ export default function JobView() {
           state[i].borderDash = [];
           break;
       }
-      
+
     }
     return [...state];
   }
 
-  React.useEffect(() => {
-    // Lookup code goes here
+  const getJobResult = async () => {
     let jobData = ""
     axiosInstance
         .get('compute/job/'+ job_id + "/")
         .then(res => {
             jobData = res.data
-            if(jobData.status == 1) // complete
+            if(res.data.status == 1) // complete
             {
                 setPending(false)
+                axiosInstance
+                  .get('/compute/models/' + jobData.model_id + '/', {})
+                  .then(res => {
+                    let graphingOutput = res.data.GraphingData;
+                    let jobDataResults = JSON.parse(jobData.results)
+                    setXData(jobDataResults[graphingOutput.X.VariableName]);
+                    yDataDispatch( { yOutput: graphingOutput.Y, yData: jobDataResults } );
+
+                    setTitle(jobData.model_id)
+                    setAuthor(res.data.Author)
+                    setDescription(res.data.Description)
+                    setType(res.data.Type)
+
+                    setParameters(jobData.input_params)
+                    setParameterInfo(res.data.Parameters)
+              })
             }
-            axiosInstance
-            .get('/compute/models/' + jobData.model_id + '/', {})
-            .then(res => {
-                graphingOutput = res.data.GraphingData;
-                let jobDataResults = JSON.parse(jobData.results)
-                console.log(jobDataResults)
-                setXData(jobDataResults[graphingOutput.X.VariableName]);
-                setTitle(jobData.model_id)
-                yDataDispatch( { yOutput: graphingOutput.Y, yData: jobDataResults } );
-                console.log(xData)
-                console.log(yData)
-            })
         })
         .catch((err) => {
             window.location.href = window.location.origin
             // TODO: Add error message when we get flashes to work.
         })
-   
+  }
+
+  React.useEffect(() => {
+    getJobResult();
   },[]);
 
   return (
-    
+
     <div>
-        {(Pending == false) ? 
-        <div>
+        {(pending == false) ?
+        <Container>
             <h4>Viewing Results of Job {job_id}</h4>
-            <div style={{'width':'50%', 'height':'50%', 'paddingLeft':'5%'}}>
-                <ResultsGraph title={Title} xData={xData} yData={yData}/>
-            </div>
-        </div> :
-        <div>
+            <Row style={{ 'marginTop': '5%', 'marginBottom': '5%' }}>
+              <Col>
+                <Stack gap={5}>
+                  <ResultsGraph title={title} xData={xData} yData={yData}/>
+                </Stack>
+              </Col>
+              <Col>
+                <h4>Details</h4>
+                <p>{title} - {author}</p>
+                <p>{description}</p>
+              </Col>
+            </Row>
+            <Row>
+  <Col>
+    <Container style={{ overflowX: "hidden", overflowY: "scroll", maxHeight: "45vh", marginBottom: "70px" }}>
+      <Stack gap={5}>
+        <h4>Inputs</h4>
+        <Row>
+          {parameterInfo.map((param) => {
+            const paramName = param.Name;
+            const paramValue = parameters[param.VariableName];
+            const paramDescription = param.Description;
+            return (
+              <Col>
+                <JobParameterView name={paramName} value={paramValue} description={paramDescription} />
+              </Col>
+            );
+          })}
+        </Row>
+      </Stack>
+    </Container>
+  </Col>
+</Row>
+        </Container> :
+        <Container>
             <h4>Your model is currently running!</h4>
             <p>Please wait a bit before refreshing the page.</p>
-        </div>
+            <Button onClick={getJobResult}>Refresh</Button>
+        </Container>
          }
     </div>
   )
