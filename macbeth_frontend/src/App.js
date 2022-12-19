@@ -7,8 +7,10 @@ import Footer from './components/home/footer'
 export default function App() {
   return (
     <div className="App">
-      <WebNavbar />
-      <Outlet />
+      <div style={{ marginBottom: '100px'}}>
+        <WebNavbar />
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

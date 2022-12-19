@@ -1,8 +1,9 @@
 import React from 'react';
 
 function Footer() {
+    // <footer className="bg-light text-center text-lg text-muted" style={{'position':'absolute','bottom':'0', 'left':'0', 'right':'0'}}></footer>
   return (
-    <footer className="bg-light text-center text-lg text-muted" style={{'position':'absolute','bottom':'0', 'left':'0', 'right':'0'}}>
+    <footer className="bg-light text-center text-lg text-muted" style={{ 'position': 'fixed', 'bottom': '0', 'left': '0', 'right': '0' }}>
       <section>
         <span>Bird image created by silhouettegarden.com</span>
       </section>
