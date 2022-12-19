@@ -8,7 +8,7 @@ import Home from './components/home/home';
 import Compute from './components/compute/compute';
 import ModelSelect from './components/model_select/model_select';
 import ParameterEdit from './components/model_params/parameter_edit';
-import Results from './components/model_results/results';
+import JobView from './components/model_results/job_view';
 import Faq from './components/help/faq';
 import ContactUs from './components/help/contact_us';
 import SignIn from './components/account/sign_in';
@@ -26,10 +26,8 @@ ReactDOM.render(
             {/* add capability to leave 'compute' to come back to same tab? */}
             <Route path="model-select" element={<ModelSelect />} />
             <Route path="parameter-edit/:modelid" element={<ParameterEdit />} />
-            <Route path="results/:modelid" element={<Results />} />
-              {/* add unique url for each result */}
-              {/* <Route path=":resultsID" element={<Result />} /> */}
           </Route>
+          <Route path="results/:job_id" element={<JobView />} />
           <Route path="help">
             <Route path="faq" element={<Faq />} />
             <Route path="contact-us" element={<ContactUs />} />

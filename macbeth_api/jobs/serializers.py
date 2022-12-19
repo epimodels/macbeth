@@ -19,7 +19,7 @@ class JobSerializer(serializers.ModelSerializer):
         '''Meta class for the JobSerializer
         '''
         model = Job
-        fields = ('model_id', 'created_by', 'input_params',
+        fields = ('id', 'model_id', 'created_by', 'input_params', 'status', 'results'
                   )
 
     def create(self, validated_data):

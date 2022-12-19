@@ -1,4 +1,5 @@
 import axios from 'axios';
+import jwt_decode from "jwt-decode"
 
 // Most of this code is taken with minor modification from
 // Very Academy's Django Rest Framework Series.
@@ -79,7 +80,7 @@ axiosInstance.interceptors.response.use(
             const refreshToken = localStorage.getItem('refresh_token');
 
             if (refreshToken) {
-                const tokenParts = JSON.parse(Buffer.from(refreshToken, 'base64').toString().split('.')[1]);
+                const tokenParts = jwt_decode(refreshToken)
 
                 const now = Math.ceil(Date.now() / 1000); // convert to seconds.
                 console.log(tokenParts.exp); // token expiration time in seconds.
@@ -89,7 +90,6 @@ axiosInstance.interceptors.response.use(
                         .post(baseURL + 'auth/refresh/', {refresh: refreshToken})
                         .then((res) => {
                             localStorage.setItem('access_token', res.data.access);
-                            localStorage.setItem('refresh_token', res.data.refresh);
                             axiosInstance.defaults.headers['Authorization'] =
                                 'JWT ' + res.data.access
                             originalRequest.headers['Authorization'] =

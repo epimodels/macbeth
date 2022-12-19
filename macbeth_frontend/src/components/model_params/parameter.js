@@ -14,24 +14,27 @@ import { faRotateLeft } from '@fortawesome/free-solid-svg-icons';
  * placeholder: text inside field until something is entered
  * text: smaller text that shows below the field
  */
-function Parameter(props) {
+function Parameter({controlId, type, modelParams, setModelParams, label, variableName, placeholder, text}) {
   // ref to parameter field
   const parameterRef = React.useRef(null);
   // value for parameter field
   const [value, valueDispatch] = React.useReducer(valueReducer, '');
 
   React.useEffect(() => {
-    // get fresh params
-    let paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
     // if the parameter is already in the dict and it's not default, set the text to that
-    if (paramDict[props.variableName] !== undefined && paramDict[props.variableName] !== props.placeholder) {
-      valueDispatch({ variableName: props.variableName, default: props.placeholder, value: paramDict[props.variableName] });
+    if (modelParams[variableName] !== undefined && modelParams[variableName] !== placeholder) {
+      valueDispatch({ variableName: variableName, default: placeholder, value: modelParams[variableName] });
     }
     // otherwise, have the text be nothing so the placeholder text (that holds the default value) shows
     else {
-      valueDispatch({ variableName: props.variableName, default: props.placeholder, value: '' });
+      valueDispatch({ variableName: variableName, default: placeholder, value: '' });
     }
-  }, [props]);
+  }, [modelParams, placeholder, variableName]);
+
+  React.useEffect(() => {
+    setModelParams(modelParams);
+  }, [value, setModelParams, modelParams]);
+
   /*
    * Reducer function for a parameter value
    * variableName: props.variableName (key for param)
@@ -39,35 +42,32 @@ function Parameter(props) {
    * value: new value
    */
   function valueReducer(value, action) {
-    // get fresh params
-    let paramDict = JSON.parse(localStorage.getItem('compute-selected-model-params'));
     // set new value in localStorage dict -- if our new value is empty, use default value instead
-    paramDict[action.variableName] = (action.value === '') ? action.default : action.value;
-    localStorage.setItem('compute-selected-model-params', JSON.stringify(paramDict));
+    modelParams[action.variableName] = (action.value === '') ? action.default : Number(action.value);
     parameterRef.current.value = action.value;
 
     return action.value;
   }
-  
+
   return (
     <InputGroup>
-      <Form.Group className='mb-3' controlId={props.controlId}>
-        <Form.Label>{props.label}</Form.Label>
+      <Form.Group className='mb-3' controlId={controlId}>
+        <Form.Label>{label}</Form.Label>
         <Stack direction="horizontal" gap={2}>
-        <Form.Control size='lg' 
+        <Form.Control size='lg'
           ref={parameterRef}
-          type={props.type} 
-          placeholder={props.placeholder} 
-          defaultValue={value} 
-          onChange={(e) => valueDispatch({ variableName: props.variableName, default: props.placeholder, value: e.target.value })} 
+          type={type}
+          placeholder={placeholder}
+          defaultValue={value}
+          onChange={(e) => valueDispatch({ variableName: variableName, default: placeholder, value: e.target.value })}
           // Added onSelect because onChange does not trigger when there is a defaultValue and you select all text and delete
           // See: https://stackoverflow.com/questions/66950716/react-bootstrap-component-form-control-onchange-event-listener-doesnt-fire-wh#comment126154329_66951536
-          onSelect={(e) => valueDispatch({ variableName: props.variableName, default: props.placeholder, value: e.target.value })} />
+          onSelect={(e) => valueDispatch({ variableName: variableName, default: placeholder, value: e.target.value })} />
         {/* Currently hides reset icon by inversing the colors to white */}
-        <FontAwesomeIcon icon={faRotateLeft} id="resetField" onClick={() => valueDispatch({ variableName: props.variableName, default: props.placeholder, value: '' })} className={value === '' ? 'fa-inverse' : ''}/>
+        <FontAwesomeIcon icon={faRotateLeft} id="resetField" onClick={() => valueDispatch({ variableName: variableName, default: placeholder, value: '' })} className={value === '' ? 'fa-inverse' : ''}/>
         </Stack>
         <Form.Text className="text-muted">
-          {props.text}
+          {text}
         </Form.Text>
       </Form.Group>
     </InputGroup>
@@ -75,7 +75,7 @@ function Parameter(props) {
 }
 
 Parameter.defaultProps = {
-  controlId: 'default',
+  controlID: 'default',
   label: 'Default',
   type: 'basicDefault',
   placeholder: 'Enter info here',

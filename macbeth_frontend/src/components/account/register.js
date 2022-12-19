@@ -40,8 +40,8 @@ export default function Register() {
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
       return;
-    } 
-    
+    }
+
     axiosInstance
       .post('auth/register/', {
         email: formData.email,
@@ -91,7 +91,7 @@ export default function Register() {
             <Form.Control type={formData.visiblePassword1 ? "text" : "password"} placeholder="Password" name="password" onChange={handleChange} />
           </Col>
           <Col sm={1}>
-            <FontAwesomeIcon icon={formData.visiblePassword1 ? faEyeSlash : faEye} id="togglepassword1" onClick={() => updateFormData({...formData, visiblePassword1: !formData.visiblePassword1})} style={{'margin-top':'10%', 'margin-left':'-100%'}}/>
+            <FontAwesomeIcon icon={formData.visiblePassword1 ? faEyeSlash : faEye} id="togglepassword1" onClick={() => updateFormData({...formData, visiblePassword1: !formData.visiblePassword1})} style={{'marginTop':'10%', 'margin-left':'-100%'}}/>
           </Col>
         </Form.Group>
 
@@ -103,7 +103,7 @@ export default function Register() {
             <Form.Control type={formData.visiblePassword2 ? "text" : "password"}  placeholder="Password" name="confirmPassword" onChange={handleChange} />
           </Col>
           <Col sm={1}>
-            <FontAwesomeIcon icon={formData.visiblePassword2 ? faEyeSlash : faEye} id="togglepassword2" onClick={() => updateFormData({...formData, visiblePassword2: !formData.visiblePassword2})} style={{'margin-top':'10%', 'margin-left':'-100%'}}/>
+            <FontAwesomeIcon icon={formData.visiblePassword2 ? faEyeSlash : faEye} id="togglepassword2" onClick={() => updateFormData({...formData, visiblePassword2: !formData.visiblePassword2})} style={{'marginTop':'10%', 'margin-left':'-100%'}}/>
           </Col>
         </Form.Group>
 

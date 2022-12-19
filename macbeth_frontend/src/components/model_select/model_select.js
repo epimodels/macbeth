@@ -3,9 +3,25 @@ import ModelDropdown from './model_dropdown'
 import NavButton from '../nav_button'
 import Progress from '../compute/progress'
 
+export default function ModelSelect({setModelID}) {
+  // TODO: Get copy of this implemented from Mikaela.
+  // TODO: Was not pushed in any commit.
+
+
+
+
+  return (
+    <div className='select'>
+        <h4>Epidemic Models</h4>
+        <ModelDropdown setModelID={setModelID}/>
+        <NavButton label='Next' redirect='/compute/parameter-edit'/>
+        <Progress currentStep={1}/>
+    </div>
+  );
+}
+
 /*
  * Sub-page of Compute
- */
 class ModelSelect extends React.Component {
   constructor(props) {
     super(props);
@@ -29,7 +45,6 @@ class ModelSelect extends React.Component {
   render() {
     return (
       <div className='select'>
-        <Progress currentStep={1} />
         <h4>Epidemic Models</h4>
         <ModelDropdown allowNextEvent={this.allowNext}/>
         <NavButton label='Next' redirect={this.state.redirectLink} variant='next' disabled={this.state.nextDisabled}/>
@@ -39,3 +54,4 @@ class ModelSelect extends React.Component {
 }
 
 export default ModelSelect;
+ */

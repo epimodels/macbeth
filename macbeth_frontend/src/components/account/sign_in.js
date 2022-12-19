@@ -56,7 +56,7 @@ export default function SignIn() {
     return (
       <Container>
         <div className="signin">
-          <h2 style={{'margin-top':'3%'}}>Sign In</h2>
+          <h2 style={{'marginTop':'3%'}}>Sign In</h2>
           <center>
           <GoogleOAuthProvider clientId="881806212575-v01hph86no2rhp8vl4d7vp2dg9u58sjc.apps.googleusercontent.com">
           <GoogleLogin
